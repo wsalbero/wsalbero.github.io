@@ -1,0 +1,4220 @@
+{
+  "dogs": {
+    "8688879": {
+      "id": "8688879",
+      "name": "WINDOFSAND SLUMBLER VIOLA",
+      "loi": "LO2599843",
+      "birth_date": "2025-05-22",
+      "sex": "F",
+      "owner": "MANCA GIANLUCA",
+      "aka": "Viola"
+    },
+    "8688886": {
+      "id": "8688886",
+      "name": "WINDOFSAND RISE GRACE",
+      "loi": "LO2599850",
+      "birth_date": "2025-05-22",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Grace"
+    },
+    "8688890": {
+      "id": "8688890",
+      "name": "WINDOFSAND WILLOW MI LEY",
+      "loi": "LO2599854",
+      "birth_date": "2025-05-22",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Vikie"
+    },
+    "8688892": {
+      "id": "8688892",
+      "name": "WINDOFSAND SUMBLER BALOO",
+      "loi": "LO2599856",
+      "birth_date": "2025-05-22",
+      "sex": "M",
+      "owner": "FOIS FRANCESCA",
+      "aka": "Baloo"
+    },
+    "8688894": {
+      "id": "8688894",
+      "name": "WINDOFSAND LUDWIG ROMEO",
+      "loi": "LO2599858",
+      "birth_date": "2025-05-22",
+      "sex": "M",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Romeo"
+    },
+    "8688895": {
+      "id": "8688895",
+      "name": "WINDOFSAND REYES WISKY",
+      "loi": "LO2599859",
+      "birth_date": "2025-05-22",
+      "sex": "M",
+      "owner": "RENDA TIZIANA",
+      "aka": "Whisky"
+    },
+    "8688903": {
+      "id": "8688903",
+      "name": "WINDOFSAND MAY FAIR OLIVIA",
+      "loi": "LO2599867",
+      "birth_date": "2025-05-22",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Olivia"
+    },
+    "8688916": {
+      "id": "8688916",
+      "name": "WINDOFSAND HYPER YELLA",
+      "loi": "LO2599880",
+      "birth_date": "2025-05-22",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Yella"
+    },
+    "8626744": {
+      "id": "8626744",
+      "name": "WINDOFSAND CHARMS",
+      "loi": "LO2537692",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Charms"
+    },
+    "8626751": {
+      "id": "8626751",
+      "name": "WINDOFSAND PAVE' DIAMOND",
+      "loi": "LO2537699",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Pave'"
+    },
+    "8626755": {
+      "id": "8626755",
+      "name": "WINDOFSAND ASTRID",
+      "loi": "LO2537703",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Astrid"
+    },
+    "7960422": {
+      "id": "7960422",
+      "name": "WINDOFSAND JJ HIMMELSTEIN",
+      "loi": "LO21148961",
+      "birth_date": "2020-11-06",
+      "sex": "M",
+      "owner": null,
+      "aka": "JJ"
+    },
+    "8043182": {
+      "id": "8043182",
+      "name": "WINDOFSAND J'ADORE GOLD LIFE",
+      "loi": "LO226142",
+      "birth_date": "2021-10-30",
+      "sex": "F",
+      "owner": null,
+      "aka": "J'Adore"
+    },
+    "6024084": {
+      "id": "6024084",
+      "name": "BLACK JACK DE JAZZ",
+      "loi": "LO1174119",
+      "birth_date": "2009-05-23",
+      "sex": "M",
+      "owner": null,
+      "hide_birth_litter": true
+    },
+    "7090025": {
+      "id": "7090025",
+      "name": "GOLDENBROS TROYA HIMMELSTEIN GCH PER CH PER CH JCHI",
+      "loi": "KCC 398996",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6943926": {
+      "id": "6943926",
+      "name": "MAD MAX DE JAZZ",
+      "loi": "LO16122989",
+      "birth_date": "2015-09-21",
+      "sex": "M",
+      "owner": null,
+      "role": "capostipite",
+      "aka": "Max"
+    },
+    "6895713": {
+      "id": "6895713",
+      "name": "LEONGOLDEN GOLDIE THE ROCK IN THE WIND AND SAND",
+      "loi": "LO1674739",
+      "birth_date": "2016-03-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Goldie"
+    },
+    "6024047": {
+      "id": "6024047",
+      "name": "SHILO'S HOTT MACHINE",
+      "loi": "AKCSR24419304",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6024080": {
+      "id": "6024080",
+      "name": "SEX BOMB DE JAZZ",
+      "loi": "FCA17688",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7090026": {
+      "id": "7090026",
+      "name": "DE LA VEGA VALENTINO ROSSI CH COL VEN ARG JCOL",
+      "loi": "SR57378604",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090027": {
+      "id": "7090027",
+      "name": "GOLDEN TRIP OLIMPIC SHELLY ANN CH CO JCO",
+      "loi": "SPX/08/03591",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6899464": {
+      "id": "6899464",
+      "name": "APOLO DE HIMMELSTEIN",
+      "loi": "FCA54755",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6899482": {
+      "id": "6899482",
+      "name": "WALKING IN THE RAIN DE JAZZ",
+      "loi": "FCA/52174",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6116932": {
+      "id": "6116932",
+      "name": "LEONGOLDEN CHAOS THE WIND OF SEND",
+      "loi": "LO11167137",
+      "birth_date": "2011-08-18",
+      "sex": "M",
+      "owner": null,
+      "role": "capostipite",
+      "aka": "Chaos"
+    },
+    "6158779": {
+      "id": "6158779",
+      "name": "LEONGOLDEN STAR IS BORN",
+      "loi": "LO1239310",
+      "birth_date": "2011-07-09",
+      "sex": "F",
+      "owner": null,
+      "role": "capostipite",
+      "aka": "Bon Bon"
+    },
+    "6024048": {
+      "id": "6024048",
+      "name": "SUMMITS MR.BOJANGLES CH",
+      "loi": "AKCSN57129701",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6024049": {
+      "id": "6024049",
+      "name": "SHILO'S WAITING TO EXCEL",
+      "loi": "AKCSN87300501",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "5728298": {
+      "id": "5728298",
+      "name": "SNOWSHOE'S LUCK OF THE DRAW CH ARG",
+      "loi": "FCA/15479",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5896713": {
+      "id": "5896713",
+      "name": "BEATIFUL DA Y'U2 DE LA MASCOTERA",
+      "loi": "FCA7262",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7090028": {
+      "id": "7090028",
+      "name": "SHEFFIELD DUCAT'S SPELLBOUND CH",
+      "loi": "SN21194001",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090029": {
+      "id": "7090029",
+      "name": "DE LA AVEGA NEW YORK STATE OF MIND CH",
+      "loi": "SR34210601",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7090030": {
+      "id": "7090030",
+      "name": "GOLDEN TRIP RINGO MORITZ",
+      "loi": "RG/SPX/06/05377",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090031": {
+      "id": "7090031",
+      "name": "MIDAS TOUCH GOLDENTRIP AVA",
+      "loi": "SPX0600596",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6899465": {
+      "id": "6899465",
+      "name": "GOOD'TIMES'S PAR EXCELLENCE",
+      "loi": "AKC/SR68948109",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6899466": {
+      "id": "6899466",
+      "name": "DE LA VEGA SOMEBODY TO LOVE AT GOLDENBROS",
+      "loi": "AKC/SR63119203",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6899483": {
+      "id": "6899483",
+      "name": "CHESTERFIELD'S FOREVER LUCKY",
+      "loi": "FCA/40133",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6029784": {
+      "id": "6029784",
+      "name": "GOLDEN SUNSHINE DE JAZZ",
+      "loi": "LO1179832",
+      "birth_date": "2008-11-17",
+      "sex": "F",
+      "owner": null
+    },
+    "5896732": {
+      "id": "5896732",
+      "name": "GOLDEN SUNSHINE AD MAITE",
+      "loi": "LO10161033",
+      "birth_date": "2008-05-22",
+      "sex": "F",
+      "owner": null
+    },
+    "6053459": {
+      "id": "6053459",
+      "name": "ONE AND  ONLY (NEVAREZ) MEX FCI",
+      "loi": "FCMP6902A",
+      "birth_date": "2008-09-01",
+      "sex": "M",
+      "owner": null
+    },
+    "5393335": {
+      "id": "5393335",
+      "name": "MON CHERI'",
+      "loi": "LO0781897",
+      "birth_date": "2007-01-24",
+      "sex": "F",
+      "owner": null
+    },
+    "8254828": {
+      "id": "8254828",
+      "name": "WINDOFSAND VOILE BY PULLOVER",
+      "loi": "LO2314277",
+      "birth_date": "2022-11-14",
+      "sex": "F",
+      "owner": null,
+      "aka": "Voile"
+    },
+    "7325892": {
+      "id": "7325892",
+      "name": "AMERICAN PULLOVER",
+      "loi": "LO18110296",
+      "birth_date": "2018-05-28",
+      "sex": "F",
+      "owner": null,
+      "aka": "Pully"
+    },
+    "6749997": {
+      "id": "6749997",
+      "name": "LEONGOLDEN THE KING OF LOVE",
+      "loi": "LO15118370",
+      "birth_date": "2014-05-30",
+      "sex": "M",
+      "owner": null,
+      "role": "capostipite"
+    },
+    "6783205": {
+      "id": "6783205",
+      "name": "LEONGOLDEN AMANDA THE BEAUTIFUL VAIN",
+      "loi": "LO15151616",
+      "birth_date": "2015-07-18",
+      "sex": "F",
+      "owner": null,
+      "aka": "Crazy"
+    },
+    "6024050": {
+      "id": "6024050",
+      "name": "FAERA'S STARLIGHT",
+      "loi": "AKCSN70962301",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6899467": {
+      "id": "6899467",
+      "name": "GOODTIME'S SUGAR AND SPICE",
+      "loi": "AKC/SR47518205",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6899468": {
+      "id": "6899468",
+      "name": "DE LA VEGA HEIR APPARENT",
+      "loi": "AKC/SR53036203",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6899469": {
+      "id": "6899469",
+      "name": "GOODTIME'S PRADA BEE MINE",
+      "loi": "AKC/SR25411806",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6680922": {
+      "id": "6680922",
+      "name": "RUSH HILL'S ALL FOOLS ON DECK GCH CH",
+      "loi": "AKC/SR 18689602",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7305854": {
+      "id": "7305854",
+      "name": "CHESTERFIELD'S ALL MY LOVING",
+      "loi": "FCA 25581",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7305855": {
+      "id": "7305855",
+      "name": "SNOWSHOE'S LUCK OF THE DRAW",
+      "loi": "FCA15479",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6003230": {
+      "id": "6003230",
+      "name": "BR GOLDEN SUNSHINE BORN IN RIO",
+      "loi": "FCA28885",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6749989": {
+      "id": "6749989",
+      "name": "GEMINI FALLCHASE THE BUTLER DID IT TKN CH AM",
+      "loi": "SR41593002",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5898267": {
+      "id": "5898267",
+      "name": "LEONGOLDEN USA AMERICA CH",
+      "loi": "LO10162571",
+      "birth_date": "2010-04-02",
+      "sex": "F",
+      "owner": null,
+      "hide_birth_litter": true
+    },
+    "6166584": {
+      "id": "6166584",
+      "name": "ONE AND ONLY (NEVAREZ) MEX.FCI",
+      "loi": "LO1247135",
+      "birth_date": "2008-09-01",
+      "sex": "M",
+      "owner": null
+    },
+    "6323201": {
+      "id": "6323201",
+      "name": "LEONGOLDEN YOU CAN DO IT",
+      "loi": "LO1337550",
+      "birth_date": "2012-12-18",
+      "sex": "F",
+      "owner": null
+    },
+    "6116967": {
+      "id": "6116967",
+      "name": "LEONGOLDEN RAGING BULL",
+      "loi": "LO11167172",
+      "birth_date": "2011-08-18",
+      "sex": "M",
+      "owner": null
+    },
+    "6067559": {
+      "id": "6067559",
+      "name": "ADAMANTEA DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117677",
+      "birth_date": "2011-06-08",
+      "sex": "F",
+      "owner": null
+    },
+    "6053471": {
+      "id": "6053471",
+      "name": "LEONGOLDEN MY LOVE",
+      "loi": "LO11103572",
+      "birth_date": "2011-04-04",
+      "sex": "M",
+      "owner": null
+    },
+    "6116976": {
+      "id": "6116976",
+      "name": "LEONGOLDEN SECRET PASSION'S WIND",
+      "loi": "LO11167181",
+      "birth_date": "2011-08-18",
+      "sex": "F",
+      "owner": null
+    },
+    "6116998": {
+      "id": "6116998",
+      "name": "LEONGOLDEN LOVER'S KISS ON THE WIND",
+      "loi": "LO11167203",
+      "birth_date": "2011-08-18",
+      "sex": "F",
+      "owner": null
+    },
+    "6067560": {
+      "id": "6067560",
+      "name": "EGESTA DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117678",
+      "birth_date": "2011-06-08",
+      "sex": "F",
+      "owner": null
+    },
+    "6077115": {
+      "id": "6077115",
+      "name": "LEONGOLDEN SULTAN'S POWER",
+      "loi": "LO11127244",
+      "birth_date": "2011-06-01",
+      "sex": "M",
+      "owner": null
+    },
+    "6053469": {
+      "id": "6053469",
+      "name": "LEONGOLDEN THAT'S LITTLE BIG LOVE",
+      "loi": "LO11103570",
+      "birth_date": "2011-04-04",
+      "sex": "F",
+      "owner": null
+    },
+    "6067562": {
+      "id": "6067562",
+      "name": "EURIALO DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117680",
+      "birth_date": "2011-06-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6067564": {
+      "id": "6067564",
+      "name": "PARIDE DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117682",
+      "birth_date": "2011-06-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6053470": {
+      "id": "6053470",
+      "name": "LEONGOLDEN GREAT AND IMPOSSIBLE",
+      "loi": "LO11103571",
+      "birth_date": "2011-04-04",
+      "sex": "M",
+      "owner": null
+    },
+    "6053467": {
+      "id": "6053467",
+      "name": "LEONGOLDEN ENDLESS LOVE",
+      "loi": "LO11103568",
+      "birth_date": "2011-04-04",
+      "sex": "F",
+      "owner": null
+    },
+    "6116977": {
+      "id": "6116977",
+      "name": "LEONGOLDEN LUCY IN THE SKY WITH DIAMOND",
+      "loi": "LO11167182",
+      "birth_date": "2011-08-18",
+      "sex": "F",
+      "owner": null
+    },
+    "6067569": {
+      "id": "6067569",
+      "name": "DIOMEDE DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117687",
+      "birth_date": "2011-06-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6053466": {
+      "id": "6053466",
+      "name": "LEONGOLDEN ON HEAVENS' DOOR",
+      "loi": "LO11103567",
+      "birth_date": "2011-04-04",
+      "sex": "F",
+      "owner": null
+    },
+    "6077125": {
+      "id": "6077125",
+      "name": "LEONGOLDEN SOFT TOUCH",
+      "loi": "LO11127254",
+      "birth_date": "2011-06-01",
+      "sex": "M",
+      "owner": null
+    },
+    "6067568": {
+      "id": "6067568",
+      "name": "ETTORE DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117686",
+      "birth_date": "2011-06-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6067566": {
+      "id": "6067566",
+      "name": "CASSANDRA DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117684",
+      "birth_date": "2011-06-08",
+      "sex": "F",
+      "owner": null
+    },
+    "6077126": {
+      "id": "6077126",
+      "name": "LEONGOLDEN MEGIC CONTACT",
+      "loi": "LO11127255",
+      "birth_date": "2011-06-01",
+      "sex": "M",
+      "owner": null
+    },
+    "6116975": {
+      "id": "6116975",
+      "name": "LEONGOLDEN SEA OF LOVE",
+      "loi": "LO11167180",
+      "birth_date": "2011-08-18",
+      "sex": "M",
+      "owner": null
+    },
+    "6116972": {
+      "id": "6116972",
+      "name": "LEONGOLDEN HURRICANE'S LOVE",
+      "loi": "LO11167177",
+      "birth_date": "2011-08-18",
+      "sex": "M",
+      "owner": null
+    },
+    "6053468": {
+      "id": "6053468",
+      "name": "LEONGOLDEN INSIDE MY SOUL",
+      "loi": "LO11103569",
+      "birth_date": "2011-04-04",
+      "sex": "F",
+      "owner": null
+    },
+    "6116969": {
+      "id": "6116969",
+      "name": "LEONGOLDEN THE BIG RED ONE",
+      "loi": "LO11167174",
+      "birth_date": "2011-08-18",
+      "sex": "M",
+      "owner": null
+    },
+    "6067561": {
+      "id": "6067561",
+      "name": "ANTIOPE DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117679",
+      "birth_date": "2011-06-08",
+      "sex": "F",
+      "owner": null
+    },
+    "6053463": {
+      "id": "6053463",
+      "name": "LEONGOLDEN FLYING IN MY HEART",
+      "loi": "LO11103564",
+      "birth_date": "2011-04-04",
+      "sex": "F",
+      "owner": null
+    },
+    "6116937": {
+      "id": "6116937",
+      "name": "LEONGOLDEN BLOW UP",
+      "loi": "LO11167142",
+      "birth_date": "2011-08-18",
+      "sex": "M",
+      "owner": null
+    },
+    "6067567": {
+      "id": "6067567",
+      "name": "MENELAO DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117685",
+      "birth_date": "2011-06-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6077141": {
+      "id": "6077141",
+      "name": "LEONGOLDEN AMAZING DREAM",
+      "loi": "LO11127270",
+      "birth_date": "2011-06-01",
+      "sex": "F",
+      "owner": null
+    },
+    "6077129": {
+      "id": "6077129",
+      "name": "LEONGOLDEN STAR INSIDE",
+      "loi": "LO11127258",
+      "birth_date": "2011-06-01",
+      "sex": "F",
+      "owner": null
+    },
+    "6116997": {
+      "id": "6116997",
+      "name": "LEONGOLDEN A LITTLE BIT OF HEAVEN",
+      "loi": "LO11167202",
+      "birth_date": "2011-08-18",
+      "sex": "F",
+      "owner": null
+    },
+    "6067565": {
+      "id": "6067565",
+      "name": "PATROCLO DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117683",
+      "birth_date": "2011-06-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6077134": {
+      "id": "6077134",
+      "name": "LEONGOLDEN EXOTIC FEELING",
+      "loi": "LO11127263",
+      "birth_date": "2011-06-01",
+      "sex": "F",
+      "owner": null
+    },
+    "6053472": {
+      "id": "6053472",
+      "name": "LEONGOLDEN IT'S A FEELING",
+      "loi": "LO11103573",
+      "birth_date": "2011-04-04",
+      "sex": "M",
+      "owner": null
+    },
+    "6053464": {
+      "id": "6053464",
+      "name": "LEONGOLDEN AMAZING STAR",
+      "loi": "LO11103565",
+      "birth_date": "2011-04-04",
+      "sex": "F",
+      "owner": null
+    },
+    "6067563": {
+      "id": "6067563",
+      "name": "ACHILLE DELLE PIETRE DELLA LUNA",
+      "loi": "LO11117681",
+      "birth_date": "2011-06-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6053465": {
+      "id": "6053465",
+      "name": "LEONGOLDEN EVER FOREVER",
+      "loi": "LO11103566",
+      "birth_date": "2011-04-04",
+      "sex": "F",
+      "owner": null
+    },
+    "7763052": {
+      "id": "7763052",
+      "name": "WINDOFSAND DAIQUIRI AARON NO ONE IS YOU",
+      "loi": "LO20136986",
+      "birth_date": "2020-07-07",
+      "sex": "M",
+      "owner": null,
+      "aka": "Aaron"
+    },
+    "8043165": {
+      "id": "8043165",
+      "name": "WINDOFSAND POISON JUST NOT EASY",
+      "loi": "LO226125",
+      "birth_date": "2021-10-30",
+      "sex": "M",
+      "owner": null
+    },
+    "8043176": {
+      "id": "8043176",
+      "name": "WINDOFSAND CHLOE' BEAUTY LOVE",
+      "loi": "LO226136",
+      "birth_date": "2021-10-30",
+      "sex": "F",
+      "owner": null,
+      "aka": "Chloe'"
+    },
+    "7504931": {
+      "id": "7504931",
+      "name": "WINDOFSAND AMERICA WENDY U.S.A.",
+      "loi": "LO1994320",
+      "birth_date": "2019-03-19",
+      "sex": "F",
+      "owner": null,
+      "aka": "Wendy"
+    },
+    "8043201": {
+      "id": "8043201",
+      "name": "WINDOFSAND BLUMARINE LEGO",
+      "loi": "LO226161",
+      "birth_date": "2021-10-30",
+      "sex": "M",
+      "owner": null,
+      "aka": "Lego"
+    },
+    "7763055": {
+      "id": "7763055",
+      "name": "WINDOFSAND RHUM GUY TAKE ME UP",
+      "loi": "LO20136989",
+      "birth_date": "2020-07-07",
+      "sex": "M",
+      "owner": null,
+      "aka": "Guy"
+    },
+    "7763054": {
+      "id": "7763054",
+      "name": "WINDOFSAND IRISH COFFE OLIVER WATCH ME",
+      "loi": "LO20136988",
+      "birth_date": "2020-07-07",
+      "sex": "M",
+      "owner": null,
+      "aka": "Oliver"
+    },
+    "7763056": {
+      "id": "7763056",
+      "name": "WINDOFSAND CHAMPAGNE FLY BUDDY",
+      "loi": "LO20136990",
+      "birth_date": "2020-07-07",
+      "sex": "M",
+      "owner": null,
+      "aka": "Buddy"
+    },
+    "7504926": {
+      "id": "7504926",
+      "name": "WINDOFSAND NEW YORK MR. PEANUT BUTTER",
+      "loi": "LO1994315",
+      "birth_date": "2019-03-19",
+      "sex": "M",
+      "owner": null,
+      "aka": "Butter"
+    },
+    "7763053": {
+      "id": "7763053",
+      "name": "WINDOFSAND BIG APPLE BRIOCHE A DREAMER",
+      "loi": "LO20136987",
+      "birth_date": "2020-07-07",
+      "sex": "F",
+      "owner": null,
+      "aka": "Brioche"
+    },
+    "7763057": {
+      "id": "7763057",
+      "name": "WINDOFSAND BLOODY MARY NORA TIME FOR CHANGE",
+      "loi": "LO20136991",
+      "birth_date": "2020-07-07",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nora"
+    },
+    "7504927": {
+      "id": "7504927",
+      "name": "WINDOFSAND BEVERLY LUXURY MOODS",
+      "loi": "LO1994316",
+      "birth_date": "2019-03-19",
+      "sex": "F",
+      "owner": null,
+      "aka": "Luxy"
+    },
+    "7763049": {
+      "id": "7763049",
+      "name": "WINDOFSAND MR.  MOJTO TRAPPER BEST TIME",
+      "loi": "LO20136983",
+      "birth_date": "2020-07-07",
+      "sex": "M",
+      "owner": null,
+      "aka": "Mojto"
+    },
+    "7504925": {
+      "id": "7504925",
+      "name": "WINDOFSAND OCEANIA ARIEL BLUE MOOD",
+      "loi": "LO1994314",
+      "birth_date": "2019-03-19",
+      "sex": "F",
+      "owner": null,
+      "aka": "Ariel"
+    },
+    "8043170": {
+      "id": "8043170",
+      "name": "WINDOFSAND CHANEL RED ELEGANT",
+      "loi": "LO226130",
+      "birth_date": "2021-10-30",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nala"
+    },
+    "7763051": {
+      "id": "7763051",
+      "name": "WINDOFSAND BRANDY WILD BEAUTY",
+      "loi": "LO20136985",
+      "birth_date": "2020-07-07",
+      "sex": "F",
+      "owner": null,
+      "aka": "Brandy"
+    },
+    "7504929": {
+      "id": "7504929",
+      "name": "WINDOFSAND BROADWAY MARGOT STYLE",
+      "loi": "LO1994318",
+      "birth_date": "2019-03-19",
+      "sex": "F",
+      "owner": null,
+      "aka": "Margot"
+    },
+    "7504928": {
+      "id": "7504928",
+      "name": "WINDOFSAND CALIFORNIA VENERE BLUE LIFE",
+      "loi": "LO1994317",
+      "birth_date": "2019-03-19",
+      "sex": "F",
+      "owner": null,
+      "aka": "Blue"
+    },
+    "7504923": {
+      "id": "7504923",
+      "name": "WINDOFSAND MALIBU' BIG WAVE",
+      "loi": "LO1994312",
+      "birth_date": "2019-03-19",
+      "sex": "M",
+      "owner": null,
+      "aka": "Wave"
+    },
+    "8043181": {
+      "id": "8043181",
+      "name": "WINDOFSAND BLOOM SEA GIRL",
+      "loi": "LO226141",
+      "birth_date": "2021-10-30",
+      "sex": "F",
+      "owner": null,
+      "aka": "Molly"
+    },
+    "8043194": {
+      "id": "8043194",
+      "name": "WINDOFSAND MISS DIOR RORY",
+      "loi": "LO226154",
+      "birth_date": "2021-10-30",
+      "sex": "F",
+      "owner": null,
+      "aka": "Rory"
+    },
+    "8043183": {
+      "id": "8043183",
+      "name": "WINDOFSAND COCO MADEMOISELLE",
+      "loi": "LO226143",
+      "birth_date": "2021-10-30",
+      "sex": "F",
+      "owner": null,
+      "aka": "Coco"
+    },
+    "7504930": {
+      "id": "7504930",
+      "name": "WINDOFSAND OCEANIA MAUI BLUE SEA",
+      "loi": "LO1994319",
+      "birth_date": "2019-03-19",
+      "sex": "M",
+      "owner": null,
+      "aka": "Maui"
+    },
+    "8043178": {
+      "id": "8043178",
+      "name": "WINDOFSAND ROYAL LOVE AGAIN",
+      "loi": "LO226138",
+      "birth_date": "2021-10-30",
+      "sex": "M",
+      "owner": null,
+      "aka": "Otello"
+    },
+    "7504920": {
+      "id": "7504920",
+      "name": "WINDOFSAND TAHITI AMERICAN BEAUTY",
+      "loi": "LO1994309",
+      "birth_date": "2019-03-19",
+      "sex": "F",
+      "owner": null,
+      "aka": "Tahiti"
+    },
+    "8043180": {
+      "id": "8043180",
+      "name": "WINDOFSAND PASSION ITALY LADY",
+      "loi": "LO226140",
+      "birth_date": "2021-10-30",
+      "sex": "F",
+      "owner": null,
+      "aka": "Lady"
+    },
+    "7504924": {
+      "id": "7504924",
+      "name": "WINDOFSAND PACIFIC COAST ANDY",
+      "loi": "LO1994313",
+      "birth_date": "2019-03-19",
+      "sex": "M",
+      "owner": null,
+      "aka": "Andy"
+    },
+    "7763050": {
+      "id": "7763050",
+      "name": "WINDOFSAND AFFINITY ZARA LIFE IS BETTER",
+      "loi": "LO20136984",
+      "birth_date": "2020-07-07",
+      "sex": "F",
+      "owner": null,
+      "aka": "Zara"
+    },
+    "7568438": {
+      "id": "7568438",
+      "name": "WINDOFSAND MALESIA LOKI LAGOON",
+      "loi": "LO19157844",
+      "birth_date": "2019-06-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Loki"
+    },
+    "7215258": {
+      "id": "7215258",
+      "name": "LIGHT SUNSET ANTHO ON GOLDEN",
+      "loi": "LO17195630",
+      "birth_date": "2017-09-30",
+      "sex": "F",
+      "owner": null
+    },
+    "8626766": {
+      "id": "8626766",
+      "name": "WINDOFSAND CHOCKER LION",
+      "loi": "LO2537714",
+      "birth_date": "2025-01-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Leone"
+    },
+    "7215249": {
+      "id": "7215249",
+      "name": "ANTHOG WHITE DIAMOND",
+      "loi": "LO17195621",
+      "birth_date": "2017-09-30",
+      "sex": "M",
+      "owner": null
+    },
+    "7264046": {
+      "id": "7264046",
+      "name": "DAFNE THE GOLD SAND",
+      "loi": "LO1848410",
+      "birth_date": "2018-01-10",
+      "sex": "F",
+      "owner": null,
+      "aka": "Dafne"
+    },
+    "7264060": {
+      "id": "7264060",
+      "name": "PLATONE IN THE SAND",
+      "loi": "LO1848424",
+      "birth_date": "2018-01-10",
+      "sex": "M",
+      "owner": null,
+      "aka": "Platone"
+    },
+    "7568432": {
+      "id": "7568432",
+      "name": "WINDOFSAND CARAIBI OLIVIA BLUE SEA",
+      "loi": "LO19157838",
+      "birth_date": "2019-06-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Olivia"
+    },
+    "8626788": {
+      "id": "8626788",
+      "name": "WINDOFSAND J - HOOK ETERNITY NALA",
+      "loi": "LO2537736",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nala"
+    },
+    "8530945": {
+      "id": "8530945",
+      "name": "WINDOFSAND HOPE",
+      "loi": "LO24109076",
+      "birth_date": "2024-05-20",
+      "sex": "F",
+      "owner": null,
+      "aka": "Hope"
+    },
+    "8530948": {
+      "id": "8530948",
+      "name": "WINDOFSAND TOMA PEDRO",
+      "loi": "LO24109079",
+      "birth_date": "2024-05-20",
+      "sex": "M",
+      "owner": null,
+      "aka": "Pedro"
+    },
+    "7568427": {
+      "id": "7568427",
+      "name": "WINDOFSAND FIJI DEA BEACH GOLD",
+      "loi": "LO19157833",
+      "birth_date": "2019-06-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Dea"
+    },
+    "8530953": {
+      "id": "8530953",
+      "name": "WINDOFSAND SHINE",
+      "loi": "LO24109084",
+      "birth_date": "2024-05-20",
+      "sex": "F",
+      "owner": null,
+      "aka": "Shein"
+    },
+    "8530954": {
+      "id": "8530954",
+      "name": "WINDOFSAND JOLLY ROGER",
+      "loi": "LO24109085",
+      "birth_date": "2024-05-20",
+      "sex": "M",
+      "owner": null,
+      "aka": "Roger"
+    },
+    "7568430": {
+      "id": "7568430",
+      "name": "WINDOFSAND POLINESIA SEA CREATURE",
+      "loi": "LO19157836",
+      "birth_date": "2019-06-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Polly"
+    },
+    "8530950": {
+      "id": "8530950",
+      "name": "WINDOFSAND GOLD KEY",
+      "loi": "LO24109081",
+      "birth_date": "2024-05-20",
+      "sex": "M",
+      "owner": null,
+      "aka": "Ugo"
+    },
+    "7264058": {
+      "id": "7264058",
+      "name": "JUNIOR MAX SAND WIND",
+      "loi": "LO1848422",
+      "birth_date": "2018-01-10",
+      "sex": "M",
+      "owner": null,
+      "aka": "Max"
+    },
+    "7568445": {
+      "id": "7568445",
+      "name": "WINDOFSAND BARBADOS J. LION CHASE LOVE",
+      "loi": "LO19157851",
+      "birth_date": "2019-06-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Lion"
+    },
+    "8530946": {
+      "id": "8530946",
+      "name": "WINDOFSAND NIVES WENDY",
+      "loi": "LO24109077",
+      "birth_date": "2024-05-20",
+      "sex": "F",
+      "owner": null,
+      "aka": "Wendy"
+    },
+    "8530947": {
+      "id": "8530947",
+      "name": "WINDOFSAND BLUE MOON",
+      "loi": "LO24109078",
+      "birth_date": "2024-05-20",
+      "sex": "M",
+      "owner": null,
+      "aka": "Blue"
+    },
+    "8626773": {
+      "id": "8626773",
+      "name": "WINDOFSAND BAGUETTE NAMI",
+      "loi": "LO2537721",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nami"
+    },
+    "7264067": {
+      "id": "7264067",
+      "name": "GAILA INSIDE THE HEART OF WIND",
+      "loi": "LO1848431",
+      "birth_date": "2018-01-10",
+      "sex": "F",
+      "owner": null,
+      "aka": "Gaila"
+    },
+    "7215257": {
+      "id": "7215257",
+      "name": "CRYSTAL LITTER ANTHOGOLDEN",
+      "loi": "LO17195629",
+      "birth_date": "2017-09-30",
+      "sex": "F",
+      "owner": null
+    },
+    "8530952": {
+      "id": "8530952",
+      "name": "WINDOFSAND MARTIN LUTHER KIWI",
+      "loi": "LO24109083",
+      "birth_date": "2024-05-20",
+      "sex": "M",
+      "owner": null,
+      "aka": "Martin"
+    },
+    "7568426": {
+      "id": "7568426",
+      "name": "WINDOFSAND MIAMI TOSS RUBBIE GRAIN",
+      "loi": "LO19157832",
+      "birth_date": "2019-06-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Toss"
+    },
+    "7264066": {
+      "id": "7264066",
+      "name": "RAJA IN THE WIND IN THE SAND",
+      "loi": "LO1848430",
+      "birth_date": "2018-01-10",
+      "sex": "F",
+      "owner": null,
+      "aka": "Raja"
+    },
+    "8626776": {
+      "id": "8626776",
+      "name": "WINDOFSAND JADE CRUMBLE",
+      "loi": "LO2537724",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Crumble"
+    },
+    "7568443": {
+      "id": "7568443",
+      "name": "WINDOFSAND KEY WEST  BRAVEHEART",
+      "loi": "LO19157849",
+      "birth_date": "2019-06-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Brave"
+    },
+    "7264047": {
+      "id": "7264047",
+      "name": "CRUMBLE AMERICAN PULLOVER WINDOFSAND",
+      "loi": "LO1848411",
+      "birth_date": "2018-01-10",
+      "sex": "M",
+      "owner": null,
+      "aka": "Crumble"
+    },
+    "7568442": {
+      "id": "7568442",
+      "name": "WINDOFSAND BAHAMAS  KIKO' THE MAGIC OF NATURE",
+      "loi": "LO19157848",
+      "birth_date": "2019-06-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Kiko"
+    },
+    "8530944": {
+      "id": "8530944",
+      "name": "WINDOFSAND SEA PEARL",
+      "loi": "LO24109075",
+      "birth_date": "2024-05-20",
+      "sex": "F",
+      "owner": null,
+      "aka": "Perla"
+    },
+    "7264052": {
+      "id": "7264052",
+      "name": "HAPPY OF WIND",
+      "loi": "LO1848416",
+      "birth_date": "2018-01-10",
+      "sex": "F",
+      "owner": null,
+      "aka": "Happy"
+    },
+    "7264059": {
+      "id": "7264059",
+      "name": "SUMMERTIME IN THE WIND OF SAND",
+      "loi": "LO1848423",
+      "birth_date": "2018-01-10",
+      "sex": "F",
+      "owner": null,
+      "aka": "Summer"
+    },
+    "8626761": {
+      "id": "8626761",
+      "name": "WINDOFSAND BROWNIE",
+      "loi": "LO2537709",
+      "birth_date": "2025-01-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Brownie"
+    },
+    "7215250": {
+      "id": "7215250",
+      "name": "TWILIGHT GOLDEN ANTHO",
+      "loi": "LO17195622",
+      "birth_date": "2017-09-30",
+      "sex": "F",
+      "owner": null
+    },
+    "7264056": {
+      "id": "7264056",
+      "name": "SEA QUIET THE STAR IN THE WIND",
+      "loi": "LO1848420",
+      "birth_date": "2018-01-10",
+      "sex": "F",
+      "owner": null,
+      "aka": "Junior Quiet"
+    },
+    "8530951": {
+      "id": "8530951",
+      "name": "WINDOFSAND AUDREY BEAUTY LOVE",
+      "loi": "LO24109082",
+      "birth_date": "2024-05-20",
+      "sex": "F",
+      "owner": null,
+      "aka": "Audrey"
+    },
+    "8626781": {
+      "id": "8626781",
+      "name": "WINDOFSAND WIRE WORK ANDY",
+      "loi": "LO2537729",
+      "birth_date": "2025-01-17",
+      "sex": "M",
+      "owner": null,
+      "aka": "Andy"
+    },
+    "7215253": {
+      "id": "7215253",
+      "name": "SUNRISE IN THE ANTHO",
+      "loi": "LO17195625",
+      "birth_date": "2017-09-30",
+      "sex": "M",
+      "owner": null
+    },
+    "7568441": {
+      "id": "7568441",
+      "name": "WINDOFSAND HAWAII ARWEN VELVET EYES",
+      "loi": "LO19157847",
+      "birth_date": "2019-06-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Arwen"
+    },
+    "8530949": {
+      "id": "8530949",
+      "name": "WINDOFSAND ESAE",
+      "loi": "LO24109080",
+      "birth_date": "2024-05-20",
+      "sex": "F",
+      "owner": null,
+      "aka": "Esme"
+    },
+    "8626805": {
+      "id": "8626805",
+      "name": "WINDOFSAND TRINITY ELLIE",
+      "loi": "LO2537753",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Ellie"
+    },
+    "8626812": {
+      "id": "8626812",
+      "name": "WINDOFSAND DAEISY GROURETTE",
+      "loi": "LO2537760",
+      "birth_date": "2025-01-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Daeisy"
+    },
+    "7215248": {
+      "id": "7215248",
+      "name": "SPARKLEY ANTHO",
+      "loi": "LO17195620",
+      "birth_date": "2017-09-30",
+      "sex": "F",
+      "owner": null
+    },
+    "7568436": {
+      "id": "7568436",
+      "name": "WINDOFSAND SEYCHELLES BEAUTY LOVE",
+      "loi": "LO19157842",
+      "birth_date": "2019-06-17",
+      "sex": "F",
+      "owner": null,
+      "aka": "Bella"
+    },
+    "7090038": {
+      "id": "7090038",
+      "name": "ZACK DE HIMMELSTEIN",
+      "loi": "LO1770331",
+      "birth_date": "2016-07-04",
+      "sex": "M",
+      "owner": null,
+      "hide_birth_litter": true
+    },
+    "8254830": {
+      "id": "8254830",
+      "name": "WINDOFSAND JERSEY MALTO ON PULLOVER",
+      "loi": "LO2314279",
+      "birth_date": "2022-11-14",
+      "sex": "M",
+      "owner": null,
+      "aka": "Malto"
+    },
+    "8254827": {
+      "id": "8254827",
+      "name": "WINDOFSAND BOUCLE ROMEO WITH PULLOVER",
+      "loi": "LO2314276",
+      "birth_date": "2022-11-14",
+      "sex": "M",
+      "owner": null,
+      "aka": "Romeo"
+    },
+    "8254826": {
+      "id": "8254826",
+      "name": "WINDOFSAND DEVORE' BY PULLOVER",
+      "loi": "LO2314275",
+      "birth_date": "2022-11-14",
+      "sex": "M",
+      "owner": null,
+      "aka": "Devore'"
+    },
+    "8254829": {
+      "id": "8254829",
+      "name": "WINDOFSAND PIQUET ORSO OF PULLOVER",
+      "loi": "LO2314278",
+      "birth_date": "2022-11-14",
+      "sex": "M",
+      "owner": null,
+      "aka": "Orso"
+    },
+    "8421728": {
+      "id": "8421728",
+      "name": "WINDOFSAND SOUL SIMBA",
+      "loi": "LO23181490",
+      "birth_date": "2023-10-06",
+      "sex": "M",
+      "owner": null,
+      "aka": "Simba"
+    },
+    "8361033": {
+      "id": "8361033",
+      "name": "WINDOFSAND FLAAFFY GOLD SIMBA",
+      "loi": "LO23120770",
+      "birth_date": "2023-06-03",
+      "sex": "M",
+      "owner": null,
+      "aka": "Simba"
+    },
+    "8361031": {
+      "id": "8361031",
+      "name": "WINDOFSAND FLABE'BE' ELEGANT  CHARLOTTE",
+      "loi": "LO23120768",
+      "birth_date": "2023-06-03",
+      "sex": "F",
+      "owner": null,
+      "aka": "Charlotte"
+    },
+    "8222564": {
+      "id": "8222564",
+      "name": "WINDOFSAND JOURNEY THE BIG LOVE OF MAHEO",
+      "loi": "LO22185592",
+      "birth_date": "2022-08-23",
+      "sex": "F",
+      "owner": null,
+      "aka": "Journey"
+    },
+    "8222559": {
+      "id": "8222559",
+      "name": "WINDOFSAND JACK JACK",
+      "loi": "LO22185587",
+      "birth_date": "2022-08-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Oliver"
+    },
+    "8222565": {
+      "id": "8222565",
+      "name": "WINDOFSAND JOLIE SWEET GIRL BIBIANE",
+      "loi": "LO22185593",
+      "birth_date": "2022-08-23",
+      "sex": "F",
+      "owner": null,
+      "aka": "Bibiane"
+    },
+    "8421731": {
+      "id": "8421731",
+      "name": "WINDOFSAND ROCK MUSIC NINA IN LOVE",
+      "loi": "LO23181493",
+      "birth_date": "2023-10-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nina"
+    },
+    "8361030": {
+      "id": "8361030",
+      "name": "WINDOFSAND BRIONNE BLOOM",
+      "loi": "LO23120767",
+      "birth_date": "2023-06-03",
+      "sex": "F",
+      "owner": null,
+      "aka": "Bloom"
+    },
+    "8222560": {
+      "id": "8222560",
+      "name": "WINDOFSAND JUMPER LOVE",
+      "loi": "LO22185588",
+      "birth_date": "2022-08-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Jumper"
+    },
+    "8222561": {
+      "id": "8222561",
+      "name": "WINDOFSAND JAZZ BRAD THE SOUND",
+      "loi": "LO22185589",
+      "birth_date": "2022-08-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Brad"
+    },
+    "8361034": {
+      "id": "8361034",
+      "name": "WINDOFSAND PHANFY GAS GAS",
+      "loi": "LO23120771",
+      "birth_date": "2023-06-03",
+      "sex": "M",
+      "owner": null,
+      "aka": "Gastone"
+    },
+    "8361029": {
+      "id": "8361029",
+      "name": "WINDOFSAND BRELOOM MILA FLOWER",
+      "loi": "LO23120766",
+      "birth_date": "2023-06-03",
+      "sex": "F",
+      "owner": null,
+      "aka": "Mila"
+    },
+    "8361032": {
+      "id": "8361032",
+      "name": "WINDOFSAND HOP PIP BLUE TEO",
+      "loi": "LO23120769",
+      "birth_date": "2023-06-03",
+      "sex": "M",
+      "owner": null,
+      "aka": "Teo"
+    },
+    "8421725": {
+      "id": "8421725",
+      "name": "WINDOFSAND FUNKY SWEET NALA",
+      "loi": "LO23181487",
+      "birth_date": "2023-10-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nala"
+    },
+    "8222563": {
+      "id": "8222563",
+      "name": "WINDOFSAND JR.  J.  LOVE",
+      "loi": "LO22185591",
+      "birth_date": "2022-08-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "DJ"
+    },
+    "8222558": {
+      "id": "8222558",
+      "name": "WINDOFSAND JINGLE LEO MUSIC",
+      "loi": "LO22185586",
+      "birth_date": "2022-08-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Leo"
+    },
+    "8421727": {
+      "id": "8421727",
+      "name": "WINDOFSAND BLUES KUZCO",
+      "loi": "LO23181489",
+      "birth_date": "2023-10-06",
+      "sex": "M",
+      "owner": null,
+      "aka": "Kuzco"
+    },
+    "8421732": {
+      "id": "8421732",
+      "name": "WINDOFSAND HIP HOP TRES JOLIE",
+      "loi": "LO23181494",
+      "birth_date": "2023-10-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Jolie"
+    },
+    "8421733": {
+      "id": "8421733",
+      "name": "WINDOFSAND SOFT MUSIC TOFFEE",
+      "loi": "LO23181495",
+      "birth_date": "2023-10-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Toffee"
+    },
+    "8222562": {
+      "id": "8222562",
+      "name": "WINDOFSAND JAIS LOLA THE PASSION",
+      "loi": "LO22185590",
+      "birth_date": "2022-08-23",
+      "sex": "F",
+      "owner": null,
+      "aka": "Lola"
+    },
+    "8421729": {
+      "id": "8421729",
+      "name": "WINDOFSAND JAZZ MUSIC KOBE",
+      "loi": "LO23181491",
+      "birth_date": "2023-10-06",
+      "sex": "M",
+      "owner": null,
+      "aka": "Kobe"
+    },
+    "8421726": {
+      "id": "8421726",
+      "name": "WINDOFSAND POP MUSIC ZACK",
+      "loi": "LO23181488",
+      "birth_date": "2023-10-06",
+      "sex": "M",
+      "owner": null,
+      "aka": "Zack"
+    },
+    "8361036": {
+      "id": "8361036",
+      "name": "WINDOFSAND HIPPO TOM TOM",
+      "loi": "LO23120773",
+      "birth_date": "2023-06-03",
+      "sex": "M",
+      "owner": null,
+      "aka": "Tom"
+    },
+    "8421730": {
+      "id": "8421730",
+      "name": "WINDOFSAND COUNTRY BOY BALTO",
+      "loi": "LO23181492",
+      "birth_date": "2023-10-06",
+      "sex": "M",
+      "owner": null,
+      "aka": "Balto"
+    },
+    "5974291": {
+      "id": "5974291",
+      "name": "GOLDEN PINE DUSTRAX MAVERICK CDX TDX",
+      "loi": "AKC/SN21914303",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5974292": {
+      "id": "5974292",
+      "name": "SUMMITS SHADOW DANCER",
+      "loi": "AKC/SG039087",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6024051": {
+      "id": "6024051",
+      "name": "SHILO'S BET ON IT",
+      "loi": "AKCSN41477003",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6680924": {
+      "id": "6680924",
+      "name": "SNOWSHOE'S GIRL CRAZY UD MH CH",
+      "loi": "AKC/SN86936901",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6680925": {
+      "id": "6680925",
+      "name": "SNOWSHOE'S BEST POLICY",
+      "loi": "AKC/SR02516201",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "5896712": {
+      "id": "5896712",
+      "name": "SIGNATURE'S SIR BARTON CH",
+      "loi": "FCA5720",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5896711": {
+      "id": "5896711",
+      "name": "HIGHLAND'S LUCK BE A LADY CH",
+      "loi": "FCA4250",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "4316664": {
+      "id": "4316664",
+      "name": "SIGNATURE'S NATURAL WONDER CH",
+      "loi": "SM791347/039-93",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090032": {
+      "id": "7090032",
+      "name": "DUCAT'S FORTUNE IN GOLD CDX SH",
+      "loi": "SM 97596407",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7090033": {
+      "id": "7090033",
+      "name": "DALANE RAZIN CAINE ON SIXTY SIX CH",
+      "loi": "SR 00024803",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090034": {
+      "id": "7090034",
+      "name": "GORCA'S VEGA RUNAWAYBRIDE CH",
+      "loi": "SN72749701",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6073189": {
+      "id": "6073189",
+      "name": "FREEDOM OF GOLDEN SPIRIT",
+      "loi": "CBK/SPQ/04/01608",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090035": {
+      "id": "7090035",
+      "name": "HUNTER LOVE HONEY VILA CONCEICAO",
+      "loi": "RSA0302350",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6271485": {
+      "id": "6271485",
+      "name": "NAUTILUS FOX MULDER BR GRAND CH PAN AR CH",
+      "loi": "SN87220903",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090036": {
+      "id": "7090036",
+      "name": "TAILOR MADE GOLDEN FORTUNE",
+      "loi": "RJC0100155",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "5896731": {
+      "id": "5896731",
+      "name": "TIGER WOODS DE JAZZ",
+      "loi": "FCA21484",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5799023": {
+      "id": "5799023",
+      "name": "BARBOUR-GOLD'S POLO LA AURORA ",
+      "loi": "BR3346",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6053445": {
+      "id": "6053445",
+      "name": "CLADDAGH'S BRONZE MAN CH",
+      "loi": "FCMQ5751SR21641307",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6053452": {
+      "id": "6053452",
+      "name": "QUEIJEIRO MATILDA (ORTIZ) MEX FCI HD\"A\"CAMPMEXGCM",
+      "loi": "FCMR8763E",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "5047781": {
+      "id": "5047781",
+      "name": "NAPOLEONE",
+      "loi": "LO055879",
+      "birth_date": "2004-06-21",
+      "sex": "M",
+      "owner": null
+    },
+    "5197342": {
+      "id": "5197342",
+      "name": "QUEENOFFLOWERS",
+      "loi": "LO0617918",
+      "birth_date": "2005-05-11",
+      "sex": "F",
+      "owner": null
+    },
+    "6754751": {
+      "id": "6754751",
+      "name": "RUSH HILL'S WINNER TAKE ALL CH USA",
+      "loi": "FCMP6807",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6749991": {
+      "id": "6749991",
+      "name": "FALLCHASE GEMINI MARKQUISE DIAMOND NAJ CH AM",
+      "loi": "SR14157602",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "5896508": {
+      "id": "5896508",
+      "name": "GOLDEN TRIP SILVERSOUND VERMONT",
+      "loi": "SPX/07/06994",
+      "birth_date": "2007-10-07",
+      "sex": "M",
+      "owner": null
+    },
+    "5896715": {
+      "id": "5896715",
+      "name": "GOLDEN SUNSHINE BORN TO SHINE",
+      "loi": "LO10161016",
+      "birth_date": "2006-09-09",
+      "sex": "F",
+      "owner": null
+    },
+    "6163856": {
+      "id": "6163856",
+      "name": "CLADDAGH'SW BRONZE MAN CH",
+      "loi": "FCMQ5751SR21641307",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6161113": {
+      "id": "6161113",
+      "name": "QUEIJEIRO MATILDA (ORTIZ) MEXFCI HD\"A\"CAMPMEXGCM",
+      "loi": "FCMR8769E",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6048131": {
+      "id": "6048131",
+      "name": "LEONGOLDEN TEXAS SECRET",
+      "loi": "LO1198228",
+      "birth_date": "2011-04-03",
+      "sex": "M",
+      "owner": null
+    },
+    "5907023": {
+      "id": "5907023",
+      "name": "LEONGOLDEN SALSA CUBANA",
+      "loi": "LO10171343",
+      "birth_date": "2010-05-16",
+      "sex": "F",
+      "owner": null
+    },
+    "6895711": {
+      "id": "6895711",
+      "name": "LEONGOLDEN MOUNA THE SAND WIND",
+      "loi": "LO1674737",
+      "birth_date": "2016-03-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Mouna"
+    },
+    "8314004": {
+      "id": "8314004",
+      "name": "FOREVER A FISH IS A WISH AT WINDOFSAND",
+      "loi": "LO2373664",
+      "birth_date": "2022-01-29",
+      "sex": "F",
+      "owner": null,
+      "aka": "Wish"
+    },
+    "7090013": {
+      "id": "7090013",
+      "name": "FLYING NICO DE HIMMELSTEIN CH CHI INC ARG CH JCHI",
+      "loi": "SR87083602",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "8313993": {
+      "id": "8313993",
+      "name": "FOREVER READY OR NOT HERE I COME",
+      "loi": "SS17271903",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7090014": {
+      "id": "7090014",
+      "name": "FOREVER'S ALL JACKED UP CGC GCH AME",
+      "loi": "KCC 419490",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "8313994": {
+      "id": "8313994",
+      "name": "TRADEMARK'S TIME OF MY LIFE CH",
+      "loi": "SR98336001",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "8313995": {
+      "id": "8313995",
+      "name": "FOREVER'S RAGS TO RICHES RN CAA",
+      "loi": "SR78579201",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7340180": {
+      "id": "7340180",
+      "name": "MY BUDDY'S COCO CABANA BANANA CH",
+      "loi": "SR35626206",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6680930": {
+      "id": "6680930",
+      "name": "BARBOUR-GOLD'S POLO LA MANUELA",
+      "loi": "FCA/14990",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7062346": {
+      "id": "7062346",
+      "name": "VENTURE REDOG'S MAGIC HAT TRICK AM CH",
+      "loi": "SR45585501",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "8313996": {
+      "id": "8313996",
+      "name": "KRISTIL'S HOUDINI OF THE HARDWOOD AT TRADEMARK CH",
+      "loi": "SR80394703",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7513160": {
+      "id": "7513160",
+      "name": "RUSH HILL'S DRAMA'GEDDON RN JH RATN GCHP CH",
+      "loi": "SR62219801",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7968808": {
+      "id": "7968808",
+      "name": "FAERA'S BALALAIKA CH AM",
+      "loi": "SR38423008",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6472041": {
+      "id": "6472041",
+      "name": "LEONGOLDEN A SEA STAR IS BORN",
+      "loi": "LO1417892",
+      "birth_date": "2013-11-08",
+      "sex": "F",
+      "owner": null,
+      "aka": "Quiet"
+    },
+    "7929643": {
+      "id": "7929643",
+      "name": "WINDOFSAND MISS CARAMEL DORY TRAVEL CAKE",
+      "loi": "LO21118174",
+      "birth_date": "2021-05-01",
+      "sex": "F",
+      "owner": null,
+      "aka": "Dory"
+    },
+    "7929645": {
+      "id": "7929645",
+      "name": "WINDOFSAND BROWNIE SWEET LOVE",
+      "loi": "LO21118176",
+      "birth_date": "2021-05-01",
+      "sex": "M",
+      "owner": null,
+      "aka": "Brownie"
+    },
+    "7929635": {
+      "id": "7929635",
+      "name": "WINDOFSAND MOUSSE KOBE FLUFFY LOVE",
+      "loi": "LO21118166",
+      "birth_date": "2021-05-01",
+      "sex": "M",
+      "owner": null,
+      "aka": "Kobe"
+    },
+    "7929607": {
+      "id": "7929607",
+      "name": "WINDOFSAND WIND STORM NOT ONLY YOU",
+      "loi": "LO21118138",
+      "birth_date": "2021-05-01",
+      "sex": "M",
+      "owner": null,
+      "aka": "Oro"
+    },
+    "7929651": {
+      "id": "7929651",
+      "name": "WINDOFSAND BISCUIT A DREAM  HAS NOT LIMIT",
+      "loi": "LO21118182",
+      "birth_date": "2021-05-01",
+      "sex": "M",
+      "owner": null,
+      "aka": "Baba'"
+    },
+    "7929639": {
+      "id": "7929639",
+      "name": "WINDOFSAND MR. MUFFIN READ BEFORE USE",
+      "loi": "LO21118170",
+      "birth_date": "2021-05-01",
+      "sex": "M",
+      "owner": null,
+      "aka": "Muffin"
+    },
+    "7929637": {
+      "id": "7929637",
+      "name": "WINDOFSAND CHANTILLY NALA IS ALWAYS TOP",
+      "loi": "LO21118168",
+      "birth_date": "2021-05-01",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nala"
+    },
+    "7929641": {
+      "id": "7929641",
+      "name": "WINDOFSAND SABLE' AGATA BEAUTY LADY",
+      "loi": "LO21118172",
+      "birth_date": "2021-05-01",
+      "sex": "F",
+      "owner": null,
+      "aka": "Agata"
+    },
+    "7213842": {
+      "id": "7213842",
+      "name": "CANDY DE JAZZ",
+      "loi": "LO17194213",
+      "birth_date": "2016-08-27",
+      "sex": "F",
+      "owner": null,
+      "hide_birth_litter": true
+    },
+    "7946003": {
+      "id": "7946003",
+      "name": "WINDOFSAND WOODY NICE BOY",
+      "loi": "LO21134538",
+      "birth_date": "2021-05-18",
+      "sex": "M",
+      "owner": null,
+      "aka": "Woody"
+    },
+    "7946013": {
+      "id": "7946013",
+      "name": "WINDOFSAND AUDRY MAYBELLE TIFFANY",
+      "loi": "LO21134548",
+      "birth_date": "2021-05-18",
+      "sex": "F",
+      "owner": null,
+      "aka": "Maybelle"
+    },
+    "7946004": {
+      "id": "7946004",
+      "name": "WINDOFSAND COCO CHANEL MIA ELEGANT LADY",
+      "loi": "LO21134539",
+      "birth_date": "2021-05-18",
+      "sex": "F",
+      "owner": null,
+      "aka": "Mia"
+    },
+    "7946002": {
+      "id": "7946002",
+      "name": "WINDOFSAND JUNIOR B. THE KING OF LOVE",
+      "loi": "LO21134537",
+      "birth_date": "2021-05-18",
+      "sex": "M",
+      "owner": null
+    },
+    "7946007": {
+      "id": "7946007",
+      "name": "WINDOFSAND GRACE KELLY THE CHOISE",
+      "loi": "LO21134542",
+      "birth_date": "2021-05-18",
+      "sex": "F",
+      "owner": null,
+      "aka": "Grace"
+    },
+    "6680927": {
+      "id": "6680927",
+      "name": "RUSH HILL'S FOOLISH PLEASURE CH",
+      "loi": "AKCSN82616101",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6680928": {
+      "id": "6680928",
+      "name": "RUSH HILL'S CRIME OF PASSION CH",
+      "loi": "AKC/SN57426703",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6899470": {
+      "id": "6899470",
+      "name": "DEJA VU'S AIR PHARE MILES CH",
+      "loi": "AKCSN84575201",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7090017": {
+      "id": "7090017",
+      "name": "KARAGOLD'S PHEE PHI PHO PHUN RN CH",
+      "loi": "SR.12265601",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6544942": {
+      "id": "6544942",
+      "name": "HALLOWEEN TOUCH OF HEAVEN CH ARG LAT",
+      "loi": "KCU266",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5686426": {
+      "id": "5686426",
+      "name": "BARBOUR-GOLD'S MAGNETIC MAGGIE",
+      "loi": "FCA6059",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7062350": {
+      "id": "7062350",
+      "name": "SUNBEAM'S PRIVATE PARTY CH AM",
+      "loi": "AKC/SN82466901O",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7062351": {
+      "id": "7062351",
+      "name": "KARAGOLD'S WHISTLIN N'THE WIND CH AM",
+      "loi": "AKC/SN88555801O",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7178406": {
+      "id": "7178406",
+      "name": "HYTREE SUMMITS TIME SQUARE CH",
+      "loi": "SR64075701",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "8314000": {
+      "id": "8314000",
+      "name": "KRISTIL'S SHAKE WHAT YOUR MAMA GAVEU CH",
+      "loi": "SR57056607",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7020553": {
+      "id": "7020553",
+      "name": "RUS HILL RUN'N AMUCK AT ABELARD GCH CH",
+      "loi": "SR08631501",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "7020554": {
+      "id": "7020554",
+      "name": "RUSH HILL'S HERE WE GO AGAIN CH",
+      "loi": "SR20209701",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6053446": {
+      "id": "6053446",
+      "name": "FAERA'S STARLIGHT CHOFA26EOFEL24CERF63DNAV160046",
+      "loi": "SN70962301",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6242775": {
+      "id": "6242775",
+      "name": "FAERA'S AKA",
+      "loi": "SR20215301",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6754753": {
+      "id": "6754753",
+      "name": "GOODTIME'S TRADEMARK OF RUSH HILL'S OA NAJ",
+      "loi": "SM379923/0",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "6754754": {
+      "id": "6754754",
+      "name": "RUSH HILL'S FAITHFUL JOURNEY CH USA",
+      "loi": "SM24021806",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "6749995": {
+      "id": "6749995",
+      "name": "FALLCHASE CALL OF THE SOUTH",
+      "loi": "SN76782501",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "5896500": {
+      "id": "5896500",
+      "name": "FREEDOM OF GOLDEN SPIRIT ",
+      "loi": "RG/SPQ/04/01608",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5896507": {
+      "id": "5896507",
+      "name": "SILVER SOUND'S LOLLIPOP ",
+      "loi": "BR3347",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "5896707": {
+      "id": "5896707",
+      "name": "LAUREATE GRACIOUS KING LEAR CH",
+      "loi": "SN651807/05",
+      "birth_date": null,
+      "sex": "M",
+      "owner": null
+    },
+    "5896714": {
+      "id": "5896714",
+      "name": "FEME FATALE DE JAZZ ",
+      "loi": "BR2775",
+      "birth_date": null,
+      "sex": "F",
+      "owner": null
+    },
+    "7325895": {
+      "id": "7325895",
+      "name": "CASHMERE AMERICAN BEAUTY MARLEY",
+      "loi": "LO18110299",
+      "birth_date": "2018-05-28",
+      "sex": "M",
+      "owner": null,
+      "aka": "Marley"
+    },
+    "6472042": {
+      "id": "6472042",
+      "name": "LEONGOLDEN KARALIS WAVE",
+      "loi": "LO1417893",
+      "birth_date": "2013-11-08",
+      "sex": "F",
+      "owner": null,
+      "aka": "Wave"
+    },
+    "6895715": {
+      "id": "6895715",
+      "name": "LEONGOLDEN NALA A WIND GRAIN SAND",
+      "loi": "LO1674741",
+      "birth_date": "2016-03-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nala"
+    },
+    "6472038": {
+      "id": "6472038",
+      "name": "LEONGOLDEN J.C. THE WIND OF SAND",
+      "loi": "LO1417889",
+      "birth_date": "2013-11-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6472040": {
+      "id": "6472040",
+      "name": "LEONGOLDEN SHAMAN OF THE SEA",
+      "loi": "LO1417891",
+      "birth_date": "2013-11-08",
+      "sex": "M",
+      "owner": null
+    },
+    "6472043": {
+      "id": "6472043",
+      "name": "LEONGOLDEN FIRST LIGHT",
+      "loi": "LO1417894",
+      "birth_date": "2013-11-08",
+      "sex": "F",
+      "owner": null,
+      "aka": "Maya"
+    },
+    "6472039": {
+      "id": "6472039",
+      "name": "LEONGOLDEN GOLD WIND",
+      "loi": "LO1417890",
+      "birth_date": "2013-11-08",
+      "sex": "F",
+      "owner": null,
+      "aka": "Maya"
+    },
+    "6895712": {
+      "id": "6895712",
+      "name": "LEONGOLDEN CHLOE' THE GOLD SAND IN THE WIND",
+      "loi": "LO1674738",
+      "birth_date": "2016-03-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Chloe'"
+    },
+    "6472044": {
+      "id": "6472044",
+      "name": "LEONGOLDEN WHITE WHALE",
+      "loi": "LO1417895",
+      "birth_date": "2013-11-08",
+      "sex": "F",
+      "owner": null
+    },
+    "6472048": {
+      "id": "6472048",
+      "name": "LEONGOLDEN SEA PEARL",
+      "loi": "LO1417899",
+      "birth_date": "2013-11-08",
+      "sex": "F",
+      "owner": null,
+      "aka": "Miele"
+    },
+    "6895714": {
+      "id": "6895714",
+      "name": "LEONGOLDEN ROSE THE WIND ON THE SAND",
+      "loi": "LO1674740",
+      "birth_date": "2016-03-06",
+      "sex": "F",
+      "owner": null,
+      "aka": "Rose"
+    },
+    "6895709": {
+      "id": "6895709",
+      "name": "LEONGOLDEN THE SAND STORM OF WIND",
+      "loi": "LO1674735",
+      "birth_date": "2016-03-06",
+      "sex": "M",
+      "owner": null
+    },
+    "6895710": {
+      "id": "6895710",
+      "name": "LEONGOLDEN ROGER SAND WILD WIND",
+      "loi": "LO1674736",
+      "birth_date": "2016-03-06",
+      "sex": "M",
+      "owner": null,
+      "aka": "Ruggero"
+    },
+    "8275919": {
+      "id": "8275919",
+      "name": "WINDOFSAND ENJOY BABY DOLL OF MAHEO",
+      "loi": "LO2335374",
+      "birth_date": "2022-10-10",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "role": "new_entry",
+      "aka": "Enjoy"
+    },
+    "5658917": {
+      "id": "5658917",
+      "name": "ARGOANNE",
+      "loi": "LO0994298",
+      "birth_date": "2008-07-08",
+      "sex": "M",
+      "owner": null,
+      "aka": "Doby",
+      "role": "dove_tutto_iniziato"
+    },
+    "5898573": {
+      "id": "5898573",
+      "name": "LEONGOLDEN FIRST KISS",
+      "loi": "LO10162878",
+      "birth_date": "2010-04-16",
+      "sex": "F",
+      "owner": "FRADELLONI ANTONIETTA",
+      "aka": "Maya",
+      "role": "dove_tutto_iniziato"
+    },
+    "6783208": {
+      "id": "6783208",
+      "name": "LEONGOLDEN MARGARET THE WISE AND MATERNAL",
+      "loi": "LO15151619",
+      "birth_date": "2015-07-18",
+      "sex": "F",
+      "owner": null,
+      "aka": "Lola"
+    },
+    "6384385": {
+      "id": "6384385",
+      "name": "LEONGOLDEN TWILIGHT SPARKLE",
+      "loi": "LO1398846",
+      "birth_date": "2013-03-26",
+      "sex": "F",
+      "owner": null,
+      "aka": "Wave"
+    }
+  },
+  "relationships": {
+    "8688879": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "7960422": {
+      "sire": "6024084",
+      "dam": "7090025"
+    },
+    "8043182": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "6024084": {
+      "sire": "6024047",
+      "dam": "6024080"
+    },
+    "7090025": {
+      "sire": "7090026",
+      "dam": "7090027"
+    },
+    "6943926": {
+      "sire": "6899464",
+      "dam": "6899482"
+    },
+    "6895713": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6024047": {
+      "sire": "6024048",
+      "dam": "6024049"
+    },
+    "6024080": {
+      "sire": "5728298",
+      "dam": "5896713"
+    },
+    "7090026": {
+      "sire": "7090028",
+      "dam": "7090029"
+    },
+    "7090027": {
+      "sire": "7090030",
+      "dam": "7090031"
+    },
+    "6899464": {
+      "sire": "6899465",
+      "dam": "6899466"
+    },
+    "6899482": {
+      "sire": "6899483",
+      "dam": "6029784"
+    },
+    "6116932": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6158779": {
+      "sire": "6053459",
+      "dam": "5393335"
+    },
+    "8688886": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "8688890": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "8688892": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "8688894": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "8688895": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "8688903": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "8688916": {
+      "sire": "7960422",
+      "dam": "8043182"
+    },
+    "8626744": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "8254828": {
+      "sire": "7960422",
+      "dam": "7325892"
+    },
+    "7325892": {
+      "sire": "6749997",
+      "dam": "6783205"
+    },
+    "6899465": {
+      "sire": "6024050",
+      "dam": "6899467"
+    },
+    "6899466": {
+      "sire": "6899468",
+      "dam": "6899469"
+    },
+    "6899483": {
+      "sire": "6680922",
+      "dam": "7305854"
+    },
+    "6029784": {
+      "sire": "7305855",
+      "dam": "6003230"
+    },
+    "6749997": {
+      "sire": "6749989",
+      "dam": "5898267"
+    },
+    "6783205": {
+      "sire": "6166584",
+      "dam": "6323201"
+    },
+    "8626751": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "8626755": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "6116967": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6067559": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6053471": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6116976": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6116998": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6067560": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6077115": {
+      "sire": "6024084",
+      "dam": "5738669"
+    },
+    "6053469": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6067562": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6067564": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6053470": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6053467": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6116977": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6067569": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6053466": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6077125": {
+      "sire": "6024084",
+      "dam": "5738669"
+    },
+    "6067568": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6067566": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6077126": {
+      "sire": "6024084",
+      "dam": "5738669"
+    },
+    "6116975": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6116972": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6053468": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6116969": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6067561": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6053463": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6116937": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6067567": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6077141": {
+      "sire": "6024084",
+      "dam": "5738669"
+    },
+    "6077129": {
+      "sire": "6024084",
+      "dam": "5738669"
+    },
+    "6116997": {
+      "sire": "6024084",
+      "dam": "5896732"
+    },
+    "6067565": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6077134": {
+      "sire": "6024084",
+      "dam": "5738669"
+    },
+    "6053472": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6053464": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "6067563": {
+      "sire": "6024084",
+      "dam": "5443435"
+    },
+    "6053465": {
+      "sire": "6024084",
+      "dam": "5635152"
+    },
+    "7763052": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043165": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043176": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504931": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043201": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763055": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763054": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763056": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504926": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763053": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763057": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504927": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763049": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504925": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043170": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763051": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504929": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504928": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504923": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043181": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043194": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043183": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504930": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043178": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504920": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "8043180": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7504924": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7763050": {
+      "sire": "6943926",
+      "dam": "6895713"
+    },
+    "7568438": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "7215258": {
+      "sire": "6943926",
+      "dam": "7023608"
+    },
+    "8626766": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "7215249": {
+      "sire": "6943926",
+      "dam": "7023608"
+    },
+    "7264046": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "7264060": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "7568432": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "8626788": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "8530945": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "8530948": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "7568427": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "8530953": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "8530954": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "7568430": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "8530950": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "7264058": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "7568445": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "8530946": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "8530947": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "8626773": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "7264067": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "7215257": {
+      "sire": "6943926",
+      "dam": "7023608"
+    },
+    "8530952": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "7568426": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "7264066": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "8626776": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "7568443": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "7264047": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "7568442": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "8530944": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "7264052": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "7264059": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "8626761": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "7215250": {
+      "sire": "6943926",
+      "dam": "7023608"
+    },
+    "7264056": {
+      "sire": "6943926",
+      "dam": "6472041"
+    },
+    "8530951": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "8626781": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "7215253": {
+      "sire": "6943926",
+      "dam": "7023608"
+    },
+    "7568441": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "8530949": {
+      "sire": "6943926",
+      "dam": "8314004"
+    },
+    "8626805": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "8626812": {
+      "sire": "6943926",
+      "dam": "8254828"
+    },
+    "7215248": {
+      "sire": "6943926",
+      "dam": "7023608"
+    },
+    "7568436": {
+      "sire": "6943926",
+      "dam": "6895711"
+    },
+    "7090038": {
+      "sire": "7090013",
+      "dam": "7090025"
+    },
+    "8254830": {
+      "sire": "7960422",
+      "dam": "7325892"
+    },
+    "8254827": {
+      "sire": "7960422",
+      "dam": "7325892"
+    },
+    "8254826": {
+      "sire": "7960422",
+      "dam": "7325892"
+    },
+    "8254829": {
+      "sire": "7960422",
+      "dam": "7325892"
+    },
+    "8421728": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8361033": {
+      "sire": "7960422",
+      "dam": "7504929"
+    },
+    "8361031": {
+      "sire": "7960422",
+      "dam": "7504929"
+    },
+    "8222564": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8222559": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8222565": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8421731": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8361030": {
+      "sire": "7960422",
+      "dam": "7504929"
+    },
+    "8222560": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8222561": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8361034": {
+      "sire": "7960422",
+      "dam": "7504929"
+    },
+    "8361029": {
+      "sire": "7960422",
+      "dam": "7504929"
+    },
+    "8361032": {
+      "sire": "7960422",
+      "dam": "7504929"
+    },
+    "8421725": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8222563": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8222558": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8421727": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8421732": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8421733": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8222562": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8421729": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8421726": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "8361036": {
+      "sire": "7960422",
+      "dam": "7504929"
+    },
+    "8421730": {
+      "sire": "7960422",
+      "dam": "7264056"
+    },
+    "6024048": {
+      "sire": "5974291",
+      "dam": "5974292"
+    },
+    "6024049": {
+      "sire": "6024050",
+      "dam": "6024051"
+    },
+    "5728298": {
+      "sire": "6680924",
+      "dam": "6680925"
+    },
+    "5896713": {
+      "sire": "5896712",
+      "dam": "5896711"
+    },
+    "7090028": {
+      "sire": "4316664",
+      "dam": "7090032"
+    },
+    "7090029": {
+      "sire": "7090033",
+      "dam": "7090034"
+    },
+    "7090030": {
+      "sire": "6073189",
+      "dam": "7090035"
+    },
+    "7090031": {
+      "sire": "6271485",
+      "dam": "7090036"
+    },
+    "5896732": {
+      "sire": "5896731",
+      "dam": "5799023"
+    },
+    "6053459": {
+      "sire": "6053445",
+      "dam": "6053452"
+    },
+    "5393335": {
+      "sire": "5047781",
+      "dam": "5197342"
+    },
+    "6749989": {
+      "sire": "6754751",
+      "dam": "6749991"
+    },
+    "5898267": {
+      "sire": "5896508",
+      "dam": "5896715"
+    },
+    "6166584": {
+      "sire": "6163856",
+      "dam": "6161113"
+    },
+    "6323201": {
+      "sire": "6048131",
+      "dam": "5907023"
+    },
+    "6895711": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "8314004": {
+      "sire": "7090013",
+      "dam": "8313993"
+    },
+    "7090013": {
+      "sire": "7090014",
+      "dam": "7305854"
+    },
+    "8313993": {
+      "sire": "8313994",
+      "dam": "8313995"
+    },
+    "7090014": {
+      "sire": "6680922",
+      "dam": "7340180"
+    },
+    "7305854": {
+      "sire": "5728298",
+      "dam": "6680930"
+    },
+    "8313994": {
+      "sire": "7062346",
+      "dam": "8313996"
+    },
+    "8313995": {
+      "sire": "7513160",
+      "dam": "7968808"
+    },
+    "6472041": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "7929643": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7929645": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7929635": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7929607": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7929651": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7929639": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7929637": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7929641": {
+      "sire": "7264047",
+      "dam": "6895711"
+    },
+    "7213842": {
+      "sire": "7090013",
+      "dam": "6899482"
+    },
+    "7946003": {
+      "sire": "6749997",
+      "dam": "7264056"
+    },
+    "7946013": {
+      "sire": "6749997",
+      "dam": "7264056"
+    },
+    "7946004": {
+      "sire": "6749997",
+      "dam": "7264056"
+    },
+    "7946002": {
+      "sire": "6749997",
+      "dam": "7264056"
+    },
+    "7946007": {
+      "sire": "6749997",
+      "dam": "7264056"
+    },
+    "6680922": {
+      "sire": "6680927",
+      "dam": "6680928"
+    },
+    "7340180": {
+      "sire": "6899470",
+      "dam": "7090017"
+    },
+    "6680930": {
+      "sire": "6544942",
+      "dam": "5686426"
+    },
+    "7062346": {
+      "sire": "7062350",
+      "dam": "7062351"
+    },
+    "8313996": {
+      "sire": "7178406",
+      "dam": "8314000"
+    },
+    "7513160": {
+      "sire": "7020553",
+      "dam": "7020554"
+    },
+    "7968808": {
+      "sire": "6053446",
+      "dam": "6242775"
+    },
+    "6754751": {
+      "sire": "6754753",
+      "dam": "6754754"
+    },
+    "6749991": {
+      "sire": "6680924",
+      "dam": "6749995"
+    },
+    "5896508": {
+      "sire": "5896500",
+      "dam": "5896507"
+    },
+    "5896715": {
+      "sire": "5896707",
+      "dam": "5896714"
+    },
+    "7325895": {
+      "sire": "6749997",
+      "dam": "6783205"
+    },
+    "6472042": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6895715": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6472038": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6472040": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6472043": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6472039": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6895712": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6472044": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6472048": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6895714": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6895709": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6895710": {
+      "sire": "6116932",
+      "dam": "6158779"
+    },
+    "6783208": {
+      "sire": "6166584",
+      "dam": "6323201"
+    }
+  },
+  "children": {
+    "7960422": [
+      "8222558",
+      "8222559",
+      "8222560",
+      "8222561",
+      "8222562",
+      "8222563",
+      "8222564",
+      "8222565",
+      "8254826",
+      "8254827",
+      "8254828",
+      "8254829",
+      "8254830",
+      "8361029",
+      "8361030",
+      "8361031",
+      "8361032",
+      "8361033",
+      "8361034",
+      "8361036",
+      "8421725",
+      "8421726",
+      "8421727",
+      "8421728",
+      "8421729",
+      "8421730",
+      "8421731",
+      "8421732",
+      "8421733",
+      "8688879",
+      "8688886",
+      "8688890",
+      "8688892",
+      "8688894",
+      "8688895",
+      "8688903",
+      "8688916"
+    ],
+    "8043182": [
+      "8688879",
+      "8688886",
+      "8688890",
+      "8688892",
+      "8688894",
+      "8688895",
+      "8688903",
+      "8688916"
+    ],
+    "6024084": [
+      "6053463",
+      "6053464",
+      "6053465",
+      "6053466",
+      "6053467",
+      "6053468",
+      "6053469",
+      "6053470",
+      "6053471",
+      "6053472",
+      "6067559",
+      "6067560",
+      "6067561",
+      "6067562",
+      "6067563",
+      "6067564",
+      "6067565",
+      "6067566",
+      "6067567",
+      "6067568",
+      "6067569",
+      "6077115",
+      "6077125",
+      "6077126",
+      "6077129",
+      "6077134",
+      "6077141",
+      "6116932",
+      "6116937",
+      "6116967",
+      "6116969",
+      "6116972",
+      "6116975",
+      "6116976",
+      "6116977",
+      "6116997",
+      "6116998",
+      "7960422"
+    ],
+    "7090025": [
+      "7090038",
+      "7960422"
+    ],
+    "6943926": [
+      "7215248",
+      "7215249",
+      "7215250",
+      "7215253",
+      "7215257",
+      "7215258",
+      "7264046",
+      "7264047",
+      "7264052",
+      "7264056",
+      "7264058",
+      "7264059",
+      "7264060",
+      "7264066",
+      "7264067",
+      "7504920",
+      "7504923",
+      "7504924",
+      "7504925",
+      "7504926",
+      "7504927",
+      "7504928",
+      "7504929",
+      "7504930",
+      "7504931",
+      "7568426",
+      "7568427",
+      "7568430",
+      "7568432",
+      "7568436",
+      "7568438",
+      "7568441",
+      "7568442",
+      "7568443",
+      "7568445",
+      "7763049",
+      "7763050",
+      "7763051",
+      "7763052",
+      "7763053",
+      "7763054",
+      "7763055",
+      "7763056",
+      "7763057",
+      "8043165",
+      "8043170",
+      "8043176",
+      "8043178",
+      "8043180",
+      "8043181",
+      "8043182",
+      "8043183",
+      "8043194",
+      "8043201",
+      "8530944",
+      "8530945",
+      "8530946",
+      "8530947",
+      "8530948",
+      "8530949",
+      "8530950",
+      "8530951",
+      "8530952",
+      "8530953",
+      "8530954",
+      "8626744",
+      "8626751",
+      "8626755",
+      "8626761",
+      "8626766",
+      "8626773",
+      "8626776",
+      "8626781",
+      "8626788",
+      "8626805",
+      "8626812"
+    ],
+    "6895713": [
+      "7504920",
+      "7504923",
+      "7504924",
+      "7504925",
+      "7504926",
+      "7504927",
+      "7504928",
+      "7504929",
+      "7504930",
+      "7504931",
+      "7763049",
+      "7763050",
+      "7763051",
+      "7763052",
+      "7763053",
+      "7763054",
+      "7763055",
+      "7763056",
+      "7763057",
+      "8043165",
+      "8043170",
+      "8043176",
+      "8043178",
+      "8043180",
+      "8043181",
+      "8043182",
+      "8043183",
+      "8043194",
+      "8043201"
+    ],
+    "6024047": [
+      "6024084"
+    ],
+    "6024080": [
+      "6024084"
+    ],
+    "7090026": [
+      "7090025"
+    ],
+    "7090027": [
+      "7090025"
+    ],
+    "6899464": [
+      "6943926"
+    ],
+    "6899482": [
+      "6943926",
+      "7213842"
+    ],
+    "6116932": [
+      "6472041",
+      "6895711",
+      "6895713",
+      "6472042",
+      "6895715",
+      "6472038",
+      "6472040",
+      "6472043",
+      "6472039",
+      "6895712",
+      "6472044",
+      "6472048",
+      "6895714",
+      "6895709",
+      "6895710"
+    ],
+    "6158779": [
+      "6472041",
+      "6895711",
+      "6895713",
+      "6472042",
+      "6895715",
+      "6472038",
+      "6472040",
+      "6472043",
+      "6472039",
+      "6895712",
+      "6472044",
+      "6472048",
+      "6895714",
+      "6895709",
+      "6895710"
+    ],
+    "6024048": [
+      "6024047"
+    ],
+    "6024049": [
+      "6024047"
+    ],
+    "5728298": [
+      "6024080",
+      "7305854"
+    ],
+    "5896713": [
+      "6024080"
+    ],
+    "7090028": [
+      "7090026"
+    ],
+    "7090029": [
+      "7090026"
+    ],
+    "7090030": [
+      "7090027"
+    ],
+    "7090031": [
+      "7090027"
+    ],
+    "6899465": [
+      "6899464"
+    ],
+    "6899466": [
+      "6899464"
+    ],
+    "6899483": [
+      "6899482"
+    ],
+    "6029784": [
+      "6899482"
+    ],
+    "5896732": [
+      "6116932",
+      "6116937",
+      "6116967",
+      "6116969",
+      "6116972",
+      "6116975",
+      "6116976",
+      "6116977",
+      "6116997",
+      "6116998"
+    ],
+    "6053459": [
+      "6158779"
+    ],
+    "5393335": [
+      "6158779"
+    ],
+    "8254828": [
+      "8626744",
+      "8626751",
+      "8626755",
+      "8626761",
+      "8626766",
+      "8626773",
+      "8626776",
+      "8626781",
+      "8626788",
+      "8626805",
+      "8626812"
+    ],
+    "7325892": [
+      "8254826",
+      "8254827",
+      "8254828",
+      "8254829",
+      "8254830"
+    ],
+    "6749997": [
+      "7325892",
+      "7325895",
+      "7946002",
+      "7946003",
+      "7946004",
+      "7946007",
+      "7946013"
+    ],
+    "6783205": [
+      "7325892",
+      "7325895"
+    ],
+    "6024050": [
+      "6024049",
+      "6899465"
+    ],
+    "6899467": [
+      "6899465"
+    ],
+    "6899468": [
+      "6899466"
+    ],
+    "6899469": [
+      "6899466"
+    ],
+    "6680922": [
+      "6899483",
+      "7090014"
+    ],
+    "7305854": [
+      "6899483",
+      "7090013"
+    ],
+    "7305855": [
+      "6029784"
+    ],
+    "6003230": [
+      "6029784"
+    ],
+    "6749989": [
+      "6749997"
+    ],
+    "5898267": [
+      "6749997"
+    ],
+    "6166584": [
+      "6783205",
+      "6783208"
+    ],
+    "6323201": [
+      "6783205",
+      "6783208"
+    ],
+    "5443435": [
+      "6067559",
+      "6067560",
+      "6067561",
+      "6067562",
+      "6067563",
+      "6067564",
+      "6067565",
+      "6067566",
+      "6067567",
+      "6067568",
+      "6067569"
+    ],
+    "5635152": [
+      "6053463",
+      "6053464",
+      "6053465",
+      "6053466",
+      "6053467",
+      "6053468",
+      "6053469",
+      "6053470",
+      "6053471",
+      "6053472"
+    ],
+    "5738669": [
+      "6077115",
+      "6077125",
+      "6077126",
+      "6077129",
+      "6077134",
+      "6077141"
+    ],
+    "6895711": [
+      "7568426",
+      "7568427",
+      "7568430",
+      "7568432",
+      "7568436",
+      "7568438",
+      "7568441",
+      "7568442",
+      "7568443",
+      "7568445",
+      "7929607",
+      "7929635",
+      "7929637",
+      "7929639",
+      "7929641",
+      "7929643",
+      "7929645",
+      "7929651"
+    ],
+    "7023608": [
+      "7215248",
+      "7215249",
+      "7215250",
+      "7215253",
+      "7215257",
+      "7215258"
+    ],
+    "6472041": [
+      "7264046",
+      "7264047",
+      "7264052",
+      "7264056",
+      "7264058",
+      "7264059",
+      "7264060",
+      "7264066",
+      "7264067"
+    ],
+    "8314004": [
+      "8530944",
+      "8530945",
+      "8530946",
+      "8530947",
+      "8530948",
+      "8530949",
+      "8530950",
+      "8530951",
+      "8530952",
+      "8530953",
+      "8530954"
+    ],
+    "7090013": [
+      "7090038",
+      "7213842",
+      "8314004"
+    ],
+    "7264056": [
+      "7946002",
+      "7946003",
+      "7946004",
+      "7946007",
+      "7946013",
+      "8222558",
+      "8222559",
+      "8222560",
+      "8222561",
+      "8222562",
+      "8222563",
+      "8222564",
+      "8222565",
+      "8421725",
+      "8421726",
+      "8421727",
+      "8421728",
+      "8421729",
+      "8421730",
+      "8421731",
+      "8421732",
+      "8421733"
+    ],
+    "7504929": [
+      "8361029",
+      "8361030",
+      "8361031",
+      "8361032",
+      "8361033",
+      "8361034",
+      "8361036"
+    ],
+    "5974291": [
+      "6024048"
+    ],
+    "5974292": [
+      "6024048"
+    ],
+    "6024051": [
+      "6024049"
+    ],
+    "6680924": [
+      "5728298",
+      "6749991"
+    ],
+    "6680925": [
+      "5728298"
+    ],
+    "5896712": [
+      "5896713"
+    ],
+    "5896711": [
+      "5896713"
+    ],
+    "4316664": [
+      "7090028"
+    ],
+    "7090032": [
+      "7090028"
+    ],
+    "7090033": [
+      "7090029"
+    ],
+    "7090034": [
+      "7090029"
+    ],
+    "6073189": [
+      "7090030"
+    ],
+    "7090035": [
+      "7090030"
+    ],
+    "6271485": [
+      "7090031"
+    ],
+    "7090036": [
+      "7090031"
+    ],
+    "5896731": [
+      "5896732"
+    ],
+    "5799023": [
+      "5896732"
+    ],
+    "6053445": [
+      "6053459"
+    ],
+    "6053452": [
+      "6053459"
+    ],
+    "5047781": [
+      "5393335"
+    ],
+    "5197342": [
+      "5393335"
+    ],
+    "6754751": [
+      "6749989"
+    ],
+    "6749991": [
+      "6749989"
+    ],
+    "5896508": [
+      "5898267"
+    ],
+    "5896715": [
+      "5898267"
+    ],
+    "6163856": [
+      "6166584"
+    ],
+    "6161113": [
+      "6166584"
+    ],
+    "6048131": [
+      "6323201"
+    ],
+    "5907023": [
+      "6323201"
+    ],
+    "8313993": [
+      "8314004"
+    ],
+    "7090014": [
+      "7090013"
+    ],
+    "8313994": [
+      "8313993"
+    ],
+    "8313995": [
+      "8313993"
+    ],
+    "7340180": [
+      "7090014"
+    ],
+    "6680930": [
+      "7305854"
+    ],
+    "7062346": [
+      "8313994"
+    ],
+    "8313996": [
+      "8313994"
+    ],
+    "7513160": [
+      "8313995"
+    ],
+    "7968808": [
+      "8313995"
+    ],
+    "7264047": [
+      "7929607",
+      "7929635",
+      "7929637",
+      "7929639",
+      "7929641",
+      "7929643",
+      "7929645",
+      "7929651"
+    ],
+    "6680927": [
+      "6680922"
+    ],
+    "6680928": [
+      "6680922"
+    ],
+    "6899470": [
+      "7340180"
+    ],
+    "7090017": [
+      "7340180"
+    ],
+    "6544942": [
+      "6680930"
+    ],
+    "5686426": [
+      "6680930"
+    ],
+    "7062350": [
+      "7062346"
+    ],
+    "7062351": [
+      "7062346"
+    ],
+    "7178406": [
+      "8313996"
+    ],
+    "8314000": [
+      "8313996"
+    ],
+    "7020553": [
+      "7513160"
+    ],
+    "7020554": [
+      "7513160"
+    ],
+    "6053446": [
+      "7968808"
+    ],
+    "6242775": [
+      "7968808"
+    ],
+    "6754753": [
+      "6754751"
+    ],
+    "6754754": [
+      "6754751"
+    ],
+    "6749995": [
+      "6749991"
+    ],
+    "5896500": [
+      "5896508"
+    ],
+    "5896507": [
+      "5896508"
+    ],
+    "5896707": [
+      "5896715"
+    ],
+    "5896714": [
+      "5896715"
+    ]
+  },
+  "windofsand_ids": [
+    "7264047",
+    "7504920",
+    "7504923",
+    "7504924",
+    "7504925",
+    "7504926",
+    "7504927",
+    "7504928",
+    "7504929",
+    "7504930",
+    "7504931",
+    "7568426",
+    "7568427",
+    "7568430",
+    "7568432",
+    "7568436",
+    "7568438",
+    "7568441",
+    "7568442",
+    "7568443",
+    "7568445",
+    "7763049",
+    "7763050",
+    "7763051",
+    "7763052",
+    "7763053",
+    "7763054",
+    "7763055",
+    "7763056",
+    "7763057",
+    "7929607",
+    "7929635",
+    "7929637",
+    "7929639",
+    "7929641",
+    "7929643",
+    "7929645",
+    "7929651",
+    "7946002",
+    "7946003",
+    "7946004",
+    "7946007",
+    "7946013",
+    "7960422",
+    "8043165",
+    "8043170",
+    "8043176",
+    "8043178",
+    "8043180",
+    "8043181",
+    "8043182",
+    "8043183",
+    "8043194",
+    "8043201",
+    "8222558",
+    "8222559",
+    "8222560",
+    "8222561",
+    "8222562",
+    "8222563",
+    "8222564",
+    "8222565",
+    "8254826",
+    "8254827",
+    "8254828",
+    "8254829",
+    "8254830",
+    "8314004",
+    "8361029",
+    "8361030",
+    "8361031",
+    "8361032",
+    "8361033",
+    "8361034",
+    "8361036",
+    "8421725",
+    "8421726",
+    "8421727",
+    "8421728",
+    "8421729",
+    "8421730",
+    "8421731",
+    "8421732",
+    "8421733",
+    "8530944",
+    "8530945",
+    "8530946",
+    "8530947",
+    "8530948",
+    "8530949",
+    "8530950",
+    "8530951",
+    "8530952",
+    "8530953",
+    "8530954",
+    "8626744",
+    "8626751",
+    "8626755",
+    "8626761",
+    "8626766",
+    "8626773",
+    "8626776",
+    "8626781",
+    "8626788",
+    "8626805",
+    "8626812",
+    "8688879",
+    "8688886",
+    "8688890",
+    "8688892",
+    "8688894",
+    "8688895",
+    "8688903",
+    "8688916",
+    "8275919"
+  ]
+}

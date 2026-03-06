@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wind of Sand® — Albero Genealogico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    :root {
+      --black: #1C1C1C;
+      --dark: #2A2A2A;
+      --charcoal: #3D3D3D;
+      --gold: #B8872A;
+      --gold-light: #D4A84A;
+      --gold-pale: #F7EDD4;
+      --white: #FFFFFF;
+      --cream: #F4EFE6;
+      --cream2: #EDE6DA;
+      --stone: #DDD6C8;
+
+      --stripe-m: #3B7EC8;
+      --stripe-f: #C83B7E;
+      --card-bg: #FFFFFF;
+      --ext-bg: #EAE6DF;
+      --card-shadow: 0 1px 5px rgba(0, 0, 0, 0.11);
+
+      --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.10);
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.13);
+      --shadow-lg: 0 6px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    #header {
+      background: var(--black);
+      color: var(--white);
+      height: 60px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-wordmark {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .brand-name em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .brand-sub {
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 300;
+      margin-top: 3px;
+    }
+
+    .header-divider {
+      width: 1px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .view-btn {
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.55);
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .view-btn:hover {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .view-btn.active {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Search */
+    #search-wrapper {
+      position: relative;
+      margin-left: auto;
+    }
+
+    #search-box {
+      width: 240px;
+      padding: 7px 14px 7px 34px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 2px;
+      color: var(--white);
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: all 0.25s;
+    }
+
+    #search-box::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    #search-box:focus {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--gold);
+      width: 280px;
+    }
+
+    #search-icon {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 12px;
+      pointer-events: none;
+    }
+
+    #search-results {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      width: 360px;
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 2px;
+      box-shadow: var(--shadow-lg);
+      max-height: 400px;
+      overflow-y: auto;
+      z-index: 200;
+      display: none;
+    }
+
+    #search-results::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    #search-results::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #search-results::-webkit-scrollbar-thumb {
+      background: var(--stone);
+    }
+
+    .result-item {
+      padding: 10px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid var(--cream2);
+      transition: background 0.12s;
+    }
+
+    .result-item:last-child {
+      border-bottom: none;
+    }
+
+    .result-item:hover {
+      background: var(--gold-pale);
+    }
+
+    .result-item .r-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .result-item.ws .r-name {
+      color: var(--gold);
+    }
+
+    .result-item .r-meta {
+      font-size: 10px;
+      color: #999;
+      margin-top: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    .sex-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .sex-dot.m {
+      background: var(--stripe-m);
+    }
+
+    .sex-dot.f {
+      background: var(--stripe-f);
+    }
+
+    .sex-dot.x {
+      background: #B0ABA2;
+    }
+
+    /* ── CANVAS ── */
+    #tree-container {
+      width: 100%;
+      height: calc(100vh - 60px);
+      overflow: hidden;
+      position: relative;
+      background: #F4EFE6;
+    }
+
+    #tree-container svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ── SVG elements ── */
+    .link {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 1.5;
+      opacity: 0.35;
+    }
+
+    /* Dog cards */
+    .dog-card {
+      rx: 3;
+      ry: 3;
+      stroke-width: 1;
+      transition: filter 0.12s;
+    }
+
+    .node-group {
+      cursor: pointer;
+    }
+
+    .node-group:hover .dog-card {
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.18));
+    }
+
+    /* Unified card style */
+    .dog-card.ws-m,
+    .dog-card.ws-f {
+      fill: var(--card-bg);
+      stroke: none;
+      filter: drop-shadow(var(--card-shadow));
+    }
+
+    .dog-card.ext-parent {
+      fill: var(--card-bg);
+      stroke: none;
+      opacity: 0.88;
+      filter: drop-shadow(var(--card-shadow));
+    }
+
+    .dog-card.ext {
+      fill: var(--ext-bg);
+      stroke: none;
+      opacity: 0.72;
+      filter: drop-shadow(var(--card-shadow));
+    }
+
+    .node-group:hover .dog-card.ext {
+      opacity: 0.90;
+    }
+
+    .node-group:hover .dog-card.ext-parent {
+      opacity: 1;
+    }
+
+    .node-group:hover .dog-card {
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.20));
+    }
+
+    .dog-card.root {
+      stroke: var(--gold) !important;
+      stroke-width: 2.5 !important;
+      filter: drop-shadow(0 0 6px rgba(184, 135, 42, 0.45)) !important;
+    }
+
+    .dog-name {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      fill: var(--black);
+    }
+
+    .dog-name.dim {
+      fill: #9A948C;
+      font-weight: 400;
+    }
+
+    .dog-date {
+      font-family: 'Inter', sans-serif;
+      fill: #999;
+    }
+
+    .dog-date.dim {
+      fill: #B8B2AA;
+    }
+
+    /* Sex symbol */
+    .sex-sym {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      dominant-baseline: auto;
+    }
+
+    .sex-sym.m {
+      fill: var(--stripe-m);
+    }
+
+    .sex-sym.f {
+      fill: var(--stripe-f);
+    }
+
+    .sex-sym.x {
+      fill: #B0ABA2;
+    }
+
+    .badge-circle {
+      fill: var(--gold);
+    }
+
+    .badge-text {
+      fill: #FFFFFF;
+      font-size: 7px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+
+    /* Litter boxes */
+    .litter-box {
+      fill: rgba(255, 252, 246, 0.92);
+      stroke: none;
+      rx: 8;
+      ry: 8;
+      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.07));
+    }
+
+    .litter-hdr-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      fill: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .litter-hdr-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      fill: #888;
+    }
+
+    .litter-hdr-parents {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      fill: #666;
+      font-style: italic;
+    }
+
+    .gen-link {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 1.5;
+      opacity: 0.4;
+      stroke-dasharray: 4 4;
+    }
+
+    /* ── FLOATING PANELS ── */
+    #info-bar {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 2px;
+      padding: 12px 22px;
+      display: none;
+      align-items: center;
+      gap: 14px;
+      z-index: 50;
+      max-width: 90vw;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .info-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--black);
+      white-space: nowrap;
+    }
+
+    .info-sep {
+      width: 1px;
+      height: 18px;
+      background: var(--stone);
+    }
+
+    .info-detail {
+      font-size: 11px;
+      color: #888;
+      white-space: nowrap;
+    }
+
+    .info-badge {
+      background: var(--gold);
+      color: var(--black);
+      padding: 2px 10px;
+      border-radius: 2px;
+      font-size: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+
+    /* Legend + stats */
+    #legend {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 2px;
+      padding: 12px 16px;
+      z-index: 50;
+      box-shadow: var(--shadow-sm);
+    }
+
+    #legend h4 {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #AAA;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .leg-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 10px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .leg-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .leg-card {
+      width: 24px;
+      height: 15px;
+      border-radius: 2px;
+      background: var(--card-bg);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.13);
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .leg-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--leg-stripe, transparent);
+    }
+
+    .leg-card.ext {
+      background: var(--ext-bg);
+      opacity: 0.7;
+    }
+
+    #stats {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 2px;
+      padding: 12px 16px;
+      z-index: 50;
+      font-size: 10px;
+      color: #999;
+      text-align: right;
+      line-height: 1.8;
+      box-shadow: var(--shadow-sm);
+    }
+
+    #stats strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    #view-chip {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 2px;
+      padding: 6px 16px;
+      z-index: 50;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+    }
+
+    /* Zoom */
+    #zoom-ctrl {
+      position: absolute;
+      bottom: 20px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      z-index: 50;
+    }
+
+    #zoom-ctrl button {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--stone);
+      background: var(--white);
+      border-radius: 2px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--charcoal);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.15s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    #zoom-ctrl button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Loading */
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 2px solid var(--stone);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 0 auto 12px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #loading p {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    /* ── MOBILE ── */
+    /* Hidden by default; JS/media query reveals */
+    #search-toggle   { display: none; }
+    #mobile-search-bar { display: none; }
+
+    @media (max-width: 640px) {
+
+      /* Use dynamic viewport height so browser chrome doesn't eat content */
+      body {
+        height: 100dvh;
+      }
+
+      /* ── Header: 2-row layout ──
+         HTML order: brand → search-toggle → header-divider(hidden) → nav-links → search-wrapper(hidden)
+         Row 1 (50px): brand stretches, search-toggle anchors right
+         Row 2 (38px): nav-links full-width                                       */
+      #header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0 14px;
+        gap: 0;
+        align-items: stretch;
+      }
+
+      .brand {
+        flex: 1;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+      }
+
+      .brand-name { font-size: 16px; }
+      .brand-sub  { display: none; }
+      .header-divider { display: none; }
+      #search-wrapper { display: none; }
+
+      /* search-toggle sits in row 1, right of brand */
+      #search-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 20px;
+        width: 44px;
+        min-height: 50px;
+        cursor: pointer;
+        flex-shrink: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* nav fills row 2 */
+      .nav-links {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0;
+        gap: 0;
+        min-height: 38px;
+      }
+
+      .view-btn {
+        flex: 1;
+        text-align: center;
+        font-size: 9px;
+        letter-spacing: 0.8px;
+        padding: 0 4px;
+        min-height: 38px;
+        border-left: 1px solid rgba(255,255,255,0.08);
+        border-radius: 0;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+      }
+      .view-btn:first-child { border-left: none; }
+
+      /* ── Canvas ── */
+      #tree-container {
+        height: calc(100dvh - 88px);
+      }
+
+      #tree-container svg {
+        touch-action: none;
+      }
+
+      /* ── Mobile search bar (fixed, slides below row 1) ── */
+      #mobile-search-bar.open {
+        display: block;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        z-index: 150;
+        background: #1C1C1C;
+        padding: 10px 14px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      #mobile-search-bar input {
+        width: 100%;
+        padding: 10px 14px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px; /* 16px prevents iOS zoom-on-focus */
+        font-family: 'Inter', sans-serif;
+        outline: none;
+      }
+
+      #mobile-search-bar input::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      #mobile-search-results {
+        position: fixed;
+        top: 106px; /* 50px header row1 + ~56px search bar height */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--white);
+        overflow-y: auto;
+        z-index: 149;
+        display: none;
+      }
+
+      /* ── Hide floating panels ── */
+      #legend, #stats { display: none; }
+
+      /* ── Info bar ── */
+      #info-bar {
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        padding: 8px 14px;
+        bottom: 10px;
+        max-width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .info-name   { font-size: 13px; white-space: normal; }
+      .info-detail { font-size: 10px; white-space: normal; }
+      .info-sep    { display: none; }
+
+      /* ── Zoom controls ── */
+      #zoom-ctrl { bottom: 80px; } /* lift above info bar */
+
+      #zoom-ctrl button {
+        width: 44px;
+        height: 44px;
+      }
+
+      /* ── Touch ── */
+      .node-group {
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header">
+    <div class="brand">
+      <div class="brand-wordmark">
+        <span class="brand-name">Wind <em>of</em> Sand<sup style="font-size:10px;vertical-align:super">®</sup></span>
+      </div>
+    </div>
+
+    <button id="search-toggle" aria-label="Cerca">🔍</button>
+
+    <div class="header-divider"></div>
+
+    <nav class="nav-links">
+      <button class="view-btn active" data-view="overview">Panoramica</button>
+      <button class="view-btn" data-view="pedigree">Antenati</button>
+      <button class="view-btn" data-view="descendants">Discendenti</button>
+    </nav>
+
+    <div id="search-wrapper">
+      <span id="search-icon">🔍</span>
+      <input type="text" id="search-box" placeholder="Cerca un golden…">
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <div id="mobile-search-bar">
+    <input type="text" id="mobile-search-box" placeholder="Cerca un golden…" autocomplete="off">
+    <div id="mobile-search-results"></div>
+  </div>
+
+  <div id="tree-container">
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Scodinzolando…</p>
+    </div>
+
+    <div id="legend">
+      <h4>Legenda</h4>
+      <div class="leg-row">
+        <span class="leg-card" style="--leg-stripe:#3B7EC8"></span>
+        <span style="color:#3B7EC8;font-weight:600">♂</span> maschio
+      </div>
+      <div class="leg-row">
+        <span class="leg-card" style="--leg-stripe:#C83B7E"></span>
+        <span style="color:#C83B7E;font-weight:600">♀</span> femmina
+      </div>
+      <div class="leg-row">
+        <span class="leg-card ext"></span>
+        Esterno
+      </div>
+    </div>
+
+    <div id="stats"></div>
+    <div id="view-chip">Panoramica del Programma</div>
+
+    <div id="zoom-ctrl">
+      <button id="btn-in">+</button>
+      <button id="btn-out">−</button>
+      <button id="btn-fit" style="font-size:14px">⊡</button>
+    </div>
+
+    <div id="info-bar"></div>
+  </div>
+
+  <script>
+    /* ── Constants ── */
+    const CW = 168, CH = 48, HGAP = 36, VGAP = 10;
+
+    /* ── State ── */
+    let data, litters = [], founders = [], kennelIds = new Set(), currentView = 'overview', currentDog = null;
+    let svg, g, zoom;
+
+    /* ── Hash-based routing ── */
+    function readHash() {
+      const h = window.location.hash.slice(1);   // strip leading #
+      if (!h || h === 'overview') return { view: 'overview', dogId: null };
+      const slash = h.indexOf('/');
+      if (slash === -1) return { view: h, dogId: null };
+      return { view: h.slice(0, slash), dogId: h.slice(slash + 1) };
+    }
+
+    function navigate(view, dogId, replace = false) {
+      const hash = view === 'overview' ? '#overview' : `#${view}/${dogId}`;
+      if (replace) {
+        history.replaceState({ view, dogId: dogId || null }, '', hash);
+      } else {
+        history.pushState({ view, dogId: dogId || null }, '', hash);
+      }
+      applyState(view, dogId);
+    }
+
+    function applyState(view, dogId) {
+      currentView = view;
+      currentDog = dogId || null;
+      document.querySelectorAll('.view-btn').forEach(b =>
+        b.classList.toggle('active', b.dataset.view === currentView));
+      if (currentView === 'overview') {
+        renderOverview();
+        document.getElementById('info-bar').style.display = 'none';
+      } else {
+        if (currentDog) _renderInfoBar(currentDog);
+        renderTree();
+      }
+    }
+
+    window.addEventListener('popstate', e => {
+      const state = e.state || readHash();
+      applyState(state.view || 'overview', state.dogId || null);
+    });
+
+    /* ── Helpers ── */
+    const isWS = n => (n || '').toUpperCase().includes('WINDOFSAND');
+    const isMale = s => s === 'M';
+    const fmt = d => { if (!d) return ''; const p = d.split('-'); return p.length === 3 ? `${p[2]}/${p[1]}/${p[0]}` : d; };
+    const short = (n, max, strip = false) => {
+      if (!n) return '';
+      let s = n.replace(/WINDOFSAND/gi, 'WS');
+      return s.length > max ? s.slice(0, max - 1) + '…' : s;
+    };
+    const dn = n => (n || '').replace(/WINDOFSAND/gi, 'WS');
+    const wrap2 = (text, max) => {
+      const words = text.split(/\s+/); const lines = []; let line = '';
+      for (const w of words) {
+        const t = line ? line + ' ' + w : w;
+        if (t.length > max && line) { lines.push(line); line = w; } else line = t;
+      }
+      if (line) lines.push(line);
+      return lines.slice(0, 2);
+    };
+    const sexClass = s => s === 'M' ? 'm' : s === 'F' ? 'f' : 'x';
+
+    /* ── Is external dog a direct parent of any WS dog? ── */
+    function isWSParent(dog) {
+      if (!data) return false;
+      return (data.children[dog.id] || []).some(cid => isWS(data.dogs[cid]?.name));
+    }
+
+    /* ── Is external dog a grandparent of any WS dog? ── */
+    function isWSGrandparent(dog) {
+      if (!data) return false;
+      return (data.children[dog.id] || []).some(cid => isWSParent(data.dogs[cid]));
+    }
+
+    /* ── Card class ── */
+    function cardClass(dog, isRoot) {
+      let c;
+      if (isWS(dog.name) || kennelIds.has(dog.id)) {
+        c = isMale(dog.sex) ? 'ws-m' : 'ws-f';
+      } else if (isWSParent(dog)) {
+        c = 'ext-parent';
+      } else {
+        c = 'ext';
+      }
+      if (isRoot) c += ' root';
+      return c;
+    }
+
+    /* ── Draw a dog card ── */
+    function drawCard(parent, dog, x, y, w, h, opts = {}) {
+      if (!dog) return;
+      const ws = isWS(dog.name) || kennelIds.has(dog.id);
+      const wsParent = !ws && isWSParent(dog);
+      const prominent = ws || wsParent || (!ws && !wsParent && isWSGrandparent(dog));
+      const stripeColor = !ws ? null : (dog.sex === 'M' ? '#3B7EC8' : dog.sex === 'F' ? '#C83B7E' : null);
+      const grp = parent.append('g')
+        .attr('class', 'node-group')
+        .attr('transform', `translate(${x},${y})`)
+        .on('click', e => { e.stopPropagation(); onDogClick(dog.id); });
+
+      grp.append('rect')
+        .attr('class', 'dog-card ' + cardClass(dog, opts.root))
+        .attr('width', w).attr('height', h);
+
+      /* left colour stripe for WINDOFSAND dogs */
+      if (stripeColor) {
+        grp.append('rect')
+          .attr('x', 0).attr('y', 0).attr('width', 5).attr('height', h)
+          .attr('rx', 3).attr('fill', stripeColor);
+        /* white cover to square off the right edge of the stripe */
+        grp.append('rect')
+          .attr('x', 3).attr('y', 0).attr('width', 4).attr('height', h)
+          .attr('fill', '#FFFFFF');
+      }
+
+      /* sex symbol top-right */
+      const sym = dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '';
+      const symColor = stripeColor || (prominent ? '#888' : '#B0ABA2');
+      if (sym) grp.append('text')
+        .attr('class', 'sex-sym ' + sexClass(dog.sex))
+        .attr('x', w - 10).attr('y', 13)
+        .attr('text-anchor', 'middle')
+        .attr('fill', symColor)
+        .text(sym);
+
+      /* name */
+      const rawName = opts.stripWS ? short(dog.name, opts.maxChars || 24, true) : short(dog.name, opts.maxChars || 24);
+      const nc = 'dog-name' + (prominent ? '' : ' dim');
+      const aka = dog.aka;
+      const lines = wrap2(rawName, opts.maxChars || 22);
+      const hasAka = !!aka;
+      const ny = hasAka ? (lines.length > 1 ? 10 : h / 2 - 4)
+                        : (lines.length > 1 ? 13 : (h / 2 + 1));
+      lines.forEach((l, i) => {
+        grp.append('text').attr('class', nc)
+          .attr('font-size', '10px')
+          .attr('x', 10).attr('y', lines.length > 1 ? ny + i * 11 : ny)
+          .text(i === 1 && l.length > 22 ? l.slice(0, 21) + '…' : l);
+      });
+      /* aka */
+      if (hasAka) {
+        const akaY = lines.length > 1 ? ny + lines.length * 11 + 1 : ny + 10;
+        grp.append('text')
+          .attr('x', 10).attr('y', akaY)
+          .attr('font-size', '8px')
+          .attr('font-style', 'italic')
+          .attr('fill', prominent ? '#9A9488' : '#B8B2A6')
+          .text('aka ' + aka);
+      }
+
+      /* bottom info */
+      if (!opts.noInfo) {
+        const info = [fmt(dog.birth_date), dog.loi && !opts.hideLoi ? dog.loi : ''].filter(Boolean).join('  ·  ');
+        const dc = 'dog-date' + (prominent ? '' : ' dim');
+        if (info) grp.append('text').attr('class', dc).attr('font-size', '8px')
+          .attr('x', 10).attr('y', h - 5).text(info);
+      }
+
+      /* offspring badge */
+      const kids = (data.children[dog.id] || []).length;
+      if (kids > 0 && !opts.noBadge) {
+        grp.append('circle').attr('class', 'badge-circle').attr('cx', w - 1).attr('cy', 1).attr('r', 8);
+        grp.append('text').attr('class', 'badge-text').attr('x', w - 1).attr('y', 1).text(kids);
+      }
+    }
+
+    /* ── Litter computation ── */
+    function computeLitters() {
+      // Dogs that should not appear as puppies in the overview (their birth litters
+      // are external to the kennel lineage and would pull in unrelated ancestry).
+      // Exclude dogs whose birth litters should not appear in the overview
+      // (driven by role or hide_birth_litter flags in the JSON data)
+      const EXCLUDE_AS_PUPPY = new Set();
+      for (const [id, dog] of Object.entries(data.dogs)) {
+        if (dog.role || dog.hide_birth_litter) EXCLUDE_AS_PUPPY.add(id);
+      }
+      const map = {};
+      for (const [id, rels] of Object.entries(data.relationships)) {
+        if (EXCLUDE_AS_PUPPY.has(id)) continue;
+        const dog = data.dogs[id];
+        if (!dog) continue;
+        const sireDoc = data.dogs[rels.sire];
+        const damDoc  = data.dogs[rels.dam];
+        // Include WS dogs, or litters where BOTH parents are in the kennel lineage.
+        // Requiring BOTH (AND not OR) prevents external litters from bleeding in —
+        // e.g. BLACK JACK's 2011 litter is excluded because GOLDEN SUNSHINE is not inLineage.
+        const inLineage = d => d && (isWS(d.name) || isWSParent(d) || isWSGrandparent(d));
+        const inKennel = isWS(dog.name) || (inLineage(sireDoc) && inLineage(damDoc));
+        if (!inKennel) continue;
+        const key = `${rels.sire || '?'}_${rels.dam || '?'}_${dog.birth_date || '?'}`;
+        if (!map[key]) map[key] = { key, sireId: rels.sire || null, damId: rels.dam || null, birthDate: dog.birth_date || null, puppies: [] };
+        map[key].puppies.push(id);
+      }
+      return Object.values(map)
+        .filter(l => l.puppies.length > 0 && l.birthDate)
+        .sort((a, b) => a.birthDate.localeCompare(b.birthDate))
+        .map(l => {
+          l.puppies.sort((a, b) => {
+            const ma = data.dogs[a]?.sex === 'M' ? 0 : 1, mb = data.dogs[b]?.sex === 'M' ? 0 : 1;
+            return ma !== mb ? ma - mb : (data.dogs[a]?.name || '').localeCompare(data.dogs[b]?.name || '');
+          });
+          return l;
+        });
+    }
+
+    /* ── Founder computation ── */
+    /* Founders are driven entirely by the JSON data:
+       - Dogs with "role" field → shown as standalone cards (label from role)
+       - Dogs appearing as sire/dam in litters but not as puppies → auto-detected capostipiti */
+    function computeFounders() {
+      const inLitter = new Set();
+      litters.forEach(l => l.puppies.forEach(id => inLitter.add(id)));
+      const seen = new Set();
+      const result = [];
+      // 1. Explicit roles from the JSON data
+      for (const [id, dog] of Object.entries(data.dogs)) {
+        if (dog.role && dog.birth_date) {
+          seen.add(id);
+          const roleLabels = { new_entry: 'NEW ENTRY', dove_tutto_iniziato: 'DOVE TUTTO È INIZIATO...' };
+          result.push({ dog, label: roleLabels[dog.role] || 'CAPOSTIPITE' });
+        }
+      }
+      // 2. Auto-detected: sire/dam of litters that aren't puppies themselves
+      litters.forEach(l => {
+        [l.sireId, l.damId].forEach(id => {
+          if (!id || seen.has(id) || inLitter.has(id)) return;
+          const dog = data.dogs[id];
+          if (!dog || !dog.birth_date || dog.hide_birth_litter) return;
+          seen.add(id);
+          result.push({ dog, label: 'CAPOSTIPITE' });
+        });
+      });
+      return result.sort((a, b) => a.dog.birth_date.localeCompare(b.dog.birth_date));
+    }
+
+    /* ── OVERVIEW ── */
+    function renderOverview() {
+      g.selectAll('*').remove();
+      document.getElementById('info-bar').style.display = 'none';
+      document.getElementById('view-chip').style.display = 'none';
+
+      const PW = 156, PH = 30, PG = 2, LP = 10, LH = 54, HCOL = 48, VCOL = 22;
+      const FW = 200, FH = 48; // founder card dimensions (wider and taller than puppy cards)
+      const FOUNDER_LABEL_H = 16; // vertical space for the "capostipite" label above card
+
+      /* Unified items per year: founders first (sorted by birth date), then litters */
+      const byYear = {};
+      founders.forEach(({ dog, label }) => {
+        const yr = dog.birth_date ? dog.birth_date.slice(0, 4) : '?';
+        (byYear[yr] || (byYear[yr] = [])).push({ type: 'founder', dog, label });
+      });
+      litters.forEach(l => {
+        const yr = l.birthDate ? l.birthDate.slice(0, 4) : '?';
+        (byYear[yr] || (byYear[yr] = [])).push({ type: 'litter', litter: l });
+      });
+      const years = Object.keys(byYear).sort();
+
+      let colX = 0;
+      const allPos = [];
+
+      years.forEach(yr => {
+        const grp = byYear[yr];
+        let ry = HCOL;
+        let maxW = 0;
+        grp.forEach(item => {
+          const iw = item.type === 'founder' ? FW + LP * 2 : PW + LP * 2;
+          const ih = item.type === 'founder'
+            ? FOUNDER_LABEL_H + FH
+            : LH + item.litter.puppies.length * (PH + PG) + LP;
+          allPos.push({ item, x: colX, y: ry, w: iw, h: ih, yr });
+          maxW = Math.max(maxW, iw);
+          ry += ih + VCOL;
+        });
+        colX += maxW + HCOL;
+      });
+
+      /* year ranges for labels */
+      const yranges = {};
+      allPos.forEach(ap => {
+        const r = yranges[ap.yr] || (yranges[ap.yr] = { min: ap.x, max: ap.x + ap.w });
+        r.min = Math.min(r.min, ap.x); r.max = Math.max(r.max, ap.x + ap.w);
+      });
+
+      const totalH = allPos.length ? Math.max(...allPos.map(ap => ap.y + ap.h)) : 400;
+
+      years.forEach((yr, idx) => {
+        const r = yranges[yr];
+        g.append('text')
+          .attr('x', (r.min + r.max) / 2).attr('y', 28)
+          .attr('text-anchor', 'middle')
+          .attr('font-family', 'Cormorant Garamond, serif')
+          .attr('font-size', '22px').attr('font-weight', '300')
+          .attr('letter-spacing', '3px')
+          .attr('fill', '#C09A3A')
+          .text(yr);
+        /* faint vertical guide at left column boundary (skip first column) */
+        if (idx > 0) {
+          g.append('line')
+            .attr('x1', r.min - HCOL / 2).attr('y1', 0)
+            .attr('x2', r.min - HCOL / 2).attr('y2', totalH + 40)
+            .attr('stroke', '#C09A3A').attr('stroke-width', 0.5).attr('opacity', 0.13);
+        }
+      });
+
+      const pupPos = {};
+      let _lci = 0;
+
+      allPos.forEach(({ item, x, y, w, h }) => {
+        if (item.type === 'founder') {
+          /* Standalone founder card — no litter box, just a small label + card */
+          const { dog, label } = item;
+          g.append('text')
+            .attr('x', x + w / 2).attr('y', y + 9)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '7px').attr('letter-spacing', '1.8px')
+            .attr('fill', '#C09A3A').attr('opacity', 0.75)
+            .attr('font-family', 'Inter, sans-serif')
+            .text(label);
+          const cx = x + LP, cy = y + FOUNDER_LABEL_H;
+          drawCard(g, dog, cx, cy, FW, FH, { stripWS: false, noInfo: true, maxChars: 26, noBadge: true });
+          pupPos[dog.id] = { cx: cx + FW / 2, cy: cy + FH / 2, right: cx + FW, left: cx };
+        } else {
+          /* Litter box */
+          _lci++;
+          const { litter } = item;
+          const sire = litter.sireId ? data.dogs[litter.sireId] : null;
+          const dam = litter.damId ? data.dogs[litter.damId] : null;
+          const males = litter.puppies.filter(id => data.dogs[id]?.sex === 'M').length;
+          const females = litter.puppies.length - males;
+
+          g.append('rect').attr('class', 'litter-box').attr('x', x).attr('y', y).attr('width', w).attr('height', h);
+          g.append('rect').attr('x', x).attr('y', y).attr('width', w).attr('height', 3)
+            .attr('rx', 3).attr('fill', '#B8872A');
+
+          const clipId = `lc${_lci}`;
+          g.append('clipPath').attr('id', clipId)
+            .append('rect').attr('x', x + LP).attr('y', y).attr('width', w - LP * 2).attr('height', LH + 2);
+
+          g.append('text').attr('class', 'litter-hdr-date')
+            .attr('x', x + LP).attr('y', y + 13)
+            .attr('clip-path', `url(#${clipId})`)
+            .text(fmt(litter.birthDate));
+          g.append('text').attr('class', 'litter-hdr-count')
+            .attr('x', x + LP + 80).attr('y', y + 13)
+            .attr('clip-path', `url(#${clipId})`)
+            .text(`${males}♂  ${females}♀`);
+
+          if (sire) {
+            const st = g.append('text').attr('class', 'litter-hdr-parents')
+              .attr('x', x + LP).attr('y', y + 28)
+              .attr('clip-path', `url(#${clipId})`);
+            st.append('tspan').attr('fill', '#3B7EC8').attr('font-weight', '700').text('♂ ');
+            st.append('tspan').text(short(sire.name, 24));
+          }
+          if (dam) {
+            const dt = g.append('text').attr('class', 'litter-hdr-parents')
+              .attr('x', x + LP).attr('y', y + 42)
+              .attr('clip-path', `url(#${clipId})`);
+            dt.append('tspan').attr('fill', '#C83B7E').attr('font-weight', '700').text('♀ ');
+            dt.append('tspan').text(short(dam.name, 24));
+          }
+
+          litter.puppies.forEach((pid, i) => {
+            const dog = data.dogs[pid]; if (!dog) return;
+            const px = x + LP, py = y + LH + i * (PH + PG);
+            drawCard(g, dog, px, py, PW, PH, { stripWS: true, noInfo: true, maxChars: 21, noBadge: true });
+            pupPos[pid] = { cx: px + PW / 2, cy: py + PH / 2, right: px + PW, left: px };
+          });
+        }
+      });
+
+      /* cross-generational links — draw behind */
+      const linkLayer = g.insert('g', 'rect').attr('class', 'link-layer');
+      allPos.filter(ap => ap.item.type === 'litter').forEach(({ item, x, y }) => {
+        const { litter } = item;
+        [litter.sireId, litter.damId].forEach(pid => {
+          if (!pid) return;
+          const src = pupPos[pid]; if (!src) return;
+          const tx = x, ty = y + LH / 2;
+          const dx = Math.abs(tx - src.right);
+          const cp = Math.max(dx * 0.45, 28);
+          linkLayer.append('path').attr('class', 'gen-link')
+            .attr('d', `M${src.right},${src.cy} C${src.right + cp},${src.cy} ${tx - cp},${ty} ${tx},${ty}`);
+          linkLayer.append('circle')
+            .attr('cx', src.right).attr('cy', src.cy).attr('r', 2.5)
+            .attr('fill', '#C09A3A').attr('opacity', 0.5);
+        });
+      });
+
+      scheduleFit();
+    }
+
+    /* ── PEDIGREE / DISCENDENTI ── */
+    function buildPedigreeTree(id, depth) {
+      const dog = data.dogs[id]; if (!dog) return null;
+      const node = { id, dog, children: [] };
+      if (depth <= 0) return node;
+      const r = data.relationships[id];
+      if (r) {
+        if (r.sire && data.dogs[r.sire]) node.children.push(buildPedigreeTree(r.sire, depth - 1));
+        if (r.dam && data.dogs[r.dam]) node.children.push(buildPedigreeTree(r.dam, depth - 1));
+      }
+      return node;
+    }
+
+    function buildDescTree(id, depth, seen = new Set()) {
+      const dog = data.dogs[id]; if (!dog || seen.has(id)) return null;
+      seen.add(id);
+      const node = { id, dog, children: [] };
+      if (depth <= 0) return node;
+      (data.children[id] || []).forEach(kid => {
+        if (data.dogs[kid] && !seen.has(kid)) {
+          const c = buildDescTree(kid, depth - 1, seen);
+          if (c) node.children.push(c);
+        }
+      });
+      node.children.sort((a, b) => (a.dog.birth_date || '9999').localeCompare(b.dog.birth_date || '9999'));
+      return node;
+    }
+
+    function renderTree() {
+      g.selectAll('*').remove();
+      const isDesc = currentView === 'descendants';
+      const chip = document.getElementById('view-chip');
+      chip.style.display = 'block';
+      chip.textContent = isDesc ? 'Discendenti' : 'Antenati';
+
+      const root = isDesc ? buildDescTree(currentDog, 3) : buildPedigreeTree(currentDog, 4);
+      if (!root) return;
+
+      const hier = d3.hierarchy(root, d => d.children);
+      const n = hier.descendants().length;
+      const vg = n > 40 ? 5 : n > 20 ? 8 : VGAP;
+
+      d3.tree().nodeSize([CH + vg, CW + HGAP])
+        .separation((a, b) => a.parent === b.parent ? 1 : 1.1)(hier);
+
+      const lk = d3.linkHorizontal().x(d => d[0]).y(d => d[1]);
+
+      g.selectAll('.link').data(hier.links()).join('path').attr('class', 'link')
+        .attr('d', d => {
+          const sx = d.source.y + CW / 2, sy = d.source.x;
+          const tx = d.target.y - CW / 2, ty = d.target.x;
+          return lk({ source: [sx, sy], target: [tx, ty] });
+        });
+
+      hier.descendants().forEach(d => {
+        drawCard(g, d.data.dog, d.y - CW / 2, d.x - CH / 2, CW, CH,
+          { root: d.data.id === currentDog, maxChars: 22 });
+      });
+
+      scheduleFit();
+    }
+
+    /* ── Info bar ── */
+    function _renderInfoBar(id) {
+      const dog = data.dogs[id]; if (!dog) return;
+      const rels = data.relationships[id] || {};
+      const sire = rels.sire ? data.dogs[rels.sire] : null;
+      const dam = rels.dam ? data.dogs[rels.dam] : null;
+      const kids = (data.children[id] || []).length;
+      const bar = document.getElementById('info-bar');
+      const sx = dog.sex === 'M' ? '♂' : '♀';
+      let html = `<span class="info-name">${dn(dog.name)}</span><span class="info-sep"></span>`;
+      html += `<span class="info-detail">${sx} ${fmt(dog.birth_date) || 'N.D.'}</span>`;
+      if (dog.loi) html += `<span class="info-detail">${dog.loi}</span>`;
+      if (sire) html += `<span class="info-sep"></span><span class="info-detail">♂ ${dn(sire.name).slice(0, 28)}</span>`;
+      if (dam) html += `<span class="info-detail">♀ ${dn(dam.name).slice(0, 28)}</span>`;
+      if (kids > 0) html += `<span class="info-badge" onclick="goDesc('${id}')">${kids} figli &rarr;</span>`;
+      bar.innerHTML = html; bar.style.display = 'flex';
+    }
+
+    /* ── Dog click ── */
+    function onDogClick(id) {
+      const dog = data.dogs[id]; if (!dog) return;
+      const view = currentView === 'overview' ? 'pedigree' : currentView;
+      navigate(view, id);
+    }
+
+    function goDesc(id) {
+      navigate('descendants', id);
+    }
+
+    /* ── Fit to screen ── */
+    function fitScreen() {
+      const bb = g.node().getBBox(); if (!bb.width) return;
+      const ctr = document.getElementById('tree-container');
+      const W = ctr.clientWidth, H = ctr.clientHeight;
+      const mobile = W <= 640;
+      const pad = mobile ? 10 : 70;
+      const maxSc = mobile ? 1.1 : 1.6;
+      const sc = Math.min((W - pad * 2) / bb.width, (H - pad * 2) / bb.height, maxSc);
+      const tx = W / 2 - (bb.x + bb.width / 2) * sc;
+      const ty = H / 2 - (bb.y + bb.height / 2) * sc;
+      svg.transition().duration(400).ease(d3.easeCubicOut)
+        .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(sc));
+    }
+
+    function scheduleFit() {
+      /* On mobile give the browser extra time to finish layout */
+      const delay = window.innerWidth <= 640 ? 250 : 80;
+      setTimeout(fitScreen, delay);
+    }
+
+    /* ── Load ── */
+    async function init() {
+      const res = await fetch('pedigree_data.json');
+      data = await res.json();
+      if (!data.children) data.children = {};
+
+      litters = computeLitters();
+      founders = computeFounders();
+      // Build the set of all kennel dogs: WS-named + litter puppies + founders
+      kennelIds = new Set(data.windofsand_ids || []);
+      litters.forEach(l => l.puppies.forEach(id => kennelIds.add(id)));
+      founders.forEach(({ dog }) => kennelIds.add(dog.id));
+      document.getElementById('loading').style.display = 'none';
+
+      const wsN = data.windofsand_ids?.length || 0;
+      const totN = Object.keys(data.dogs).length;
+      document.getElementById('stats').innerHTML =
+        `<strong>${wsN}</strong> WINDOFSAND<br>` +
+        `<strong>${litters.length}</strong> cucciolate 🐾<br>` +
+        `<strong>${totN}</strong> amici pelosi`;
+
+      const ctr = document.getElementById('tree-container');
+      svg = d3.select(ctr).append('svg'); g = svg.append('g');
+      zoom = d3.zoom().scaleExtent([0.03, 3]).on('zoom', e => g.attr('transform', e.transform));
+      svg.call(zoom);
+      d3.select('#btn-in').on('click', () => svg.transition().duration(280).call(zoom.scaleBy, 1.45));
+      d3.select('#btn-out').on('click', () => svg.transition().duration(280).call(zoom.scaleBy, 0.68));
+      d3.select('#btn-fit').on('click', fitScreen);
+
+      const initial = readHash();
+      navigate(initial.view, initial.dogId, /*replace=*/true);
+    }
+
+    /* ── View buttons ── */
+    document.querySelectorAll('.view-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const view = btn.dataset.view;
+        if (view === 'overview') { navigate('overview', null); return; }
+        let dog = currentDog;
+        if (!dog) {
+          for (const [id, d] of Object.entries(data.dogs)) {
+            if (isWS(d.name)) { dog = id; break; }
+          }
+        }
+        navigate(view, dog);
+      });
+    });
+
+    /* ── Search ── */
+    function doSearch(q, resultsEl) {
+      if (!q || q.length < 2 || !data) { resultsEl.style.display = 'none'; return; }
+      const hits = [];
+      for (const [id, dog] of Object.entries(data.dogs)) {
+        if ((dog.name || '').toUpperCase().includes(q) || (dog.loi || '').toUpperCase().includes(q))
+          hits.push({ id, dog });
+        if (hits.length >= 24) break;
+      }
+      hits.sort((a, b) => {
+        const aw = isWS(a.dog.name) ? 0 : 1, bw = isWS(b.dog.name) ? 0 : 1;
+        return aw !== bw ? aw - bw : (a.dog.name || '').localeCompare(b.dog.name || '');
+      });
+      if (!hits.length) { resultsEl.style.display = 'none'; return; }
+      resultsEl.innerHTML = hits.map(({ id, dog }) => {
+        const kids = (data.children[id] || []).length;
+        const ws = isWS(dog.name) ? ' ws' : '';
+        const sc = sexClass(dog.sex);
+        const sx = dog.sex === 'M' ? '♂' : '♀';
+        return `<div class="result-item${ws}" data-id="${id}">
+      <div class="r-name"><span class="sex-dot ${sc}"></span>${sx} ${dn(dog.name)}</div>
+      <div class="r-meta">${fmt(dog.birth_date) || ''}${dog.loi ? ' · ' + dog.loi : ''}${kids ? ' · ' + kids + ' cuccioli' : ''}</div>
+    </div>`;
+      }).join('');
+      resultsEl.style.display = 'block';
+    }
+
+    const sb = document.getElementById('search-box');
+    const sr = document.getElementById('search-results');
+
+    sb.addEventListener('input', () => doSearch(sb.value.trim().toUpperCase(), sr));
+
+    sr.addEventListener('click', e => {
+      const item = e.target.closest('.result-item'); if (!item) return;
+      sb.value = ''; sr.style.display = 'none';
+      onDogClick(item.dataset.id);
+    });
+
+    sb.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { sb.value = ''; sr.style.display = 'none'; }
+    });
+
+    /* ── Mobile search ── */
+    const searchToggle = document.getElementById('search-toggle');
+    const mobileSearchBar = document.getElementById('mobile-search-bar');
+    const msb = document.getElementById('mobile-search-box');
+    const msr = document.getElementById('mobile-search-results');
+
+    searchToggle.addEventListener('click', () => {
+      const open = mobileSearchBar.classList.toggle('open');
+      if (open) { msb.focus(); } else { msb.value = ''; msr.style.display = 'none'; }
+    });
+
+    msb.addEventListener('input', () => doSearch(msb.value.trim().toUpperCase(), msr));
+
+    msr.addEventListener('click', e => {
+      const item = e.target.closest('.result-item'); if (!item) return;
+      msb.value = ''; msr.style.display = 'none';
+      mobileSearchBar.classList.remove('open');
+      onDogClick(item.dataset.id);
+    });
+
+    msb.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { msb.value = ''; msr.style.display = 'none'; mobileSearchBar.classList.remove('open'); }
+    });
+
+    document.addEventListener('click', e => {
+      if (!e.target.closest('#search-results') && !e.target.closest('#search-wrapper'))
+        sr.style.display = 'none';
+      if (!e.target.closest('#mobile-search-bar') && !e.target.closest('#search-toggle'))
+        mobileSearchBar.classList.remove('open');
+    });
+
+
+    init();
+  </script>
+</body>
+
+</html>
