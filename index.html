@@ -971,8 +971,7 @@
     function drawCard(parent, dog, x, y, w, h, opts = {}) {
       if (!dog) return;
       const ws = isWS(dog.name) || kennelIds.has(dog.id);
-      const wsParent = !ws && isWSParent(dog);
-      const prominent = ws || wsParent || (!ws && !wsParent && isWSGrandparent(dog));
+      const prominent = true;
       const stripeColor = !ws ? null : (dog.sex === 'M' ? '#3B7EC8' : dog.sex === 'F' ? '#C83B7E' : null);
       const grp = parent.append('g')
         .attr('class', 'node-group')
