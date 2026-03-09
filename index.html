@@ -306,13 +306,6 @@
       filter: drop-shadow(var(--card-shadow));
     }
 
-    .dog-card.ext-parent {
-      fill: var(--card-bg);
-      stroke: none;
-      opacity: 0.88;
-      filter: drop-shadow(var(--card-shadow));
-    }
-
     .dog-card.ext {
       fill: var(--ext-bg);
       stroke: none;
@@ -324,9 +317,6 @@
       opacity: 0.90;
     }
 
-    .node-group:hover .dog-card.ext-parent {
-      opacity: 1;
-    }
 
     .node-group:hover .dog-card {
       filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.20));
@@ -958,8 +948,6 @@
       let c;
       if (isWS(dog.name) || kennelIds.has(dog.id)) {
         c = isMale(dog.sex) ? 'ws-m' : 'ws-f';
-      } else if (isWSParent(dog)) {
-        c = 'ext-parent';
       } else {
         c = 'ext';
       }
