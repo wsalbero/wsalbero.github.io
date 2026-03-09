@@ -106,7 +106,8 @@
       "birth_date": "2020-11-06",
       "sex": "M",
       "owner": null,
-      "aka": "JJ"
+      "aka": "JJ",
+      "hide_birth_litter": true
     },
     "8043182": {
       "id": "8043182",
@@ -141,7 +142,7 @@
       "birth_date": "2015-09-21",
       "sex": "M",
       "owner": null,
-      "role": "capostipite",
+      "role": "in_casa_ws",
       "aka": "Max"
     },
     "6895713": {
@@ -366,7 +367,8 @@
       "birth_date": "2014-05-30",
       "sex": "M",
       "owner": null,
-      "role": "capostipite"
+      "aka": "Black",
+      "hide_birth_litter": true
     },
     "6783205": {
       "id": "6783205",
@@ -375,7 +377,8 @@
       "birth_date": "2015-07-18",
       "sex": "F",
       "owner": null,
-      "aka": "Crazy"
+      "aka": "Crazy",
+      "role": "in_casa_ws"
     },
     "6024050": {
       "id": "6024050",
@@ -1500,7 +1503,7 @@
       "birth_date": "2022-08-23",
       "sex": "F",
       "owner": null,
-      "aka": "Bibiane"
+      "aka": "Bibien"
     },
     "8421731": {
       "id": "8421731",
@@ -1662,7 +1665,7 @@
       "birth_date": "2023-10-06",
       "sex": "M",
       "owner": null,
-      "aka": "Balto"
+      "aka": "Baldo"
     },
     "5974291": {
       "id": "5974291",
@@ -1912,7 +1915,8 @@
       "birth_date": "2022-01-29",
       "sex": "F",
       "owner": null,
-      "aka": "Wish"
+      "aka": "Wish",
+      "hide_birth_litter": true
     },
     "7090013": {
       "id": "7090013",
@@ -2406,7 +2410,8 @@
       "loi": "LO1674735",
       "birth_date": "2016-03-06",
       "sex": "M",
-      "owner": null
+      "owner": null,
+      "aka": "Diego"
     },
     "6895710": {
       "id": "6895710",
@@ -2424,7 +2429,7 @@
       "birth_date": "2022-10-10",
       "sex": "F",
       "owner": "FRADELLONI ANTONIETTA",
-      "role": "new_entry",
+      "role": "in_casa_ws",
       "aka": "Enjoy"
     },
     "5658917": {
@@ -2464,6 +2469,26 @@
       "sex": "F",
       "owner": null,
       "aka": "Wave"
+    },
+    "6783206": {
+      "id": "6783206",
+      "name": "LEONGOLDEN JOSEPHINE THE BRAVE REBEL",
+      "loi": "LO15151617",
+      "birth_date": "2015-07-18",
+      "sex": "F",
+      "owner": null,
+      "aka": "Destiny"
+    },
+    "mowgli": {
+      "id": "mowgli",
+      "name": "MOWGLI",
+      "loi": null,
+      "birth_date": "2024-05-01",
+      "sex": "M",
+      "owner": null,
+      "aka": "Mowgli",
+      "role": "mascotte",
+      "is_cat": true
     }
   },
   "relationships": {
@@ -3398,6 +3423,10 @@
     "6783208": {
       "sire": "6166584",
       "dam": "6323201"
+    },
+    "6783206": {
+      "sire": "6166584",
+      "dam": "6323201"
     }
   },
   "children": {
@@ -3779,11 +3808,13 @@
     ],
     "6166584": [
       "6783205",
-      "6783208"
+      "6783208",
+      "6783206"
     ],
     "6323201": [
       "6783205",
-      "6783208"
+      "6783208",
+      "6783206"
     ],
     "5443435": [
       "6067559",

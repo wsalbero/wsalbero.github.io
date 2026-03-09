@@ -995,13 +995,13 @@
       }
 
       /* sex symbol top-right */
-      const sym = dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '';
+      const sym = dog.is_cat ? '🐱' : (dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '');
       const symColor = stripeColor || (prominent ? '#888' : '#B0ABA2');
       if (sym) grp.append('text')
         .attr('class', 'sex-sym ' + sexClass(dog.sex))
         .attr('x', w - 10).attr('y', 13)
         .attr('text-anchor', 'middle')
-        .attr('fill', symColor)
+        .attr('fill', dog.is_cat ? null : symColor)
         .text(sym);
 
       /* name */
@@ -1097,7 +1097,13 @@
       for (const [id, dog] of Object.entries(data.dogs)) {
         if (dog.role && dog.birth_date) {
           seen.add(id);
-          const roleLabels = { new_entry: 'NEW ENTRY', dove_tutto_iniziato: 'DOVE TUTTO È INIZIATO...' };
+          const roleLabels = {
+            new_entry: 'NEW ENTRY',
+            dove_tutto_iniziato: 'DOVE TUTTO È INIZIATO...',
+            in_casa_ws: 'IN CASA WS...',
+            famiglia_allargata: 'LA FAMIGLIA ALLARGATA',
+            mascotte: 'LA MASCOTTE WS 🐱'
+          };
           result.push({ dog, label: roleLabels[dog.role] || 'CAPOSTIPITE' });
         }
       }
