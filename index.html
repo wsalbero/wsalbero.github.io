@@ -571,6 +571,33 @@
       white-space: nowrap;
     }
 
+    #ancestors-toggle {
+      position: absolute;
+      top: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 2px;
+      padding: 5px 14px;
+      z-index: 50;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+      display: none;
+    }
+    #ancestors-toggle label { cursor: pointer; }
+    #ancestors-toggle input[type="checkbox"] {
+      accent-color: var(--gold);
+      cursor: pointer;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
     /* Zoom */
     #zoom-ctrl {
       position: absolute;
@@ -854,6 +881,9 @@
 
     <div id="stats"></div>
     <div id="view-chip">Panoramica del Programma</div>
+    <div id="ancestors-toggle">
+      <label><input type="checkbox" id="ext-ancestors-cb"> Antenati esterni</label>
+    </div>
 
     <div id="zoom-ctrl">
       <button id="btn-in">+</button>
@@ -866,10 +896,11 @@
 
   <script>
     /* ── Constants ── */
-    const CW = 168, CH = 48, HGAP = 36, VGAP = 10;
+    const CW = 140, CH = 38, HGAP = 28, VGAP = 8;
 
     /* ── State ── */
     let data, litters = [], founders = [], kennelIds = new Set(), currentView = 'overview', currentDog = null;
+    let showExtAncestors = false;
     let svg, g, zoom;
 
     /* ── Hash-based routing ── */
@@ -908,6 +939,11 @@
     window.addEventListener('popstate', e => {
       const state = e.state || readHash();
       applyState(state.view || 'overview', state.dogId || null);
+    });
+
+    document.getElementById('ext-ancestors-cb').addEventListener('change', e => {
+      showExtAncestors = e.target.checked;
+      renderTree();
     });
 
     /* ── Helpers ── */
@@ -982,7 +1018,7 @@
       }
 
       /* sex symbol top-right */
-      const sym = dog.is_cat ? '🐱' : (dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '');
+      const sym = dog.is_cat ? '🐈‍⬛' : (dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '');
       const symColor = stripeColor || (prominent ? '#888' : '#B0ABA2');
       if (sym) grp.append('text')
         .attr('class', 'sex-sym ' + sexClass(dog.sex))
@@ -1089,7 +1125,7 @@
             dove_tutto_iniziato: 'DOVE TUTTO È INIZIATO...',
             in_casa_ws: 'IN CASA WS...',
             famiglia_allargata: 'LA FAMIGLIA ALLARGATA',
-            mascotte: 'LA MASCOTTE WS 🐱'
+            mascotte: 'LA MASCOTTE WS 🐈‍⬛'
           };
           result.push({ dog, label: roleLabels[dog.role] || 'CAPOSTIPITE' });
         }
@@ -1112,6 +1148,7 @@
       g.selectAll('*').remove();
       document.getElementById('info-bar').style.display = 'none';
       document.getElementById('view-chip').style.display = 'none';
+      document.getElementById('ancestors-toggle').style.display = 'none';
 
       const PW = 156, PH = 30, PG = 2, LP = 10, LH = 54, HCOL = 48, VCOL = 22;
       const FW = 200, FH = 48; // founder card dimensions (wider and taller than puppy cards)
@@ -1265,14 +1302,15 @@
     }
 
     /* ── PEDIGREE / DISCENDENTI ── */
-    function buildPedigreeTree(id, depth) {
+    function buildPedigreeTree(id, depth, isRoot = false) {
       const dog = data.dogs[id]; if (!dog) return null;
+      if (!isRoot && !showExtAncestors && !isWS(dog.name) && !kennelIds.has(dog.id)) return null;
       const node = { id, dog, children: [] };
       if (depth <= 0) return node;
       const r = data.relationships[id];
       if (r) {
-        if (r.sire && data.dogs[r.sire]) node.children.push(buildPedigreeTree(r.sire, depth - 1));
-        if (r.dam && data.dogs[r.dam]) node.children.push(buildPedigreeTree(r.dam, depth - 1));
+        if (r.sire && data.dogs[r.sire]) { const n = buildPedigreeTree(r.sire, depth - 1); if (n) node.children.push(n); }
+        if (r.dam  && data.dogs[r.dam])  { const n = buildPedigreeTree(r.dam,  depth - 1); if (n) node.children.push(n); }
       }
       return node;
     }
@@ -1299,7 +1337,10 @@
       chip.style.display = 'block';
       chip.textContent = isDesc ? 'Discendenti' : 'Antenati';
 
-      const root = isDesc ? buildDescTree(currentDog, 3) : buildPedigreeTree(currentDog, 4);
+      const toggle = document.getElementById('ancestors-toggle');
+      toggle.style.display = isDesc ? 'none' : 'block';
+
+      const root = isDesc ? buildDescTree(currentDog, 3) : buildPedigreeTree(currentDog, 4, true);
       if (!root) return;
 
       const hier = d3.hierarchy(root, d => d.children);
