@@ -211,7 +211,8 @@
       "sex": "M",
       "owner": null,
       "hide_birth_litter": true,
-      "aka": "Chaos"
+      "aka": "Chaos",
+      "role": "dove_tutto_iniziato"
     },
     "6158779": {
       "id": "6158779",
@@ -221,7 +222,8 @@
       "sex": "F",
       "owner": null,
       "hide_birth_litter": true,
-      "aka": "Bon Bon"
+      "aka": "Bon Bon",
+      "role": "dove_tutto_iniziato"
     },
     "6024048": {
       "id": "6024048",
@@ -935,7 +937,8 @@
       "birth_date": "2019-03-19",
       "sex": "M",
       "owner": null,
-      "aka": "Wave"
+      "aka": "Wave",
+      "role": "in_casa_ws"
     },
     "8043181": {
       "id": "8043181",
@@ -2498,6 +2501,85 @@
       "aka": "Mowgli",
       "role": "mascotte",
       "is_cat": true
+    },
+    "ws_shaggy": {
+      "id": "ws_shaggy",
+      "name": "WINDOFSAND MR. BOMBASTIC SHAGGY",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "M",
+      "owner": null
+    },
+    "ws_george": {
+      "id": "ws_george",
+      "name": "WINDOFSAND MR. GEORGE SPEAK TO ME",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "M",
+      "owner": null,
+      "aka": "George"
+    },
+    "ws_ares": {
+      "id": "ws_ares",
+      "name": "WINDOFSAND ARES NEVER BACK",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "M",
+      "owner": null,
+      "aka": "Ares"
+    },
+    "ws_achi": {
+      "id": "ws_achi",
+      "name": "WINDOFSAND ACHI TAKE ME OUT",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "M",
+      "owner": null,
+      "aka": "Achi"
+    },
+    "ws_archie": {
+      "id": "ws_archie",
+      "name": "WINDOFSAND ARCHIE THE GAME OF LIFE",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "M",
+      "owner": null,
+      "aka": "Archie"
+    },
+    "ws_nina": {
+      "id": "ws_nina",
+      "name": "WINDOFSAND NINA DANCE WITH ME",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nina"
+    },
+    "ws_luna": {
+      "id": "ws_luna",
+      "name": "WINDOFSAND CRAZY LUNA TO LOVE YOU",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "F",
+      "owner": null,
+      "aka": "Luna"
+    },
+    "ws_adel": {
+      "id": "ws_adel",
+      "name": "WINDOFSAND ADEL NOBODY HOME",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "F",
+      "owner": null,
+      "aka": "Adel"
+    },
+    "ws_easylove": {
+      "id": "ws_easylove",
+      "name": "WINDOFSAND EASY LOVE",
+      "loi": null,
+      "birth_date": "2025-12-31",
+      "sex": "F",
+      "owner": null
     }
   },
   "relationships": {
@@ -3436,6 +3518,42 @@
     "6783206": {
       "sire": "6166584",
       "dam": "6323201"
+    },
+    "ws_shaggy": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_george": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_ares": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_achi": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_archie": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_nina": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_luna": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_adel": {
+      "sire": "7568438",
+      "dam": "8275919"
+    },
+    "ws_easylove": {
+      "sire": "7568438",
+      "dam": "8275919"
     }
   },
   "children": {
@@ -4138,6 +4256,28 @@
     ],
     "5896714": [
       "5896715"
+    ],
+    "7568438": [
+      "ws_shaggy",
+      "ws_george",
+      "ws_ares",
+      "ws_achi",
+      "ws_archie",
+      "ws_nina",
+      "ws_luna",
+      "ws_adel",
+      "ws_easylove"
+    ],
+    "8275919": [
+      "ws_shaggy",
+      "ws_george",
+      "ws_ares",
+      "ws_achi",
+      "ws_archie",
+      "ws_nina",
+      "ws_luna",
+      "ws_adel",
+      "ws_easylove"
     ]
   },
   "windofsand_ids": [
@@ -4255,6 +4395,15 @@
     "8688895",
     "8688903",
     "8688916",
-    "8275919"
+    "8275919",
+    "ws_shaggy",
+    "ws_george",
+    "ws_ares",
+    "ws_achi",
+    "ws_archie",
+    "ws_nina",
+    "ws_luna",
+    "ws_adel",
+    "ws_easylove"
   ]
 }
