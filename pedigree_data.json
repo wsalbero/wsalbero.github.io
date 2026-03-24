@@ -212,7 +212,7 @@
       "owner": null,
       "hide_birth_litter": true,
       "aka": "Chaos",
-      "role": "dove_tutto_iniziato"
+      "role": "capostipite"
     },
     "6158779": {
       "id": "6158779",
@@ -223,7 +223,7 @@
       "owner": null,
       "hide_birth_litter": true,
       "aka": "Bon Bon",
-      "role": "dove_tutto_iniziato"
+      "role": "capostipite"
     },
     "6024048": {
       "id": "6024048",
@@ -937,8 +937,7 @@
       "birth_date": "2019-03-19",
       "sex": "M",
       "owner": null,
-      "aka": "Wave",
-      "role": "in_casa_ws"
+      "aka": "Wave"
     },
     "8043181": {
       "id": "8043181",
@@ -1508,9 +1507,7 @@
       "birth_date": "2022-08-23",
       "sex": "F",
       "owner": null,
-      "aka": "Bibien",
-      "hide_birth_litter": true,
-      "role": "in_casa_ws"
+      "aka": "Bibien"
     },
     "8421731": {
       "id": "8421731",
@@ -1672,9 +1669,7 @@
       "birth_date": "2023-10-06",
       "sex": "M",
       "owner": null,
-      "aka": "Baldo",
-      "hide_birth_litter": true,
-      "role": "in_casa_ws"
+      "aka": "Baldo"
     },
     "5974291": {
       "id": "5974291",
@@ -2479,7 +2474,9 @@
       "birth_date": "2013-03-26",
       "sex": "F",
       "owner": null,
-      "aka": "Wave"
+      "aka": "Wave",
+      "role": "in_casa_ws",
+      "hide_birth_litter": true
     },
     "6783206": {
       "id": "6783206",
