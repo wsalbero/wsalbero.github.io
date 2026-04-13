@@ -784,7 +784,8 @@
       "loi": "LO226125",
       "birth_date": "2021-10-30",
       "sex": "M",
-      "owner": null
+      "owner": null,
+      "aka": "Bubu"
     },
     "8043176": {
       "id": "8043176",
@@ -2134,7 +2135,8 @@
       "loi": "LO21134537",
       "birth_date": "2021-05-18",
       "sex": "M",
-      "owner": null
+      "owner": null,
+      "aka": "Kevin"
     },
     "7946007": {
       "id": "7946007",
@@ -2329,7 +2331,7 @@
       "birth_date": "2013-11-08",
       "sex": "F",
       "owner": null,
-      "aka": "Wave"
+      "aka": "Fly"
     },
     "6895715": {
       "id": "6895715",
@@ -2346,7 +2348,8 @@
       "loi": "LO1417889",
       "birth_date": "2013-11-08",
       "sex": "M",
-      "owner": null
+      "owner": null,
+      "aka": "JC"
     },
     "6472040": {
       "id": "6472040",
@@ -2354,7 +2357,8 @@
       "loi": "LO1417891",
       "birth_date": "2013-11-08",
       "sex": "M",
-      "owner": null
+      "owner": null,
+      "aka": "Noah"
     },
     "6472043": {
       "id": "6472043",
@@ -2389,7 +2393,8 @@
       "loi": "LO1417895",
       "birth_date": "2013-11-08",
       "sex": "F",
-      "owner": null
+      "owner": null,
+      "aka": "Zoe"
     },
     "6472048": {
       "id": "6472048",
@@ -2505,7 +2510,8 @@
       "loi": null,
       "birth_date": "2025-12-31",
       "sex": "M",
-      "owner": null
+      "owner": null,
+      "aka": "Sergio"
     },
     "ws_george": {
       "id": "ws_george",
@@ -2576,7 +2582,8 @@
       "loi": null,
       "birth_date": "2025-12-31",
       "sex": "F",
-      "owner": null
+      "owner": null,
+      "aka": "Easy"
     }
   },
   "relationships": {
