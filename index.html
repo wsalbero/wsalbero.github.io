@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1C1C1C">
   <title>Wind of Sand® — Albero Genealogico</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet">
@@ -40,25 +42,44 @@
       box-sizing: border-box;
     }
 
+    html,
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--cream);
       color: var(--black);
       overflow: hidden;
+      overscroll-behavior: none;
+      display: flex;
+      flex-direction: column;
       height: 100vh;
+      height: 100dvh;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 2px;
     }
 
     /* ── HEADER ── */
     #header {
       background: var(--black);
       color: var(--white);
-      height: 60px;
-      padding: 0 28px;
+      min-height: 60px;
+      padding: 0 24px;
+      padding-top: env(safe-area-inset-top);
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
       position: relative;
       z-index: 100;
+      flex-shrink: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .brand {
@@ -67,6 +88,7 @@
       gap: 14px;
       text-decoration: none;
       flex-shrink: 0;
+      min-width: 0;
     }
 
     .brand-wordmark {
@@ -82,6 +104,7 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--white);
+      white-space: nowrap;
     }
 
     .brand-name em {
@@ -89,48 +112,37 @@
       color: var(--gold-light);
     }
 
-    .brand-sub {
-      font-size: 9px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.45);
-      font-weight: 300;
-      margin-top: 3px;
-    }
-
     .brand-social {
       display: flex;
-      gap: 14px;
-      margin-top: 5px;
+      align-items: center;
+      gap: 12px;
     }
 
     .brand-social a {
       font-size: 10px;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.55);
       text-decoration: none;
       font-weight: 400;
       transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
     }
 
     .brand-social a:hover {
       color: var(--gold-light);
     }
 
-    .brand-social a[aria-label] {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .brand-social .ig-icon {
+    .brand-social .social-icon {
       flex-shrink: 0;
     }
 
     .header-divider {
       width: 1px;
-      height: 30px;
+      height: 28px;
       background: rgba(255, 255, 255, 0.12);
       flex-shrink: 0;
     }
@@ -142,11 +154,11 @@
     }
 
     .view-btn {
-      padding: 6px 14px;
+      padding: 7px 14px;
       border: 1px solid rgba(255, 255, 255, 0.15);
       background: transparent;
-      color: rgba(255, 255, 255, 0.55);
-      border-radius: 2px;
+      color: rgba(255, 255, 255, 0.62);
+      border-radius: 3px;
       cursor: pointer;
       font-size: 10px;
       font-weight: 500;
@@ -155,6 +167,7 @@
       text-transform: uppercase;
       transition: all 0.2s;
       white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .view-btn:hover {
@@ -174,14 +187,15 @@
     #search-wrapper {
       position: relative;
       margin-left: auto;
+      flex-shrink: 0;
     }
 
     #search-box {
-      width: 240px;
+      width: 230px;
       padding: 7px 14px 7px 34px;
       background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 3px;
       color: var(--white);
       font-size: 12px;
       font-family: 'Inter', sans-serif;
@@ -190,22 +204,23 @@
     }
 
     #search-box::placeholder {
-      color: rgba(255, 255, 255, 0.35);
+      color: rgba(255, 255, 255, 0.38);
     }
 
     #search-box:focus {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.11);
       border-color: var(--gold);
-      width: 280px;
+      width: 270px;
     }
 
     #search-icon {
       position: absolute;
-      left: 11px;
+      left: 10px;
       top: 50%;
       transform: translateY(-50%);
-      color: rgba(255, 255, 255, 0.3);
-      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      align-items: center;
       pointer-events: none;
     }
 
@@ -216,7 +231,7 @@
       width: 360px;
       background: var(--white);
       border: 1px solid var(--stone);
-      border-radius: 2px;
+      border-radius: 4px;
       box-shadow: var(--shadow-lg);
       max-height: 400px;
       overflow-y: auto;
@@ -247,7 +262,8 @@
       border-bottom: none;
     }
 
-    .result-item:hover {
+    .result-item:hover,
+    .result-item:active {
       background: var(--gold-pale);
     }
 
@@ -257,18 +273,37 @@
       color: var(--black);
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 6px;
     }
 
     .result-item.ws .r-name {
-      color: var(--gold);
+      color: #8E6418;
+    }
+
+    .result-item .r-aka {
+      font-size: 11px;
+      font-style: italic;
+      font-weight: 400;
+      color: #6B5B3E;
+      background: var(--gold-pale);
+      padding: 1px 6px;
+      border-radius: 2px;
     }
 
     .result-item .r-meta {
       font-size: 10px;
-      color: #999;
-      margin-top: 2px;
+      color: #888;
+      margin-top: 3px;
       letter-spacing: 0.3px;
+    }
+
+    .result-empty {
+      padding: 18px 16px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
     }
 
     .sex-dot {
@@ -293,7 +328,8 @@
     /* ── CANVAS ── */
     #tree-container {
       width: 100%;
-      height: calc(100vh - 60px);
+      flex: 1;
+      min-height: 0;
       overflow: hidden;
       position: relative;
       background: #F4EFE6;
@@ -302,6 +338,8 @@
     #tree-container svg {
       width: 100%;
       height: 100%;
+      display: block;
+      touch-action: none;
     }
 
     /* ── SVG elements ── */
@@ -314,18 +352,19 @@
 
     /* Dog cards */
     .dog-card {
-      rx: 3;
-      ry: 3;
+      rx: 4;
+      ry: 4;
       stroke-width: 1;
       transition: filter 0.12s;
     }
 
     .node-group {
       cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .node-group:hover .dog-card {
-      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.18));
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.20));
     }
 
     /* Unified card style */
@@ -339,17 +378,12 @@
     .dog-card.ext {
       fill: var(--ext-bg);
       stroke: none;
-      opacity: 0.72;
+      opacity: 0.78;
       filter: drop-shadow(var(--card-shadow));
     }
 
     .node-group:hover .dog-card.ext {
-      opacity: 0.90;
-    }
-
-
-    .node-group:hover .dog-card {
-      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.20));
+      opacity: 0.94;
     }
 
     .dog-card.root {
@@ -371,7 +405,7 @@
 
     .dog-date {
       font-family: 'Inter', sans-serif;
-      fill: #999;
+      fill: #8E887E;
     }
 
     .dog-date.dim {
@@ -404,7 +438,7 @@
 
     .badge-text {
       fill: #FFFFFF;
-      font-size: 7px;
+      font-size: 7.5px;
       font-weight: 700;
       font-family: 'Inter', sans-serif;
       text-anchor: middle;
@@ -413,7 +447,7 @@
 
     /* Litter boxes */
     .litter-box {
-      fill: rgba(255, 252, 246, 0.92);
+      fill: rgba(255, 252, 246, 0.94);
       stroke: none;
       rx: 8;
       ry: 8;
@@ -432,13 +466,13 @@
     .litter-hdr-count {
       font-family: 'Inter', sans-serif;
       font-size: 10px;
-      fill: #888;
+      fill: #777;
     }
 
     .litter-hdr-parents {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 11px;
-      fill: #666;
+      font-size: 11.5px;
+      fill: #555;
       font-style: italic;
     }
 
@@ -453,51 +487,186 @@
     /* ── FLOATING PANELS ── */
     #info-bar {
       position: absolute;
-      bottom: 20px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
       left: 50%;
       transform: translateX(-50%);
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border: 1px solid var(--stone);
-      border-radius: 2px;
-      padding: 12px 22px;
+      border-radius: 6px;
+      padding: 11px 18px;
       display: none;
       align-items: center;
-      gap: 14px;
-      z-index: 50;
-      max-width: 90vw;
+      gap: 12px;
+      z-index: 60;
+      max-width: calc(100vw - 120px);
       box-shadow: var(--shadow-lg);
+    }
+
+    .info-main {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      min-width: 0;
     }
 
     .info-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--black);
+      white-space: nowrap;
+    }
+
+    .info-aka {
+      font-size: 11px;
+      font-style: italic;
+      color: #7D5B1C;
+      background: var(--gold-pale);
+      padding: 2px 7px;
+      border-radius: 3px;
       white-space: nowrap;
     }
 
     .info-sep {
       width: 1px;
-      height: 18px;
+      height: 16px;
       background: var(--stone);
+      flex-shrink: 0;
     }
 
     .info-detail {
       font-size: 11px;
-      color: #888;
+      color: #777;
       white-space: nowrap;
+    }
+
+    .info-parent-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      padding: 2px 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #555;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+
+    .info-parent-btn:hover {
+      background: var(--cream);
+      border-color: var(--stone);
+      color: var(--black);
+    }
+
+    .info-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      margin-left: auto;
     }
 
     .info-badge {
       background: var(--gold);
       color: var(--black);
-      padding: 2px 10px;
-      border-radius: 2px;
+      border: none;
+      padding: 5px 11px;
+      border-radius: 3px;
+      font-family: 'Inter', sans-serif;
       font-size: 10px;
       font-weight: 600;
       white-space: nowrap;
       cursor: pointer;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
+      transition: background 0.15s;
+    }
+
+    .info-badge:hover {
+      background: var(--gold-light);
+    }
+
+    .info-badge.secondary {
+      background: var(--cream2);
+      color: var(--charcoal);
+    }
+
+    .info-badge.secondary:hover {
+      background: var(--stone);
+    }
+
+    .info-close {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #888;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .info-close:hover {
+      background: var(--cream2);
+      color: var(--black);
+    }
+
+    /* Year jump bar (Overview) */
+    #year-bar {
+      position: absolute;
+      bottom: calc(16px + env(safe-area-inset-bottom));
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--stone);
+      border-radius: 999px;
+      padding: 4px 6px;
+      max-width: calc(100vw - 120px);
+      overflow-x: auto;
+      scrollbar-width: none;
+      z-index: 50;
+      box-shadow: var(--shadow);
+    }
+
+    #year-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .year-pill {
+      border: none;
+      background: transparent;
+      color: #6E685F;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .year-pill:hover {
+      background: var(--gold-pale);
+      color: var(--black);
+    }
+
+    .year-pill.active {
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 600;
     }
 
     /* Legend + stats */
@@ -505,9 +674,11 @@
       position: absolute;
       top: 14px;
       left: 14px;
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid var(--stone);
-      border-radius: 2px;
+      border-radius: 4px;
       padding: 12px 16px;
       z-index: 50;
       box-shadow: var(--shadow-sm);
@@ -517,9 +688,9 @@
       font-size: 8px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #AAA;
+      color: #999;
       margin-bottom: 8px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .leg-row {
@@ -527,8 +698,8 @@
       align-items: center;
       gap: 7px;
       font-size: 10px;
-      color: #666;
-      margin-bottom: 4px;
+      color: #555;
+      margin-bottom: 5px;
     }
 
     .leg-row:last-child {
@@ -558,20 +729,22 @@
 
     .leg-card.ext {
       background: var(--ext-bg);
-      opacity: 0.7;
+      opacity: 0.78;
     }
 
     #stats {
       position: absolute;
       top: 14px;
       right: 14px;
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid var(--stone);
-      border-radius: 2px;
+      border-radius: 4px;
       padding: 12px 16px;
       z-index: 50;
       font-size: 10px;
-      color: #999;
+      color: #777;
       text-align: right;
       line-height: 1.8;
       box-shadow: var(--shadow-sm);
@@ -582,70 +755,79 @@
       font-weight: 600;
     }
 
-    #view-chip {
+    /* Combined top bar for tree view */
+    #tree-toolbar {
       position: absolute;
       top: 14px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--white);
+      display: none;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid var(--stone);
-      border-radius: 2px;
+      border-radius: 999px;
       padding: 6px 16px;
       z-index: 50;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+      max-width: calc(100vw - 28px);
+    }
+
+    #view-chip {
       font-size: 9px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--gold);
-      font-weight: 500;
-      box-shadow: var(--shadow-sm);
-      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .toolbar-sep {
+      width: 1px;
+      height: 14px;
+      background: var(--stone);
     }
 
     #ancestors-toggle {
-      position: absolute;
-      top: 48px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--white);
-      border: 1px solid var(--stone);
-      border-radius: 2px;
-      padding: 5px 14px;
-      z-index: 50;
-      font-size: 9px;
-      letter-spacing: 1.5px;
+      font-size: 10px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      color: var(--gold);
+      color: #666;
       font-weight: 500;
-      box-shadow: var(--shadow-sm);
-      white-space: nowrap;
-      display: none;
     }
-    #ancestors-toggle label { cursor: pointer; }
+
+    #ancestors-toggle label {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
     #ancestors-toggle input[type="checkbox"] {
       accent-color: var(--gold);
       cursor: pointer;
-      margin-right: 5px;
-      vertical-align: middle;
     }
 
     /* Zoom */
     #zoom-ctrl {
       position: absolute;
-      bottom: 20px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
       right: 16px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
-      z-index: 50;
+      gap: 4px;
+      z-index: 55;
+      transition: bottom 0.2s ease;
     }
 
     #zoom-ctrl button {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border: 1px solid var(--stone);
-      background: var(--white);
-      border-radius: 2px;
-      font-size: 18px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 4px;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -654,12 +836,91 @@
       box-shadow: var(--shadow-sm);
       transition: all 0.15s;
       font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #zoom-ctrl button:hover {
       background: var(--gold-pale);
       border-color: var(--gold);
       color: var(--gold);
+    }
+
+    #zoom-ctrl button:active {
+      transform: scale(0.95);
+    }
+
+    #btn-info-mobile {
+      display: none;
+    }
+
+    /* Mobile info popover (legend + stats) */
+    #mobile-info-sheet {
+      display: none;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      left: 12px;
+      max-width: 320px;
+      margin-left: auto;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--stone);
+      border-radius: 8px;
+      padding: 14px 16px;
+      z-index: 90;
+      box-shadow: var(--shadow-lg);
+    }
+
+    #mobile-info-sheet.open {
+      display: block;
+    }
+
+    .sheet-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .sheet-hdr h4 {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .sheet-close {
+      background: transparent;
+      border: none;
+      color: #888;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .sheet-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    #mobile-stats-body {
+      font-size: 11px;
+      color: #666;
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    #mobile-stats-body strong {
+      color: var(--gold);
+      font-weight: 600;
     }
 
     /* Loading */
@@ -692,165 +953,326 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--gold);
-      font-weight: 300;
+      font-weight: 400;
     }
 
-    /* ── MOBILE ── */
-    /* Hidden by default; JS/media query reveals */
-    #search-toggle   { display: none; }
-    #mobile-search-bar { display: none; }
+    /* Hidden by default; mobile reveals */
+    #search-toggle {
+      display: none;
+    }
 
-    @media (max-width: 640px) {
+    #mobile-search-overlay {
+      display: none;
+    }
 
-      /* Use dynamic viewport height so browser chrome doesn't eat content */
-      body {
-        height: 100dvh;
+    /* ── TABLET (641px–1024px) ── */
+    @media (max-width: 1024px) {
+      #header {
+        padding: 0 16px;
+        gap: 12px;
       }
 
-      /* ── Header: 2-row layout ──
-         HTML order: brand → search-toggle → header-divider(hidden) → nav-links → search-wrapper(hidden)
-         Row 1 (50px): brand stretches, search-toggle anchors right
-         Row 2 (38px): nav-links full-width                                       */
+      .brand-name {
+        font-size: 19px;
+        letter-spacing: 2px;
+      }
+
+      .brand-social .social-text {
+        display: none;
+      }
+
+      .brand-social {
+        gap: 8px;
+      }
+
+      .brand-social a {
+        padding: 6px;
+      }
+
+      .brand-social .social-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      #search-box {
+        width: 175px;
+      }
+
+      #search-box:focus {
+        width: 215px;
+      }
+    }
+
+    /* ── MOBILE (<= 640px) ── */
+    @media (max-width: 640px) {
       #header {
         flex-wrap: wrap;
-        height: auto;
-        padding: 0 14px;
+        min-height: 0;
+        padding: env(safe-area-inset-top) 0 0 0;
         gap: 0;
-        align-items: stretch;
+        align-items: center;
       }
 
       .brand {
         flex: 1;
         min-height: 50px;
-        display: flex;
-        align-items: center;
+        padding-left: 14px;
+        gap: 10px;
+        justify-content: space-between;
       }
 
-      .brand-name { font-size: 16px; }
-      .brand-sub  { display: none; }
-      .header-divider { display: none; }
-      #search-wrapper { display: none; }
+      .brand-name {
+        font-size: 17px;
+        letter-spacing: 2px;
+      }
 
-      /* search-toggle sits in row 1, right of brand */
+      .brand-social {
+        gap: 2px;
+      }
+
+      .brand-social a {
+        width: 38px;
+        height: 38px;
+        justify-content: center;
+        padding: 0;
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      .brand-social .social-text {
+        display: none;
+      }
+
+      .brand-social .social-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      .header-divider,
+      #search-wrapper {
+        display: none;
+      }
+
       #search-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
         background: transparent;
         border: none;
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 20px;
-        width: 44px;
-        min-height: 50px;
+        color: rgba(255, 255, 255, 0.8);
+        width: 48px;
+        height: 50px;
         cursor: pointer;
         flex-shrink: 0;
-        padding: 0;
         -webkit-tap-highlight-color: transparent;
       }
 
-      /* nav fills row 2 */
+      #search-toggle[aria-expanded="true"] {
+        color: var(--gold-light);
+      }
+
       .nav-links {
         width: 100%;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 0;
         gap: 0;
-        min-height: 38px;
       }
 
       .view-btn {
         flex: 1;
         text-align: center;
-        font-size: 9px;
-        letter-spacing: 0.8px;
+        font-size: 10px;
+        letter-spacing: 0.9px;
         padding: 0 4px;
-        min-height: 38px;
-        border-left: 1px solid rgba(255,255,255,0.08);
+        min-height: 44px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 0;
         border-top: none;
         border-bottom: none;
         border-right: none;
       }
-      .view-btn:first-child { border-left: none; }
 
-      /* ── Canvas ── */
-      #tree-container {
-        height: calc(100dvh - 88px);
+      .view-btn:first-child {
+        border-left: none;
       }
 
-      #tree-container svg {
-        touch-action: none;
-      }
-
-      /* ── Mobile search bar (fixed, slides below row 1) ── */
-      #mobile-search-bar.open {
-        display: block;
-        position: fixed;
-        top: 50px;
-        left: 0;
-        right: 0;
+      /* Mobile search overlay anchored cleanly inside #tree-container */
+      #mobile-search-overlay.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        inset: 0;
         z-index: 150;
-        background: #1C1C1C;
-        padding: 10px 14px 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(28, 28, 28, 0.35);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
       }
 
-      #mobile-search-bar input {
-        width: 100%;
+      .mobile-search-input-row {
+        background: var(--black);
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      #mobile-search-box {
+        flex: 1;
         padding: 10px 14px;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.11);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
         color: #fff;
-        font-size: 16px; /* 16px prevents iOS zoom-on-focus */
+        font-size: 16px; /* prevents iOS zoom-on-focus */
         font-family: 'Inter', sans-serif;
         outline: none;
       }
 
-      #mobile-search-bar input::placeholder {
-        color: rgba(255, 255, 255, 0.35);
+      #mobile-search-box:focus {
+        border-color: var(--gold-light);
+      }
+
+      #mobile-search-box::placeholder {
+        color: rgba(255, 255, 255, 0.42);
+      }
+
+      #mobile-search-close {
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.7);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
       }
 
       #mobile-search-results {
-        position: fixed;
-        top: 106px; /* 50px header row1 + ~56px search bar height */
-        left: 0;
-        right: 0;
-        bottom: 0;
         background: var(--white);
         overflow-y: auto;
-        z-index: 149;
+        max-height: 100%;
+        flex: 1;
+        display: none;
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+
+      #mobile-search-results .result-item {
+        padding: 13px 16px;
+      }
+
+      /* Hide desktop floating legend/stats; use #btn-info-mobile instead */
+      #legend,
+      #stats {
         display: none;
       }
 
-      /* ── Hide floating panels ── */
-      #legend, #stats { display: none; }
-
-      /* ── Info bar ── */
-      #info-bar {
-        flex-wrap: wrap;
-        gap: 4px 10px;
-        padding: 8px 14px;
-        bottom: 10px;
-        max-width: 100vw;
-        left: 50%;
-        transform: translateX(-50%);
+      #btn-info-mobile {
+        display: flex;
       }
 
-      .info-name   { font-size: 13px; white-space: normal; }
-      .info-detail { font-size: 10px; white-space: normal; }
-      .info-sep    { display: none; }
+      #tree-toolbar {
+        top: 10px;
+        padding: 6px 12px;
+        gap: 8px;
+      }
 
-      /* ── Zoom controls ── */
-      #zoom-ctrl { bottom: 80px; } /* lift above info bar */
+      #view-chip {
+        font-size: 9px;
+        letter-spacing: 1.4px;
+      }
+
+      #ancestors-toggle {
+        font-size: 9.5px;
+      }
+
+      /* Year bar on mobile */
+      #year-bar {
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        left: 10px;
+        right: 68px;
+        transform: none;
+        max-width: none;
+        padding: 4px 5px;
+      }
+
+      .year-pill {
+        padding: 7px 10px;
+        font-size: 11px;
+      }
+
+      /* Info bar as a sleek mobile bottom card */
+      #info-bar {
+        left: 10px;
+        right: 10px;
+        bottom: calc(10px + env(safe-area-inset-bottom));
+        transform: none;
+        max-width: none;
+        padding: 12px 14px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        border-radius: 10px;
+      }
+
+      .info-top-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      .info-main {
+        gap: 4px 8px;
+      }
+
+      .info-name {
+        font-size: 15px;
+        white-space: normal;
+        line-height: 1.2;
+      }
+
+      .info-detail,
+      .info-parent-btn {
+        font-size: 11px;
+        white-space: normal;
+      }
+
+      .info-sep {
+        display: none;
+      }
+
+      .info-close {
+        display: flex;
+      }
+
+      .info-actions {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .info-badge {
+        flex: 1;
+        text-align: center;
+        padding: 9px 12px;
+        font-size: 11px;
+      }
+
+      /* Zoom controls */
+      #zoom-ctrl {
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        gap: 6px;
+      }
+
+      body.has-info-bar #zoom-ctrl {
+        bottom: calc(132px + env(safe-area-inset-bottom));
+      }
 
       #zoom-ctrl button {
         width: 44px;
         height: 44px;
-      }
-
-      /* ── Touch ── */
-      .node-group {
-        -webkit-tap-highlight-color: transparent;
+        border-radius: 8px;
       }
     }
   </style>
@@ -858,47 +1280,71 @@
 
 <body>
 
-  <div id="header">
+  <header id="header">
     <div class="brand">
       <div class="brand-wordmark">
         <span class="brand-name">Windofsand<sup style="font-size:10px;vertical-align:super">®</sup></span>
       </div>
       <div class="brand-social">
         <a href="https://www.instagram.com/windofsand" target="_blank" rel="noopener noreferrer" aria-label="Instagram @windofsand">
-          <svg class="ig-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
+          <svg class="social-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
             <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.38A5.9 5.9 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/>
             <path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4z"/>
             <circle cx="18.41" cy="5.59" r="1.44"/>
           </svg>
-          <span>@windofsand</span>
+          <span class="social-text">@windofsand</span>
         </a>
-        <a href="https://www.windofsand.com" target="_blank" rel="noopener noreferrer">www.windofsand.com</a>
+        <a href="https://www.windofsand.com" target="_blank" rel="noopener noreferrer" aria-label="Sito web www.windofsand.com">
+          <svg class="social-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="social-text">www.windofsand.com</span>
+        </a>
       </div>
     </div>
 
-    <button id="search-toggle" aria-label="Cerca">🔍</button>
+    <button id="search-toggle" aria-label="Cerca un golden" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m20 20-3.5-3.5"/>
+      </svg>
+    </button>
 
     <div class="header-divider"></div>
 
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Viste dell'albero">
       <button class="view-btn active" data-view="overview">Panoramica</button>
       <button class="view-btn" data-view="pedigree">Antenati</button>
       <button class="view-btn" data-view="descendants">Discendenti</button>
     </nav>
 
     <div id="search-wrapper">
-      <span id="search-icon">🔍</span>
-      <input type="text" id="search-box" placeholder="Cerca un golden…">
-      <div id="search-results"></div>
+      <span id="search-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="m20 20-3.5-3.5"/>
+        </svg>
+      </span>
+      <input type="text" id="search-box" placeholder="Cerca nome, soprannome o LOI…" autocomplete="off" aria-label="Cerca un golden">
+      <div id="search-results" role="listbox"></div>
     </div>
-  </div>
+  </header>
 
-  <div id="mobile-search-bar">
-    <input type="text" id="mobile-search-box" placeholder="Cerca un golden…" autocomplete="off">
-    <div id="mobile-search-results"></div>
-  </div>
+  <main id="tree-container">
+    <div id="mobile-search-overlay" aria-hidden="true">
+      <div class="mobile-search-input-row">
+        <input type="search" id="mobile-search-box" placeholder="Cerca nome, soprannome o LOI…" autocomplete="off" aria-label="Cerca un golden">
+        <button id="mobile-search-close" aria-label="Chiudi ricerca">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-search-results" role="listbox"></div>
+    </div>
 
-  <div id="tree-container">
     <div id="loading">
       <div class="spinner"></div>
       <p>Scodinzolando…</p>
@@ -921,27 +1367,82 @@
     </div>
 
     <div id="stats"></div>
-    <div id="view-chip">Panoramica del Programma</div>
-    <div id="ancestors-toggle">
-      <label><input type="checkbox" id="ext-ancestors-cb"> Antenati esterni</label>
+
+    <div id="tree-toolbar">
+      <span id="view-chip">Antenati</span>
+      <span class="toolbar-sep" id="toolbar-sep"></span>
+      <div id="ancestors-toggle">
+        <label><input type="checkbox" id="ext-ancestors-cb"> Antenati esterni</label>
+      </div>
     </div>
 
+    <div id="mobile-info-sheet" role="dialog" aria-label="Legenda e statistiche">
+      <div class="sheet-hdr">
+        <h4>Legenda &amp; Numeri</h4>
+        <button class="sheet-close" id="sheet-close" aria-label="Chiudi legenda">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="sheet-grid">
+        <div>
+          <div class="leg-row">
+            <span class="leg-card" style="--leg-stripe:#3B7EC8"></span>
+            <span style="color:#3B7EC8;font-weight:600">♂</span> maschio
+          </div>
+          <div class="leg-row">
+            <span class="leg-card" style="--leg-stripe:#C83B7E"></span>
+            <span style="color:#C83B7E;font-weight:600">♀</span> femmina
+          </div>
+          <div class="leg-row">
+            <span class="leg-card ext"></span>
+            Esterno
+          </div>
+        </div>
+        <div id="mobile-stats-body"></div>
+      </div>
+    </div>
+
+    <div id="year-bar" aria-label="Salta all'anno"></div>
+
     <div id="zoom-ctrl">
-      <button id="btn-in">+</button>
-      <button id="btn-out">−</button>
-      <button id="btn-fit" style="font-size:14px">⊡</button>
+      <button id="btn-info-mobile" aria-label="Legenda e statistiche" title="Legenda e statistiche">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 16v-4"/>
+          <path d="M12 8h.01"/>
+        </svg>
+      </button>
+      <button id="btn-in" aria-label="Zoom avanti" title="Zoom avanti">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+      </button>
+      <button id="btn-out" aria-label="Zoom indietro" title="Zoom indietro">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M5 12h14"/>
+        </svg>
+      </button>
+      <button id="btn-fit" aria-label="Adatta allo schermo" title="Adatta allo schermo">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+        </svg>
+      </button>
     </div>
 
     <div id="info-bar"></div>
-  </div>
+  </main>
 
   <script>
     /* ── Constants ── */
-    const CW = 140, CH = 38, HGAP = 28, VGAP = 8;
+    const CW = 160, CH = 48, HGAP = 28, VGAP = 10;
 
     /* ── State ── */
     let data, litters = [], founders = [], kennelIds = new Set(), currentView = 'overview', currentDog = null;
     let showExtAncestors = false;
+    let overviewYearBounds = {};
+    let overviewYears = [];
     let svg, g, zoom;
 
     /* ── Hash-based routing ── */
@@ -963,6 +1464,12 @@
       applyState(view, dogId);
     }
 
+    function setInfoBarVisible(visible) {
+      const bar = document.getElementById('info-bar');
+      bar.style.display = visible ? 'flex' : 'none';
+      document.body.classList.toggle('has-info-bar', visible);
+    }
+
     function applyState(view, dogId) {
       currentView = view;
       currentDog = dogId || null;
@@ -970,7 +1477,7 @@
         b.classList.toggle('active', b.dataset.view === currentView));
       if (currentView === 'overview') {
         renderOverview();
-        document.getElementById('info-bar').style.display = 'none';
+        setInfoBarVisible(false);
       } else {
         if (currentDog) _renderInfoBar(currentDog);
         renderTree();
@@ -991,12 +1498,13 @@
     const isWS = n => (n || '').toUpperCase().includes('WINDOFSAND');
     const isMale = s => s === 'M';
     const fmt = d => { if (!d) return ''; const p = d.split('-'); return p.length === 3 ? `${p[2]}/${p[1]}/${p[0]}` : d; };
-    const short = (n, max, strip = false) => {
+    const short = (n, max) => {
       if (!n) return '';
-      let s = n.replace(/WINDOFSAND/gi, 'WS');
+      const s = n.replace(/WINDOFSAND/gi, 'WS');
       return s.length > max ? s.slice(0, max - 1) + '…' : s;
     };
     const dn = n => (n || '').replace(/WINDOFSAND/gi, 'WS');
+    const norm = s => (s || '').toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’'`]/g, '');
     const wrap2 = (text, max) => {
       const words = text.split(/\s+/); const lines = []; let line = '';
       for (const w of words) {
@@ -1033,10 +1541,10 @@
     }
 
     /* ── Draw a dog card ── */
+    let _cardClipSeq = 0;
     function drawCard(parent, dog, x, y, w, h, opts = {}) {
       if (!dog) return;
       const ws = isWS(dog.name) || kennelIds.has(dog.id);
-      const prominent = true;
       const stripeColor = !ws ? null : (dog.sex === 'M' ? '#3B7EC8' : dog.sex === 'F' ? '#C83B7E' : null);
       const grp = parent.append('g')
         .attr('class', 'node-group')
@@ -1051,70 +1559,94 @@
       if (stripeColor) {
         grp.append('rect')
           .attr('x', 0).attr('y', 0).attr('width', 5).attr('height', h)
-          .attr('rx', 3).attr('fill', stripeColor);
+          .attr('rx', 4).attr('fill', stripeColor);
         /* white cover to square off the right edge of the stripe */
         grp.append('rect')
           .attr('x', 3).attr('y', 0).attr('width', 4).attr('height', h)
           .attr('fill', '#FFFFFF');
       }
 
+      /* clip text area so names never collide with sex symbol */
+      const clipId = `cc${++_cardClipSeq}`;
+      grp.append('clipPath').attr('id', clipId)
+        .append('rect').attr('x', 9).attr('y', 0).attr('width', w - 28).attr('height', h);
+
       /* sex symbol top-right */
       const sym = dog.is_cat ? '🐈‍⬛' : (dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '');
-      const symColor = stripeColor || (prominent ? '#888' : '#B0ABA2');
+      const symColor = stripeColor || '#888';
       if (sym) grp.append('text')
         .attr('class', 'sex-sym ' + sexClass(dog.sex))
-        .attr('x', w - 10).attr('y', 13)
+        .attr('x', w - 10).attr('y', 14)
         .attr('text-anchor', 'middle')
         .attr('fill', dog.is_cat ? null : symColor)
         .text(sym);
 
-      /* name */
-      const rawName = opts.stripWS ? short(dog.name, opts.maxChars || 24, true) : short(dog.name, opts.maxChars || 24);
-      const nc = 'dog-name' + (prominent ? '' : ' dim');
+      /* name + aka + optional info (non-overlapping vertical rhythm) */
+      const maxPerLine = opts.maxChars || 22;
+      const rawName = short(dog.name, maxPerLine * 2);
+      const lines = wrap2(rawName, maxPerLine);
       const aka = dog.aka;
-      const lines = wrap2(rawName, opts.maxChars || 22);
       const hasAka = !!aka;
-      const ny = hasAka ? (lines.length > 1 ? 10 : h / 2 - 4)
-                        : (lines.length > 1 ? 13 : (h / 2 + 1));
+      const info = !opts.noInfo
+        ? [fmt(dog.birth_date), dog.loi && !opts.hideLoi ? dog.loi : ''].filter(Boolean).join(' · ')
+        : '';
+      const hasInfo = !!info;
+
+      let ny, lineStep = 11, akaY;
+      if (hasInfo) {
+        if (lines.length > 1) {
+          ny = hasAka ? 12 : 15;
+          lineStep = hasAka ? 10.5 : 11.5;
+          akaY = ny + lineStep + 10.5;
+        } else {
+          ny = hasAka ? 16 : 21;
+          akaY = ny + 11.5;
+        }
+      } else {
+        if (lines.length > 1) {
+          ny = hasAka ? 11.5 : (h / 2 - 3);
+          lineStep = hasAka ? 10.5 : 11.5;
+          akaY = ny + lineStep + 10.5;
+        } else {
+          ny = hasAka ? (h / 2 - 2.5) : (h / 2 + 3.5);
+          akaY = ny + 11.5;
+        }
+      }
+
+      const textLayer = grp.append('g').attr('clip-path', `url(#${clipId})`);
       lines.forEach((l, i) => {
-        grp.append('text').attr('class', nc)
-          .attr('font-size', '10px')
-          .attr('x', 10).attr('y', lines.length > 1 ? ny + i * 11 : ny)
-          .text(i === 1 && l.length > 22 ? l.slice(0, 21) + '…' : l);
+        textLayer.append('text').attr('class', 'dog-name')
+          .attr('font-size', '9.8px')
+          .attr('x', 10).attr('y', ny + i * lineStep)
+          .text(i === 1 && l.length > maxPerLine ? l.slice(0, maxPerLine - 1) + '…' : l);
       });
-      /* aka */
+
       if (hasAka) {
-        const akaY = lines.length > 1 ? ny + lines.length * 11 + 1 : ny + 10;
-        grp.append('text')
+        textLayer.append('text')
           .attr('x', 10).attr('y', akaY)
-          .attr('font-size', '8px')
+          .attr('font-size', '8.5px')
           .attr('font-style', 'italic')
-          .attr('fill', prominent ? '#9A9488' : '#B8B2A6')
+          .attr('fill', '#8B7344')
           .text(aka);
       }
 
-      /* bottom info */
-      if (!opts.noInfo) {
-        const info = [fmt(dog.birth_date), dog.loi && !opts.hideLoi ? dog.loi : ''].filter(Boolean).join('  ·  ');
-        const dc = 'dog-date' + (prominent ? '' : ' dim');
-        if (info) grp.append('text').attr('class', dc).attr('font-size', '8px')
-          .attr('x', 10).attr('y', h - 5).text(info);
+      if (hasInfo) {
+        textLayer.append('text').attr('class', 'dog-date')
+          .attr('font-size', '8px')
+          .attr('x', 10).attr('y', h - 5.5)
+          .text(info);
       }
 
       /* offspring badge */
       const kids = (data.children[dog.id] || []).length;
       if (kids > 0 && !opts.noBadge) {
-        grp.append('circle').attr('class', 'badge-circle').attr('cx', w - 1).attr('cy', 1).attr('r', 8);
+        grp.append('circle').attr('class', 'badge-circle').attr('cx', w - 1).attr('cy', 1).attr('r', 8.5);
         grp.append('text').attr('class', 'badge-text').attr('x', w - 1).attr('y', 1).text(kids);
       }
     }
 
     /* ── Litter computation ── */
     function computeLitters() {
-      // Dogs that should not appear as puppies in the overview (their birth litters
-      // are external to the kennel lineage and would pull in unrelated ancestry).
-      // Exclude dogs whose birth litters should not appear in the overview
-      // (driven by role or hide_birth_litter flags in the JSON data)
       const EXCLUDE_AS_PUPPY = new Set();
       for (const [id, dog] of Object.entries(data.dogs)) {
         if (dog.role || dog.hide_birth_litter) EXCLUDE_AS_PUPPY.add(id);
@@ -1126,9 +1658,6 @@
         if (!dog) continue;
         const sireDoc = data.dogs[rels.sire];
         const damDoc  = data.dogs[rels.dam];
-        // Include WS dogs, or litters where BOTH parents are in the kennel lineage.
-        // Requiring BOTH (AND not OR) prevents external litters from bleeding in —
-        // e.g. BLACK JACK's 2011 litter is excluded because GOLDEN SUNSHINE is not inLineage.
         const inLineage = d => d && (isWS(d.name) || isWSParent(d) || isWSGrandparent(d));
         const inKennel = isWS(dog.name) || (inLineage(sireDoc) && inLineage(damDoc));
         if (!inKennel) continue;
@@ -1149,15 +1678,11 @@
     }
 
     /* ── Founder computation ── */
-    /* Founders are driven entirely by the JSON data:
-       - Dogs with "role" field → shown as standalone cards (label from role)
-       - Dogs appearing as sire/dam in litters but not as puppies → auto-detected capostipiti */
     function computeFounders() {
       const inLitter = new Set();
       litters.forEach(l => l.puppies.forEach(id => inLitter.add(id)));
       const seen = new Set();
       const result = [];
-      // 1. Explicit roles from the JSON data
       for (const [id, dog] of Object.entries(data.dogs)) {
         if (dog.role && dog.birth_date) {
           seen.add(id);
@@ -1172,7 +1697,6 @@
           result.push({ dog, label: roleLabels[dog.role] || 'CAPOSTIPITE' });
         }
       }
-      // 2. Auto-detected: sire/dam of litters that aren't puppies themselves
       litters.forEach(l => {
         [l.sireId, l.damId].forEach(id => {
           if (!id || seen.has(id) || inLitter.has(id)) return;
@@ -1185,18 +1709,67 @@
       return result.sort((a, b) => a.dog.birth_date.localeCompare(b.dog.birth_date));
     }
 
+    /* ── Year bar helper ── */
+    function renderYearBar(years) {
+      const bar = document.getElementById('year-bar');
+      bar.innerHTML = years.map(yr =>
+        `<button class="year-pill" data-year="${yr}">${yr}</button>`
+      ).join('');
+      bar.style.display = 'flex';
+      bar.querySelectorAll('.year-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          focusYear(btn.dataset.year);
+        });
+      });
+    }
+
+    function setActiveYearPill(yr) {
+      const bar = document.getElementById('year-bar');
+      bar.querySelectorAll('.year-pill').forEach(b => {
+        const active = b.dataset.year === yr;
+        b.classList.toggle('active', active);
+        if (active) b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+    }
+
+    function focusYear(yr, animate = true) {
+      const b = overviewYearBounds[yr];
+      if (!b) return;
+      const ctr = document.getElementById('tree-container');
+      const W = ctr.clientWidth, H = ctr.clientHeight;
+      const mobile = W <= 640;
+      const padX = mobile ? 18 : 60;
+      const padTop = mobile ? 20 : 40;
+      const padBot = mobile ? 72 : 76;
+      const colW = b.maxX - b.minX;
+      const colH = b.maxY - b.minY;
+      const scX = (W - padX * 2) / colW;
+      const scY = (H - padTop - padBot) / colH;
+      const sc = mobile
+        ? Math.min(Math.max(scX * 0.92, 0.72), 1.35)
+        : Math.min(scX, scY, 1.25);
+      const cx = (b.minX + b.maxX) / 2;
+      const tx = W / 2 - cx * sc;
+      const ty = mobile ? (padTop - b.minY * sc) : (padTop + (H - padTop - padBot) / 2 - (b.minY + colH / 2) * sc);
+      const t = d3.zoomIdentity.translate(tx, ty).scale(sc);
+      if (animate) {
+        svg.transition().duration(420).ease(d3.easeCubicOut).call(zoom.transform, t);
+      } else {
+        svg.call(zoom.transform, t);
+      }
+      setActiveYearPill(yr);
+    }
+
     /* ── OVERVIEW ── */
     function renderOverview() {
       g.selectAll('*').remove();
-      document.getElementById('info-bar').style.display = 'none';
-      document.getElementById('view-chip').style.display = 'none';
-      document.getElementById('ancestors-toggle').style.display = 'none';
+      setInfoBarVisible(false);
+      document.getElementById('tree-toolbar').style.display = 'none';
 
-      const PW = 156, PH = 30, PG = 2, LP = 10, LH = 54, HCOL = 48, VCOL = 22;
-      const FW = 200, FH = 48; // founder card dimensions (wider and taller than puppy cards)
-      const FOUNDER_LABEL_H = 16; // vertical space for the "capostipite" label above card
+      const PW = 168, PH = 38, PG = 4, LP = 10, LH = 56, HCOL = 48, VCOL = 24;
+      const FW = 204, FH = 52;
+      const FOUNDER_LABEL_H = 16;
 
-      /* Unified items per year: founders first (sorted by birth date), then litters */
       const byYear = {};
       founders.forEach(({ dog, label }) => {
         const yr = dog.birth_date ? dog.birth_date.slice(0, 4) : '?';
@@ -1207,6 +1780,7 @@
         (byYear[yr] || (byYear[yr] = [])).push({ type: 'litter', litter: l });
       });
       const years = Object.keys(byYear).sort();
+      overviewYears = years;
 
       let colX = 0;
       const allPos = [];
@@ -1227,11 +1801,18 @@
         colX += maxW + HCOL;
       });
 
-      /* year ranges for labels */
       const yranges = {};
+      overviewYearBounds = {};
       allPos.forEach(ap => {
         const r = yranges[ap.yr] || (yranges[ap.yr] = { min: ap.x, max: ap.x + ap.w });
         r.min = Math.min(r.min, ap.x); r.max = Math.max(r.max, ap.x + ap.w);
+
+        const b = overviewYearBounds[ap.yr] || (overviewYearBounds[ap.yr] = {
+          minX: ap.x, maxX: ap.x + ap.w, minY: 0, maxY: ap.y + ap.h
+        });
+        b.minX = Math.min(b.minX, ap.x);
+        b.maxX = Math.max(b.maxX, ap.x + ap.w);
+        b.maxY = Math.max(b.maxY, ap.y + ap.h);
       });
 
       const totalH = allPos.length ? Math.max(...allPos.map(ap => ap.y + ap.h)) : 400;
@@ -1246,7 +1827,6 @@
           .attr('letter-spacing', '3px')
           .attr('fill', '#C09A3A')
           .text(yr);
-        /* faint vertical guide at left column boundary (skip first column) */
         if (idx > 0) {
           g.append('line')
             .attr('x1', r.min - HCOL / 2).attr('y1', 0)
@@ -1260,20 +1840,18 @@
 
       allPos.forEach(({ item, x, y, w, h }) => {
         if (item.type === 'founder') {
-          /* Standalone founder card — no litter box, just a small label + card */
           const { dog, label } = item;
           g.append('text')
             .attr('x', x + w / 2).attr('y', y + 9)
             .attr('text-anchor', 'middle')
             .attr('font-size', '7px').attr('letter-spacing', '1.8px')
-            .attr('fill', '#C09A3A').attr('opacity', 0.75)
+            .attr('fill', '#C09A3A').attr('opacity', 0.8)
             .attr('font-family', 'Inter, sans-serif')
             .text(label);
           const cx = x + LP, cy = y + FOUNDER_LABEL_H;
-          drawCard(g, dog, cx, cy, FW, FH, { stripWS: false, noInfo: true, maxChars: 26, noBadge: true });
+          drawCard(g, dog, cx, cy, FW, FH, { noInfo: true, maxChars: 26, noBadge: true });
           pupPos[dog.id] = { cx: cx + FW / 2, cy: cy + FH / 2, right: cx + FW, left: cx };
         } else {
-          /* Litter box */
           _lci++;
           const { litter } = item;
           const sire = litter.sireId ? data.dogs[litter.sireId] : null;
@@ -1290,40 +1868,40 @@
             .append('rect').attr('x', x + LP).attr('y', y).attr('width', w - LP * 2).attr('height', LH + 2);
 
           g.append('text').attr('class', 'litter-hdr-date')
-            .attr('x', x + LP).attr('y', y + 13)
+            .attr('x', x + LP).attr('y', y + 14)
             .attr('clip-path', `url(#${clipId})`)
             .text(fmt(litter.birthDate));
           g.append('text').attr('class', 'litter-hdr-count')
-            .attr('x', x + LP + 80).attr('y', y + 13)
+            .attr('x', x + w - LP).attr('y', y + 14)
+            .attr('text-anchor', 'end')
             .attr('clip-path', `url(#${clipId})`)
             .text(`${males}♂  ${females}♀`);
 
           if (sire) {
             const st = g.append('text').attr('class', 'litter-hdr-parents')
-              .attr('x', x + LP).attr('y', y + 28)
+              .attr('x', x + LP).attr('y', y + 30)
               .attr('clip-path', `url(#${clipId})`);
             st.append('tspan').attr('fill', '#3B7EC8').attr('font-weight', '700').text('♂ ');
-            st.append('tspan').text(short(sire.name, 24));
+            st.append('tspan').text(short(sire.name, 26));
           }
           if (dam) {
             const dt = g.append('text').attr('class', 'litter-hdr-parents')
-              .attr('x', x + LP).attr('y', y + 42)
+              .attr('x', x + LP).attr('y', y + 44)
               .attr('clip-path', `url(#${clipId})`);
             dt.append('tspan').attr('fill', '#C83B7E').attr('font-weight', '700').text('♀ ');
-            dt.append('tspan').text(short(dam.name, 24));
+            dt.append('tspan').text(short(dam.name, 26));
           }
 
           litter.puppies.forEach((pid, i) => {
             const dog = data.dogs[pid]; if (!dog) return;
             const px = x + LP, py = y + LH + i * (PH + PG);
-            drawCard(g, dog, px, py, PW, PH, { stripWS: true, noInfo: true, maxChars: 21, noBadge: true });
+            drawCard(g, dog, px, py, PW, PH, { noInfo: true, maxChars: 22, noBadge: true });
             pupPos[pid] = { cx: px + PW / 2, cy: py + PH / 2, right: px + PW, left: px };
           });
         }
       });
 
-      /* cross-generational links — draw behind */
-      const linkLayer = g.insert('g', 'rect').attr('class', 'link-layer');
+      const linkLayer = g.insert('g', ':first-child').attr('class', 'link-layer');
       allPos.filter(ap => ap.item.type === 'litter').forEach(({ item, x, y }) => {
         const { litter } = item;
         [litter.sireId, litter.damId].forEach(pid => {
@@ -1340,7 +1918,8 @@
         });
       });
 
-      scheduleFit();
+      renderYearBar(years);
+      scheduleFit(/*initialOverview=*/true);
     }
 
     /* ── PEDIGREE / DISCENDENTI ── */
@@ -1374,12 +1953,17 @@
 
     function renderTree() {
       g.selectAll('*').remove();
-      const isDesc = currentView === 'descendants';
-      const chip = document.getElementById('view-chip');
-      chip.style.display = 'block';
-      chip.textContent = isDesc ? 'Discendenti' : 'Antenati';
+      document.getElementById('year-bar').style.display = 'none';
 
+      const isDesc = currentView === 'descendants';
+      const toolbar = document.getElementById('tree-toolbar');
+      const chip = document.getElementById('view-chip');
+      const sep = document.getElementById('toolbar-sep');
       const toggle = document.getElementById('ancestors-toggle');
+
+      toolbar.style.display = 'flex';
+      chip.textContent = isDesc ? 'Discendenti' : 'Antenati';
+      sep.style.display = isDesc ? 'none' : 'block';
       toggle.style.display = isDesc ? 'none' : 'block';
 
       const root = isDesc ? buildDescTree(currentDog, 3) : buildPedigreeTree(currentDog, 4, true);
@@ -1387,7 +1971,7 @@
 
       const hier = d3.hierarchy(root, d => d.children);
       const n = hier.descendants().length;
-      const vg = n > 40 ? 5 : n > 20 ? 8 : VGAP;
+      const vg = n > 40 ? 6 : n > 20 ? 8 : VGAP;
 
       d3.tree().nodeSize([CH + vg, CW + HGAP])
         .separation((a, b) => a.parent === b.parent ? 1 : 1.1)(hier);
@@ -1417,14 +2001,44 @@
       const dam = rels.dam ? data.dogs[rels.dam] : null;
       const kids = (data.children[id] || []).length;
       const bar = document.getElementById('info-bar');
-      const sx = dog.sex === 'M' ? '♂' : '♀';
-      let html = `<span class="info-name">${dn(dog.name)}</span><span class="info-sep"></span>`;
-      html += `<span class="info-detail">${sx} ${fmt(dog.birth_date) || 'N.D.'}</span>`;
-      if (dog.loi) html += `<span class="info-detail">${dog.loi}</span>`;
-      if (sire) html += `<span class="info-sep"></span><span class="info-detail">♂ ${dn(sire.name).slice(0, 28)}</span>`;
-      if (dam) html += `<span class="info-detail">♀ ${dn(dam.name).slice(0, 28)}</span>`;
-      if (kids > 0) html += `<span class="info-badge" onclick="goDesc('${id}')">${kids} figli &rarr;</span>`;
-      bar.innerHTML = html; bar.style.display = 'flex';
+      const sx = dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '';
+
+      let mainHtml = `<span class="info-name">${dn(dog.name)}</span>`;
+      if (dog.aka) mainHtml += `<span class="info-aka">${dog.aka}</span>`;
+      mainHtml += `<span class="info-sep"></span>`;
+      mainHtml += `<span class="info-detail">${sx} ${fmt(dog.birth_date) || 'N.D.'}</span>`;
+      if (dog.loi) mainHtml += `<span class="info-detail">${dog.loi}</span>`;
+      if (sire || dam) mainHtml += `<span class="info-sep"></span>`;
+      if (sire) mainHtml += `<button class="info-parent-btn" data-dog="${sire.id}" title="Vai al padre">♂ ${short(sire.name, 24)}</button>`;
+      if (dam) mainHtml += `<button class="info-parent-btn" data-dog="${dam.id}" title="Vai alla madre">♀ ${short(dam.name, 24)}</button>`;
+
+      let actionsHtml = '';
+      if (currentView === 'descendants') {
+        actionsHtml += `<button class="info-badge secondary" data-nav-view="pedigree" data-dog="${id}">← Antenati</button>`;
+      }
+      if (kids > 0 && currentView !== 'descendants') {
+        actionsHtml += `<button class="info-badge" data-nav-view="descendants" data-dog="${id}">${kids} figli →</button>`;
+      }
+
+      const closeBtn = `<button class="info-close" id="info-close-btn" aria-label="Chiudi scheda">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>`;
+
+      bar.innerHTML = `<div class="info-top-row"><div class="info-main">${mainHtml}</div>${closeBtn}</div>` +
+        (actionsHtml ? `<div class="info-actions">${actionsHtml}</div>` : '');
+
+      bar.querySelectorAll('.info-parent-btn').forEach(btn => {
+        btn.addEventListener('click', () => navigate('pedigree', btn.dataset.dog));
+      });
+      bar.querySelectorAll('[data-nav-view]').forEach(btn => {
+        btn.addEventListener('click', () => navigate(btn.dataset.navView, btn.dataset.dog));
+      });
+      const closeEl = document.getElementById('info-close-btn');
+      if (closeEl) closeEl.addEventListener('click', () => setInfoBarVisible(false));
+
+      setInfoBarVisible(true);
     }
 
     /* ── Dog click ── */
@@ -1434,29 +2048,37 @@
       navigate(view, id);
     }
 
-    function goDesc(id) {
-      navigate('descendants', id);
-    }
-
     /* ── Fit to screen ── */
-    function fitScreen() {
+    function fitScreen(initialOverview = false) {
       const bb = g.node().getBBox(); if (!bb.width) return;
       const ctr = document.getElementById('tree-container');
       const W = ctr.clientWidth, H = ctr.clientHeight;
       const mobile = W <= 640;
-      const pad = mobile ? 10 : 70;
-      const maxSc = mobile ? 1.1 : 1.6;
-      const sc = Math.min((W - pad * 2) / bb.width, (H - pad * 2) / bb.height, maxSc);
+
+      /* On mobile initial overview load, focus on the latest year at a readable scale */
+      if (mobile && initialOverview && currentView === 'overview' && overviewYears.length) {
+        focusYear(overviewYears[overviewYears.length - 1], false);
+        return;
+      }
+
+      const padX = mobile ? 14 : 70;
+      const padTop = mobile ? 54 : 70;
+      const padBot = mobile ? (document.body.classList.contains('has-info-bar') ? 135 : 70) : 80;
+      const maxSc = mobile ? 1.15 : 1.5;
+      const sc = Math.min((W - padX * 2) / bb.width, (H - padTop - padBot) / bb.height, maxSc);
       const tx = W / 2 - (bb.x + bb.width / 2) * sc;
-      const ty = H / 2 - (bb.y + bb.height / 2) * sc;
+      const ty = padTop + (H - padTop - padBot) / 2 - (bb.y + bb.height / 2) * sc;
       svg.transition().duration(400).ease(d3.easeCubicOut)
         .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(sc));
+
+      if (currentView === 'overview') {
+        document.querySelectorAll('.year-pill').forEach(b => b.classList.remove('active'));
+      }
     }
 
-    function scheduleFit() {
-      /* On mobile give the browser extra time to finish layout */
-      const delay = window.innerWidth <= 640 ? 250 : 80;
-      setTimeout(fitScreen, delay);
+    function scheduleFit(initialOverview = false) {
+      const delay = window.innerWidth <= 640 ? 180 : 60;
+      setTimeout(() => fitScreen(initialOverview), delay);
     }
 
     /* ── Load ── */
@@ -1467,7 +2089,6 @@
 
       litters = computeLitters();
       founders = computeFounders();
-      // Build the set of all kennel dogs: WS-named + litter puppies + founders
       kennelIds = new Set(data.windofsand_ids || []);
       litters.forEach(l => l.puppies.forEach(id => kennelIds.add(id)));
       founders.forEach(({ dog }) => kennelIds.add(dog.id));
@@ -1475,22 +2096,33 @@
 
       const wsN = data.windofsand_ids?.length || 0;
       const totN = Object.keys(data.dogs).length;
-      document.getElementById('stats').innerHTML =
+      const statsHtml =
         `<strong>${wsN}</strong> WINDOFSAND<br>` +
         `<strong>${litters.length}</strong> cucciolate 🐾<br>` +
         `<strong>${totN}</strong> amici pelosi`;
+      document.getElementById('stats').innerHTML = statsHtml;
+      document.getElementById('mobile-stats-body').innerHTML = statsHtml;
 
       const ctr = document.getElementById('tree-container');
       svg = d3.select(ctr).append('svg'); g = svg.append('g');
-      zoom = d3.zoom().scaleExtent([0.03, 3]).on('zoom', e => g.attr('transform', e.transform));
+      zoom = d3.zoom().scaleExtent([0.05, 3]).on('zoom', e => g.attr('transform', e.transform));
       svg.call(zoom);
-      d3.select('#btn-in').on('click', () => svg.transition().duration(280).call(zoom.scaleBy, 1.45));
-      d3.select('#btn-out').on('click', () => svg.transition().duration(280).call(zoom.scaleBy, 0.68));
-      d3.select('#btn-fit').on('click', fitScreen);
+      d3.select('#btn-in').on('click', () => svg.transition().duration(260).call(zoom.scaleBy, 1.45));
+      d3.select('#btn-out').on('click', () => svg.transition().duration(260).call(zoom.scaleBy, 0.68));
+      d3.select('#btn-fit').on('click', () => fitScreen(false));
 
       const initial = readHash();
       navigate(initial.view, initial.dogId, /*replace=*/true);
     }
+
+    /* ── Resize / orientation handler ── */
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (g && g.node()) fitScreen(false);
+      }, 220);
+    });
 
     /* ── View buttons ── */
     document.querySelectorAll('.view-btn').forEach(btn => {
@@ -1507,27 +2139,50 @@
       });
     });
 
-    /* ── Search ── */
-    function doSearch(q, resultsEl) {
+    /* ── Mobile info sheet (legend + stats) ── */
+    const infoSheet = document.getElementById('mobile-info-sheet');
+    document.getElementById('btn-info-mobile').addEventListener('click', e => {
+      e.stopPropagation();
+      infoSheet.classList.toggle('open');
+    });
+    document.getElementById('sheet-close').addEventListener('click', () => {
+      infoSheet.classList.remove('open');
+    });
+
+    /* ── Search (matches name, aka, and LOI; sorts before slicing) ── */
+    function doSearch(rawQ, resultsEl) {
+      const q = norm(rawQ);
       if (!q || q.length < 2 || !data) { resultsEl.style.display = 'none'; return; }
       const hits = [];
       for (const [id, dog] of Object.entries(data.dogs)) {
-        if ((dog.name || '').toUpperCase().includes(q) || (dog.loi || '').toUpperCase().includes(q))
-          hits.push({ id, dog });
-        if (hits.length >= 24) break;
+        const nName = norm(dog.name);
+        const nAka = norm(dog.aka);
+        const nLoi = norm(dog.loi);
+        if (nName.includes(q) || nAka.includes(q) || nLoi.includes(q)) {
+          const akaExact = nAka && (nAka === q || nAka.startsWith(q)) ? 0 : 1;
+          hits.push({ id, dog, akaExact });
+        }
       }
       hits.sort((a, b) => {
-        const aw = isWS(a.dog.name) ? 0 : 1, bw = isWS(b.dog.name) ? 0 : 1;
+        if (a.akaExact !== b.akaExact) return a.akaExact - b.akaExact;
+        const aw = (isWS(a.dog.name) || kennelIds.has(a.id)) ? 0 : 1;
+        const bw = (isWS(b.dog.name) || kennelIds.has(b.id)) ? 0 : 1;
         return aw !== bw ? aw - bw : (a.dog.name || '').localeCompare(b.dog.name || '');
       });
-      if (!hits.length) { resultsEl.style.display = 'none'; return; }
-      resultsEl.innerHTML = hits.map(({ id, dog }) => {
+      const top = hits.slice(0, 25);
+      if (!top.length) {
+        resultsEl.innerHTML = `<div class="result-empty">Nessun risultato per “${rawQ.replace(/</g, '&lt;')}”</div>`;
+        resultsEl.style.display = 'block';
+        return;
+      }
+      resultsEl.innerHTML = top.map(({ id, dog }) => {
         const kids = (data.children[id] || []).length;
-        const ws = isWS(dog.name) ? ' ws' : '';
+        const ws = (isWS(dog.name) || kennelIds.has(id)) ? ' ws' : '';
         const sc = sexClass(dog.sex);
-        const sx = dog.sex === 'M' ? '♂' : '♀';
-        return `<div class="result-item${ws}" data-id="${id}">
-      <div class="r-name"><span class="sex-dot ${sc}"></span>${sx} ${dn(dog.name)}</div>
+        const sx = dog.sex === 'M' ? '♂' : dog.sex === 'F' ? '♀' : '';
+        const akaTag = dog.aka ? `<span class="r-aka">${dog.aka}</span>` : '';
+        return `<div class="result-item${ws}" data-id="${id}" role="option">
+      <div class="r-name"><span class="sex-dot ${sc}"></span><span>${sx} ${dn(dog.name)}</span>${akaTag}</div>
       <div class="r-meta">${fmt(dog.birth_date) || ''}${dog.loi ? ' · ' + dog.loi : ''}${kids ? ' · ' + kids + ' cuccioli' : ''}</div>
     </div>`;
       }).join('');
@@ -1537,7 +2192,7 @@
     const sb = document.getElementById('search-box');
     const sr = document.getElementById('search-results');
 
-    sb.addEventListener('input', () => doSearch(sb.value.trim().toUpperCase(), sr));
+    sb.addEventListener('input', () => doSearch(sb.value.trim(), sr));
 
     sr.addEventListener('click', e => {
       const item = e.target.closest('.result-item'); if (!item) return;
@@ -1546,40 +2201,61 @@
     });
 
     sb.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { sb.value = ''; sr.style.display = 'none'; }
+      if (e.key === 'Escape') { sb.value = ''; sr.style.display = 'none'; sb.blur(); }
     });
 
     /* ── Mobile search ── */
     const searchToggle = document.getElementById('search-toggle');
-    const mobileSearchBar = document.getElementById('mobile-search-bar');
+    const mobileSearchOverlay = document.getElementById('mobile-search-overlay');
+    const mobileSearchClose = document.getElementById('mobile-search-close');
     const msb = document.getElementById('mobile-search-box');
     const msr = document.getElementById('mobile-search-results');
 
+    function closeMobileSearch() {
+      mobileSearchOverlay.classList.remove('open');
+      mobileSearchOverlay.setAttribute('aria-hidden', 'true');
+      searchToggle.setAttribute('aria-expanded', 'false');
+      msb.value = '';
+      msr.style.display = 'none';
+    }
+
     searchToggle.addEventListener('click', () => {
-      const open = mobileSearchBar.classList.toggle('open');
-      if (open) { msb.focus(); } else { msb.value = ''; msr.style.display = 'none'; }
+      const willOpen = !mobileSearchOverlay.classList.contains('open');
+      if (willOpen) {
+        infoSheet.classList.remove('open');
+        mobileSearchOverlay.classList.add('open');
+        mobileSearchOverlay.setAttribute('aria-hidden', 'false');
+        searchToggle.setAttribute('aria-expanded', 'true');
+        setTimeout(() => msb.focus(), 40);
+      } else {
+        closeMobileSearch();
+      }
     });
 
-    msb.addEventListener('input', () => doSearch(msb.value.trim().toUpperCase(), msr));
+    mobileSearchClose.addEventListener('click', closeMobileSearch);
+
+    mobileSearchOverlay.addEventListener('click', e => {
+      if (e.target === mobileSearchOverlay) closeMobileSearch();
+    });
+
+    msb.addEventListener('input', () => doSearch(msb.value.trim(), msr));
 
     msr.addEventListener('click', e => {
       const item = e.target.closest('.result-item'); if (!item) return;
-      msb.value = ''; msr.style.display = 'none';
-      mobileSearchBar.classList.remove('open');
+      closeMobileSearch();
       onDogClick(item.dataset.id);
     });
 
     msb.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { msb.value = ''; msr.style.display = 'none'; mobileSearchBar.classList.remove('open'); }
+      if (e.key === 'Escape') closeMobileSearch();
     });
 
     document.addEventListener('click', e => {
       if (!e.target.closest('#search-results') && !e.target.closest('#search-wrapper'))
         sr.style.display = 'none';
-      if (!e.target.closest('#mobile-search-bar') && !e.target.closest('#search-toggle'))
-        mobileSearchBar.classList.remove('open');
+      if (infoSheet.classList.contains('open') && !e.target.closest('#mobile-info-sheet') && !e.target.closest('#btn-info-mobile'))
+        infoSheet.classList.remove('open');
     });
-
 
     init();
   </script>
