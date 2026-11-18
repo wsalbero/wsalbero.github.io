@@ -2504,86 +2504,167 @@
       "role": "mascotte",
       "is_cat": true
     },
-    "ws_shaggy": {
-      "id": "ws_shaggy",
-      "name": "WINDOFSAND MR. BOMBASTIC SHAGGY",
-      "loi": null,
-      "birth_date": "2025-12-31",
+    "8779924": {
+      "id": "8779924",
+      "name": "WINDOFSAND MR. BOMBASTIC",
+      "loi": "LO2633194",
+      "birth_date": "2026-01-03",
       "sex": "M",
       "owner": null,
       "aka": "Sergio"
     },
-    "ws_george": {
-      "id": "ws_george",
-      "name": "WINDOFSAND MR. GEORGE SPEAK TO ME",
-      "loi": null,
-      "birth_date": "2025-12-31",
-      "sex": "M",
-      "owner": null,
-      "aka": "George"
-    },
-    "ws_ares": {
-      "id": "ws_ares",
+    "8779925": {
+      "id": "8779925",
       "name": "WINDOFSAND ARES NEVER BACK",
-      "loi": null,
-      "birth_date": "2025-12-31",
+      "loi": "LO2633195",
+      "birth_date": "2026-01-03",
       "sex": "M",
       "owner": null,
       "aka": "Ares"
     },
-    "ws_achi": {
-      "id": "ws_achi",
-      "name": "WINDOFSAND ACHI TAKE ME OUT",
-      "loi": null,
-      "birth_date": "2025-12-31",
-      "sex": "M",
-      "owner": null,
-      "aka": "Achi"
-    },
-    "ws_archie": {
-      "id": "ws_archie",
+    "8779926": {
+      "id": "8779926",
       "name": "WINDOFSAND ARCHIE THE GAME OF LIFE",
-      "loi": null,
-      "birth_date": "2025-12-31",
+      "loi": "LO2633196",
+      "birth_date": "2026-01-03",
       "sex": "M",
       "owner": null,
       "aka": "Archie"
     },
-    "ws_nina": {
-      "id": "ws_nina",
-      "name": "WINDOFSAND NINA DANCE WITH ME",
-      "loi": null,
-      "birth_date": "2025-12-31",
-      "sex": "F",
+    "8779927": {
+      "id": "8779927",
+      "name": "WINDOFSAND ACHI TAKE ME OUT",
+      "loi": "LO2633197",
+      "birth_date": "2026-01-03",
+      "sex": "M",
       "owner": null,
-      "aka": "Nina"
+      "aka": "Achille"
     },
-    "ws_luna": {
-      "id": "ws_luna",
-      "name": "WINDOFSAND CRAZY LUNA TO LOVE YOU",
-      "loi": null,
-      "birth_date": "2025-12-31",
-      "sex": "F",
+    "8779928": {
+      "id": "8779928",
+      "name": "WINDOFSAND MR. GEORGE SPEAK TO ME",
+      "loi": "LO2633198",
+      "birth_date": "2026-01-03",
+      "sex": "M",
       "owner": null,
-      "aka": "Luna"
+      "aka": "George"
     },
-    "ws_adel": {
-      "id": "ws_adel",
+    "8779929": {
+      "id": "8779929",
       "name": "WINDOFSAND ADEL NOBODY HOME",
-      "loi": null,
-      "birth_date": "2025-12-31",
+      "loi": "LO2633199",
+      "birth_date": "2026-01-03",
       "sex": "F",
       "owner": null,
       "aka": "Adel"
     },
-    "ws_easylove": {
-      "id": "ws_easylove",
+    "8779930": {
+      "id": "8779930",
+      "name": "WINDOFSAND CRAZY LUNA TO LOVE YOU",
+      "loi": "LO2633200",
+      "birth_date": "2026-01-03",
+      "sex": "F",
+      "owner": null,
+      "aka": "Luna"
+    },
+    "8779931": {
+      "id": "8779931",
+      "name": "WINDOFSAND NINA DANCE WITH ME",
+      "loi": "LO2633201",
+      "birth_date": "2026-01-03",
+      "sex": "F",
+      "owner": null,
+      "aka": "Nina"
+    },
+    "8779932": {
+      "id": "8779932",
       "name": "WINDOFSAND EASY LOVE",
-      "loi": null,
-      "birth_date": "2025-12-31",
+      "loi": "LO2633202",
+      "birth_date": "2026-01-03",
       "sex": "F",
       "owner": null,
       "aka": "Easy"
+    },
+    "8857781": {
+      "id": "8857781",
+      "name": "WINDOFSAND WILLOW",
+      "loi": "LO26111069",
+      "birth_date": "2026-06-23",
+      "sex": "F",
+      "owner": null,
+      "aka": "Willow"
+    },
+    "8857782": {
+      "id": "8857782",
+      "name": "WINDOFSAND POETTO BALOO",
+      "loi": "LO26111070",
+      "birth_date": "2026-06-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Baloo"
+    },
+    "8857783": {
+      "id": "8857783",
+      "name": "WINDOFSAND LIO",
+      "loi": "LO26111071",
+      "birth_date": "2026-06-23",
+      "sex": "F",
+      "owner": null,
+      "aka": "Lio'"
+    },
+    "8857784": {
+      "id": "8857784",
+      "name": "WINDOFSAND MR.YA200 JULIUS",
+      "loi": "LO26111072",
+      "birth_date": "2026-06-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Giulio"
+    },
+    "8857785": {
+      "id": "8857785",
+      "name": "WINDOFSAND WHITE LADY MIA",
+      "loi": "LO26111073",
+      "birth_date": "2026-06-23",
+      "sex": "F",
+      "owner": null,
+      "aka": "Mia"
+    },
+    "8857787": {
+      "id": "8857787",
+      "name": "WINDOFSAND KELLUKE ROMEO",
+      "loi": "LO26111075",
+      "birth_date": "2026-06-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Romeo"
+    },
+    "8857788": {
+      "id": "8857788",
+      "name": "WINDOFSAND PUNCH HERO",
+      "loi": "LO26111076",
+      "birth_date": "2026-06-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Hero"
+    },
+    "8857789": {
+      "id": "8857789",
+      "name": "WINDOFSAND SHOT",
+      "loi": "LO26111077",
+      "birth_date": "2026-06-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Achi"
+    },
+    "8857790": {
+      "id": "8857790",
+      "name": "WINDOFSAND MAI TAI MUFFIN",
+      "loi": "LO26111078",
+      "birth_date": "2026-06-23",
+      "sex": "M",
+      "owner": null,
+      "aka": "Muffin"
     }
   },
   "relationships": {
@@ -3523,41 +3604,77 @@
       "sire": "6166584",
       "dam": "6323201"
     },
-    "ws_shaggy": {
+    "8779924": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_george": {
+    "8779925": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_ares": {
+    "8779926": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_achi": {
+    "8779927": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_archie": {
+    "8779928": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_nina": {
+    "8779929": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_luna": {
+    "8779930": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_adel": {
+    "8779931": {
       "sire": "7568438",
       "dam": "8275919"
     },
-    "ws_easylove": {
+    "8779932": {
       "sire": "7568438",
       "dam": "8275919"
+    },
+    "8857781": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857782": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857783": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857784": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857785": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857787": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857788": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857789": {
+      "sire": "7960422",
+      "dam": "8314004"
+    },
+    "8857790": {
+      "sire": "7960422",
+      "dam": "8314004"
     }
   },
   "children": {
@@ -3598,7 +3715,16 @@
       "8688894",
       "8688895",
       "8688903",
-      "8688916"
+      "8688916",
+      "8857781",
+      "8857782",
+      "8857783",
+      "8857784",
+      "8857785",
+      "8857787",
+      "8857788",
+      "8857789",
+      "8857790"
     ],
     "8043182": [
       "8688879",
@@ -4030,7 +4156,16 @@
       "8530951",
       "8530952",
       "8530953",
-      "8530954"
+      "8530954",
+      "8857781",
+      "8857782",
+      "8857783",
+      "8857784",
+      "8857785",
+      "8857787",
+      "8857788",
+      "8857789",
+      "8857790"
     ],
     "7090013": [
       "7090038",
@@ -4262,26 +4397,26 @@
       "5896715"
     ],
     "7568438": [
-      "ws_shaggy",
-      "ws_george",
-      "ws_ares",
-      "ws_achi",
-      "ws_archie",
-      "ws_nina",
-      "ws_luna",
-      "ws_adel",
-      "ws_easylove"
+      "8779924",
+      "8779928",
+      "8779925",
+      "8779927",
+      "8779926",
+      "8779931",
+      "8779930",
+      "8779929",
+      "8779932"
     ],
     "8275919": [
-      "ws_shaggy",
-      "ws_george",
-      "ws_ares",
-      "ws_achi",
-      "ws_archie",
-      "ws_nina",
-      "ws_luna",
-      "ws_adel",
-      "ws_easylove"
+      "8779924",
+      "8779928",
+      "8779925",
+      "8779927",
+      "8779926",
+      "8779931",
+      "8779930",
+      "8779929",
+      "8779932"
     ]
   },
   "windofsand_ids": [
@@ -4400,14 +4535,23 @@
     "8688903",
     "8688916",
     "8275919",
-    "ws_shaggy",
-    "ws_george",
-    "ws_ares",
-    "ws_achi",
-    "ws_archie",
-    "ws_nina",
-    "ws_luna",
-    "ws_adel",
-    "ws_easylove"
+    "8779924",
+    "8779928",
+    "8779925",
+    "8779927",
+    "8779926",
+    "8779931",
+    "8779930",
+    "8779929",
+    "8779932",
+    "8857781",
+    "8857782",
+    "8857783",
+    "8857784",
+    "8857785",
+    "8857787",
+    "8857788",
+    "8857789",
+    "8857790"
   ]
 }
